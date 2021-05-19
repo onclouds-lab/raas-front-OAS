@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "type": "divider",
+      "title": "APIS"
+    },
+    {
+      "type": "divider",
+      "title": "Schemas"
+    },
+    {
+      "type": "item",
+      "title": "point3d",
+      "uri": "models/point3d.json"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "robotParams",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "エンドユーザにとってのロボットの名前"
+    },
+    "init_map_id": {
+      "type": "string"
+    },
+    "init_slam_map_version": {
+      "type": "string"
+    },
+    "owner_id": {
+      "type": "string"
+    }
+  }
+}

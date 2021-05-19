@@ -1,0 +1,23 @@
+{
+  "title": "point3d",
+  "type": "object",
+  "properties": {
+    "x": {
+      "type": "number",
+      "description": "x座標の位置"
+    },
+    "y": {
+      "type": "number",
+      "description": "y座標の位置"
+    },
+    "z": {
+      "type": "number",
+      "description": "z座標の位置"
+    }
+  },
+  "required": [
+    "x",
+    "y",
+    "z"
+  ]
+}

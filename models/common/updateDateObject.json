@@ -1,0 +1,12 @@
+{
+  "title": "updateDate",
+  "type": "object",
+  "properties": {
+    "updateDate": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "updateDate"
+  ]
+}

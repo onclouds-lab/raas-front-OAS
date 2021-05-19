@@ -1,0 +1,19 @@
+{
+  "title": "point2d.json",
+  "type": "object",
+  "description": "2次元の場所を示します",
+  "properties": {
+    "x": {
+      "type": "number",
+      "description": "x座標の位置"
+    },
+    "y": {
+      "type": "number",
+      "description": "y座標の位置"
+    }
+  },
+  "required": [
+    "x",
+    "y"
+  ]
+}

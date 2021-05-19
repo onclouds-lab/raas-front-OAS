@@ -1,0 +1,48 @@
+{
+  "title": "facility",
+  "type": "object",
+  "x-internal": false,
+  "description": "",
+  "properties": {
+    "id": {
+      "$ref": "./common/idObject.v1.json"
+    },
+    "registDate": {
+      "$ref": "./common/registDateObject.json"
+    },
+    "maps": {
+      "type": "array",
+      "items": {
+        "$ref": "./mapInfo.v1.json"
+      }
+    },
+    "floor": {
+      "type": "number",
+      "description": "階数"
+    },
+    "elevators": {
+      "type": "array",
+      "items": {
+        "$ref": "./elevator.json"
+      }
+    },
+    "updateDate": {
+      "$ref": "./common/updateDateObject.json"
+    },
+    "robots": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "items": {
+        "$ref": "./robot.v1.json"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "maps",
+    "floor",
+    "updateDate"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "robotType.v2",
+  "description": "ロボットの諸元\n主にnavMeshに必要なもの",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "./common/idObject.v1.json"
+    },
+    "size": {
+      "$ref": "./common/size3d.v2.json"
+    },
+    "maxVel": {
+      "type": "number",
+      "description": "最大速度 m/sec"
+    },
+    "minRad": {
+      "type": "number",
+      "description": "旋回半径 mm (その場の場合は0)"
+    }
+
+  },
+  "required": [
+    "size",
+    "id"
+  ]
+}

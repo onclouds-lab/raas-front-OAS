@@ -1,0 +1,19 @@
+{
+  "title": "mapMeta.v2",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "mapOriginPostion": {
+      "$ref": "./common/point3d.json"
+    }
+  },
+  "required": [
+    "name",
+    "mapOriginPostion"
+  ]
+}

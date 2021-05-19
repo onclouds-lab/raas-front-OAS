@@ -1,0 +1,14 @@
+{
+  "title": "idObject",
+  "type": "object",
+  "description": "string型のIdを持つObject",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "ユニーク識別子。16文字のstring。Modelを一意に識別する文字列"
+    }
+  },
+  "required": [
+    "id"
+  ]
+}

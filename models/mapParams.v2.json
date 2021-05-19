@@ -1,0 +1,41 @@
+{
+  "title": "mapInfoParams",
+  "type": "object",
+  "description": "YAMLデータ",
+  "properties": {
+    "resolution": {
+      "type": "number",
+      "description": "PGMマップの解像度。ロボットが使う"
+    },
+    "origin": {
+      "$ref": "./common/point2d.v1.json"
+    },
+    "negate": {
+      "type": "boolean",
+      "default": false,
+      "description": "pgmのデータを白黒反転するかどうか。trueで反転"
+    },
+    "occupied_thresh": {
+      "type": "number",
+      "description": "0~1の数。ROSで壁判定に使う",
+      "format": "float",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "free_thresh": {
+      "type": "number",
+      "description": "0~1の数。ROSでロボットが通れる場所判定に使う。",
+      "format": "float",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "size": {
+      "$ref": "./common/size2d.v1.json"
+    }
+  },
+  "required": [
+    "resolution",
+    "origin",
+    "size"
+  ]
+}

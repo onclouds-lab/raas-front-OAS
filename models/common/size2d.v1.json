@@ -1,0 +1,19 @@
+{
+  "title": "size2d",
+  "type": "object",
+  "properties": {
+    "width": {
+      "type": "number",
+      "description": "横サイズ"
+    },
+    "height": {
+      "type": "number",
+      "description": "縦サイズ"
+    }
+  },
+  "required": [
+    "width",
+    "height"
+  ],
+  "description": "2次元のサイズを示します"
+}

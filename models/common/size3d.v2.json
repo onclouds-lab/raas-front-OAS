@@ -1,0 +1,21 @@
+{
+  "title": "size3d.v2",
+  "type": "object",
+  "properties": {
+    "height": {
+      "type": "number"
+    },
+    "width": {
+      "type": "number"
+    },
+    "deepth": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "height",
+    "width",
+    "deepth"
+  ],
+  "description": "物理での大きさ\n単位mm"
+}

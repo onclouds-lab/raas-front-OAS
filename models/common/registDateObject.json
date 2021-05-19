@@ -1,0 +1,12 @@
+{
+  "title": "registDateObject",
+  "type": "object",
+  "properties": {
+    "registDate": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "registDate"
+  ]
+}

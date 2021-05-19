@@ -1,0 +1,13 @@
+{
+  "title": "robot",
+  "x-examples": {},
+  "description": "データベース上のロボットの情報",
+  "allOf": [
+    {
+      "$ref": "../../common/idObject.v1.json"
+    },
+    {
+      "$ref": "./robotParams.v1.json"
+    }
+  ]
+}
