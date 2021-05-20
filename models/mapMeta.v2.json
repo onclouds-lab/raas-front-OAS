@@ -10,6 +10,9 @@
     },
     "mapOriginPostion": {
       "$ref": "./common/point3d.json"
+    },
+    "offset": {
+      "$ref": "./common/point3d.json"
     }
   },
   "required": [
