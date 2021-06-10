@@ -143,6 +143,71 @@ paths:
                   dateOfBirth: '1996-08-24'
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
+  '/mapMeta/{id}':
+    get:
+      summary: get MapMeta
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/mapMeta.v2.json
+      operationId: get-mapMeta
+    post:
+      summary: post new MapMeta
+      tags: []
+      responses: {}
+      operationId: post-mapMeta
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+        description: map id
+  '/mapMeta/{id}/params':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+        description: map id
+    post:
+      summary: post map params
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/mapParams.v2.json
+      operationId: post-mapMeta-id-params
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/mapParams.v2.json
+    get:
+      summary: get map params
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/mapParams.v2.json
+      operationId: get-mapMeta-id-params
 components:
   schemas:
     User:
