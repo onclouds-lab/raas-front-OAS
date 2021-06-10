@@ -13,12 +13,20 @@
     "maps": {
       "type": "array",
       "items": {
-        "$ref": "./mapMeta.v2.json"
+        "type": "object",
+        "properties": {
+          "floorNum": {
+            "type": "number"
+          },
+          "mapmeta": {
+            "$ref": "./mapMeta.v2.json"
+          }
+        }
       }
     },
     "floor": {
       "type": "number",
-      "description": "階数"
+      "description": "建物の実際の階数"
     },
     "elevators": {
       "type": "array",
