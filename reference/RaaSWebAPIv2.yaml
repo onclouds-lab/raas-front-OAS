@@ -140,7 +140,7 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: ../models/pagenateTemplate.v1.json
+                  - $ref: ../models/common/pagenateTemplate.v1.json
                   - type: array
                     items:
                       $ref: ../models/facility.json
@@ -156,7 +156,7 @@ paths:
             application/json:
               schema:
                 allOf:
-                  - $ref: ../models/pagenateTemplate.v1.json
+                  - $ref: ../models/common/pagenateTemplate.v1.json
                   - type: array
                     items:
                       $ref: ../models/mapMeta.v2.json
