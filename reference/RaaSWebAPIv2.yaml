@@ -5,7 +5,7 @@ info:
 servers:
   - url: 'http://localhost:3000'
 paths:
-  '/mapMeta/{id}':
+  '/map/{map_id}':
     get:
       summary: get MapMeta
       tags: []
@@ -32,18 +32,16 @@ paths:
     parameters:
       - schema:
           type: string
-        name: id
+        name: map_id
         in: path
         required: true
-        description: map id
-  '/mapMeta/{id}/params':
+  '/map/{map_id}/params':
     parameters:
       - schema:
           type: string
-        name: id
+        name: map_id
         in: path
         required: true
-        description: map id
     post:
       summary: post map params
       tags: []
@@ -107,5 +105,44 @@ paths:
       responses:
         '200':
           description: OK
+  '/facility/{facility_id}':
+    parameters:
+      - schema:
+          type: string
+        name: facility_id
+        in: path
+        required: true
+    get:
+      summary: get Facility
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/facility.json
+      operationId: getFacility
+    post:
+      summary: post Facility
+      operationId: potFacility
+      responses:
+        '200':
+          description: OK
+  /facility:
+    get:
+      summary: get facilities list
+      tags: []
+      responses: {}
+      operationId: get-facility
 components:
   schemas: {}
+  responses:
+    listRes:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            properties:
+              id:
+                type: string
