@@ -8,6 +8,9 @@
       "$ref": "./mapParams.v2.json"
     },
     {
+      "$ref": "./owner.v1.json"
+    },
+    {
       "type": "object",
       "properties": {
         "name": {
@@ -21,11 +24,21 @@
         },
         "costmap_link": {
           "type": "string"
+        },
+        "yaw": {
+          "type": "number",
+          "format": "float",
+          "default": 0,
+          "description": "yaw角。度数法。"
         }
       },
       "required": [
-        "name"
+        "name",
+        "pgm_link",
+        "costmap_link",
+        "yaw"
       ]
     }
-  ]
+  ],
+  "description": ""
 }

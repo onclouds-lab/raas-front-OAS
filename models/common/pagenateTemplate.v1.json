@@ -1,0 +1,46 @@
+{
+  "title": "pagenateTemplate",
+  "type": "object",
+  "x-examples": {},
+  "properties": {
+    "current_page": {
+      "type": "integer"
+    },
+    "from": {
+      "type": "integer"
+    },
+    "to": {
+      "type": "integer"
+    },
+    "first_page_url": {
+      "type": "string"
+    },
+    "last_page_url": {
+      "type": "string"
+    },
+    "next_page_url": {
+      "type": "string"
+    },
+    "prev_page_url": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "last_page": {
+      "type": "integer"
+    },
+    "per_page": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "current_page",
+    "from",
+    "to",
+    "total"
+  ]
+}
