@@ -40,5 +40,27 @@
       ]
     }
   ],
-  "description": ""
+  "description": "",
+  "examples": [
+    {
+      "id": "0000000000000054",
+      "name": "ToyotaStadiumv2",
+      "description": "ToyotaStadium-res0.1",
+      "resolution": 0.1,
+      "origin": {
+        "x": -200,
+        "y": -200
+      },
+      "negate": false,
+      "occupied_thresh": 0.65,
+      "free_thresh": 0.196,
+      "size": {
+        "width": 4000,
+        "height": 4000
+      },
+      "pgm_link": "{url}/maps/{map_id}/pgm",
+      "costmap_link": "{url}/maps/{map_id}/cost",
+      "yaw": 0
+    }
+  ]
 }
