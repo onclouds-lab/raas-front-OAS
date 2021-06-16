@@ -24,12 +24,19 @@
         },
         "costmap_link": {
           "type": "string"
+        },
+        "yaw": {
+          "type": "number",
+          "format": "float",
+          "default": 0,
+          "description": "yaw角。度数法。"
         }
       },
       "required": [
         "name",
         "pgm_link",
-        "costmap_link"
+        "costmap_link",
+        "yaw"
       ]
     }
   ],
