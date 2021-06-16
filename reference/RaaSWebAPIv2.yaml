@@ -206,3 +206,6 @@ components:
       required: true
       schema:
         type: string
+        example: '0000000000000013'
+        minLength: 16
+        maxLength: 16
