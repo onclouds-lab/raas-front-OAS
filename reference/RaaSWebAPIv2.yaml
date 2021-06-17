@@ -49,18 +49,10 @@ paths:
                 - $ref: ../models/common/updateDateObject.json
                 - $ref: ../models/mapParams.v2.json
     parameters:
-      - schema:
-          type: string
-        name: map_id
-        in: path
-        required: true
+      - $ref: '#/components/parameters/map_id'
   '/maps/{map_id}/params':
     parameters:
-      - schema:
-          type: string
-        name: map_id
-        in: path
-        required: true
+      - $ref: '#/components/parameters/map_id'
     post:
       summary: post map params
       tags: []
@@ -90,15 +82,20 @@ paths:
       operationId: get-mapMeta-id-params
   '/maps/{map_id}/pgm':
     parameters:
-      - schema:
-          type: string
-        name: map_id
-        in: path
-        required: true
+      - $ref: '#/components/parameters/map_id'
     get:
       summary: get pgm url
       tags: []
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/url.v1.json
+              examples:
+                example-1:
+                  $ref: '#/components/examples/pgm_linkURL'
       operationId: getPGMmapURL
     put:
       summary: ''
@@ -108,15 +105,20 @@ paths:
           description: OK
   '/maps/{map_id}/cost':
     parameters:
-      - schema:
-          type: string
-        name: map_id
-        in: path
-        required: true
+      - $ref: '#/components/parameters/map_id'
     get:
       summary: Your GET endpoint
       tags: []
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/url.v1.json
+              examples:
+                example-1:
+                  $ref: '#/components/examples/costmap_linkURL'
       operationId: getCostmapURL
     put:
       summary: ''
@@ -126,11 +128,7 @@ paths:
           description: OK
   '/facilities/{facility_id}':
     parameters:
-      - schema:
-          type: string
-        name: facility_id
-        in: path
-        required: true
+      - $ref: '#/components/parameters/facility_id'
     get:
       summary: get Facility
       tags: []
@@ -186,16 +184,53 @@ paths:
           in: query
           name: search
           description: 検索文字列
-        - schema:
-            type: number
-          in: query
-          name: page
-          description: ページ数
-        - schema:
-            type: number
-          in: query
-          name: limit
-          description: 表示数
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/limit'
+  '/facilities/{facility_id}/elevators':
+    parameters:
+      - $ref: '#/components/parameters/facility_id'
+    get:
+      summary: getElevetorsByFacilityID
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: ../models/common/pagenateTemplate.v1.json
+                  - type: array
+                    items:
+                      $ref: ../models/elevator.json
+      operationId: get-facility-facility_id-elevators
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/limit'
+    post:
+      summary: postElevetorsByFacilityID
+      operationId: post-facilities-facility_id-elevators
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - description: 登録された分だけ返す
+                    items:
+                      $ref: ../models/elevator.json
+                type: array
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - maxItems: 20
+                  uniqueItems: true
+                  items:
+                    $ref: ../models/elevator.post.json
+              type: array
 components:
   schemas: {}
   responses: {}
@@ -209,3 +244,52 @@ components:
         example: '0000000000000013'
         minLength: 16
         maxLength: 16
+        pattern: '[0-9]{16}'
+    page:
+      name: page
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        minimum: 1
+        default: 1
+      description: ページ数
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 100
+        minimum: 1
+      description: 表示数
+    facility_id:
+      name: facility_id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: 施設のID
+  examples:
+    pgm_linkURL:
+      value:
+        description: Example shared example
+        type: object
+        properties:
+          url:
+            type: string
+            example: 'http://localhost/pgmimage.pgm'
+        required:
+          - url
+    costmap_linkURL:
+      value:
+        description: Example shared example
+        type: object
+        properties:
+          url:
+            type: string
+            example: 'http://localhost/costmapimage.png'
+        required:
+          - url

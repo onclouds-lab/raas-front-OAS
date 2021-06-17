@@ -1,10 +1,8 @@
 {
   "title": "Elevator",
   "type": "object",
+  "description": "構造物としてのエレベーター\nロボット、籠とは別。という意味。",
   "properties": {
-    "id": {
-      "$ref": "./common/idObject.v1.json"
-    },
     "postion": {
       "$ref": "./common/point3d.json"
     },
@@ -22,6 +20,5 @@
   "required": [
     "stopFloor",
     "supportTypes"
-  ],
-  "description": "構造物としてのエレベーター\nロボット、籠とは別。という意味。"
+  ]
 }
