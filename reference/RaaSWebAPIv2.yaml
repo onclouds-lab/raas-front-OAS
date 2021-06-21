@@ -1,14 +1,23 @@
-openapi: 3.1.0
+openapi: 3.0.1
+tags:
+  - name: facility
+  - name: robot
+  - name: map
 info:
   title: RaaSWebAPIv2
   version: '1.0'
+  contact:
+    name: onClouds
+  description: rass APiv2
 servers:
   - url: 'http://localhost:3000'
 paths:
   '/maps/{map_id}':
+    description: mapの取得
     get:
       summary: get MapMeta
-      tags: []
+      tags:
+        - map
       responses:
         '200':
           description: OK
@@ -16,19 +25,23 @@ paths:
             application/json:
               schema:
                 $ref: ../models/mapMeta.v2.json
-      operationId: get-mapMeta
+      operationId: getMapMeta
+      description: Idを指定してMapの取得
     post:
       summary: post new MapMeta
-      tags: []
-      responses: {}
-      operationId: post-mapMeta
+      tags:
+        - map
+      responses:
+        '200':
+          description: OK
+      operationId: postMapMeta
       requestBody:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: ../models/common/updateDateObject.json
-                - $ref: ../models/mapParams.v2.json
+              $ref: ../models/mapMeta.v2.json
+        description: ''
+      description: Mapの登録
     parameters:
       - schema:
           type: string
@@ -44,7 +57,8 @@ paths:
         required: true
     post:
       summary: post map params
-      tags: []
+      tags:
+        - map
       responses:
         '200':
           description: OK
@@ -52,15 +66,17 @@ paths:
             application/json:
               schema:
                 $ref: ../models/mapParams.v2.json
-      operationId: post-mapMeta-id-params
+      operationId: postMapMetaIdParams
       requestBody:
         content:
           application/json:
             schema:
               $ref: ../models/mapParams.v2.json
+      description: 詳細説明なし
     get:
       summary: get map params
-      tags: []
+      tags:
+        - map
       responses:
         '200':
           description: OK
@@ -68,7 +84,8 @@ paths:
             application/json:
               schema:
                 $ref: ../models/mapParams.v2.json
-      operationId: get-mapMeta-id-params
+      operationId: getMapMetaIdParams
+      description: 詳細説明なし
   '/maps/{map_id}/pgm':
     parameters:
       - schema:
@@ -78,15 +95,22 @@ paths:
         required: true
     get:
       summary: get pgm url
-      tags: []
-      responses: {}
+      tags:
+        - map
+      responses:
+        '200':
+          description: OK
       operationId: getPGMmapURL
+      description: 詳細説明なし
     put:
       summary: ''
       operationId: putPGMmap
       responses:
         '200':
           description: OK
+      tags:
+        - map
+      description: 詳細説明なし
   '/maps/{map_id}/cost':
     parameters:
       - schema:
@@ -96,15 +120,22 @@ paths:
         required: true
     get:
       summary: Your GET endpoint
-      tags: []
-      responses: {}
+      tags:
+        - map
+      responses:
+        '200':
+          description: OK
       operationId: getCostmapURL
+      description: 詳細説明なし
     put:
       summary: ''
       operationId: putCostmap
       responses:
         '200':
           description: OK
+      description: 詳細説明なし
+      tags:
+        - map
   '/facilities/{facility_id}':
     parameters:
       - schema:
@@ -114,7 +145,8 @@ paths:
         required: true
     get:
       summary: get Facility
-      tags: []
+      tags:
+        - facility
       responses:
         '200':
           description: OK
@@ -123,44 +155,61 @@ paths:
               schema:
                 $ref: ../models/facility.json
       operationId: getFacilityByID
+      description: 詳細説明なし
     post:
       summary: post Facility
       operationId: potFacilityByID
       responses:
         '200':
           description: OK
-  /facilities/:
+      tags:
+        - facility
+      description: 詳細説明なし
+  /facilities:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - facility
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                allOf:
-                  - $ref: ../models/common/pagenateTemplate.v1.json
-                  - type: array
+                type: object
+                properties:
+                  pagenate:
+                    $ref: ../models/common/pagenateTemplate.v1.json
+                  data:
+                    type: array
                     items:
                       $ref: ../models/facility.json
       operationId: getFacilities
-  /maps/:
+      description: 詳細説明なし
+    parameters: []
+  /maps:
     get:
       summary: Your GET endpoint
-      tags: []
+      tags:
+        - map
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                allOf:
-                  - $ref: ../models/common/pagenateTemplate.v1.json
-                  - type: array
+                type: object
+                properties:
+                  pagenate:
+                    $ref: ../models/common/pagenateTemplate.v1.json
+                  data:
+                    type: array
                     items:
                       $ref: ../models/mapMeta.v2.json
-      operationId: get-maps
+                required:
+                  - pagenate
+                  - data
+      operationId: getMaps
       parameters:
         - schema:
             type: string
@@ -177,6 +226,8 @@ paths:
           in: query
           name: limit
           description: 表示数
+      description: 詳細説明なし
+    parameters: []
 components:
   schemas: {}
   responses: {}
