@@ -14,7 +14,8 @@
       "type": "object",
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "各階の名前というよりも、その画像の名前。”NIC6F”のような"
         },
         "description": {
           "type": "string"

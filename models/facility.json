@@ -1,56 +1,61 @@
 {
   "title": "facility",
-  "type": "object",
   "x-internal": false,
   "description": "",
-  "properties": {
-    "id": {
+  "allOf": [
+    {
       "$ref": "./common/idObject.v1.json"
     },
-    "registDate": {
+    {
       "$ref": "./common/registDateObject.json"
     },
-    "maps": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "floorNum": {
-            "type": "number"
-          },
-          "mapmeta": {
-            "$ref": "./mapMeta.v2.json"
+    {
+      "type": "object",
+      "properties": {
+        "maps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "floorNum": {
+                "type": "number"
+              },
+              "mapMeta": {
+                "$ref": "./mapMeta.v2.json"
+              }
+            },
+            "required": [
+              "floorNum",
+              "mapMeta"
+            ]
+          }
+        },
+        "floor": {
+          "type": "number",
+          "description": "建物の実際の階数"
+        },
+        "elevators": {
+          "type": "array",
+          "items": {
+            "$ref": "./elevator.json"
+          }
+        },
+        "robots": {
+          "type": "array",
+          "items": {
+            "$ref": "./robot.v1.json"
           }
         }
-      }
+      },
+      "required": [
+        "maps",
+        "floor",
+        "elevators",
+        "robots"
+      ]
     },
-    "floor": {
-      "type": "number",
-      "description": "建物の実際の階数"
-    },
-    "elevators": {
-      "type": "array",
-      "items": {
-        "$ref": "./elevator.json"
-      }
-    },
-    "updateDate": {
+    {
       "$ref": "./common/updateDateObject.json"
-    },
-    "robots": {
-      "type": [
-        "string",
-        "array"
-      ],
-      "items": {
-        "$ref": "./robot.v1.json"
-      }
     }
-  },
-  "required": [
-    "id",
-    "maps",
-    "floor",
-    "updateDate"
   ]
 }
