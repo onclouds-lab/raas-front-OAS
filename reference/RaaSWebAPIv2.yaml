@@ -5,6 +5,38 @@ info:
 servers:
   - url: 'http://localhost:3000'
 paths:
+  /owners:
+    get:
+      summary: get owners
+      tags:
+        - owner
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pagenate:
+                    $ref: ../models/pagenateTemplate.v1.json
+                  data:
+                    type: array
+                    items:
+                      $ref: ../models/owner.v1.json
+              examples:
+                example-1:
+                  value:
+                    data:
+                      - id: 0123456789aaabbb
+                        name: owner1
+                        owned_robot: []
+                        owned_map: []
+      operationId: getOwners
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/limit'
+      description: Ownerの一覧を取得
   '/maps/{map_id}':
     get:
       summary: get MapMeta
@@ -231,6 +263,81 @@ paths:
                   items:
                     $ref: ../models/elevator.post.json
               type: array
+  '/facilities/{facility_id}/elevators/{elevator_id}':
+    parameters:
+      - $ref: '#/components/parameters/facility_id'
+      - $ref: '#/components/parameters/elevator_id'
+    get:
+      summary: get Elevator By Elovator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/elevator.json
+      operationId: get-facilities-facility_id-elevators-elevator_id
+    delete:
+      summary: delete Elevator By Elovator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: delete-facilities-facility_id-elevators-elevator_id
+    put:
+      summary: put Elevator By Elovator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/elevator.json
+      operationId: put-facilities-facility_id-elevators-elevator_id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/elevator.post.json
+  /elevator:
+    get:
+      summary: get Elevator By only Elevator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/elevator.json
+      operationId: get-elevator
+    put:
+      summary: put Elevator By only Elevator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/elevator.json
+      operationId: put-elevator
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/elevator.post.json
+    delete:
+      summary: delete Elevator By only Elevator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: delete-elevator
+    parameters:
+      - $ref: '#/components/parameters/elevator_id'
 components:
   schemas: {}
   responses: {}
@@ -272,6 +379,13 @@ components:
       schema:
         type: string
       description: 施設のID
+    elevator_id:
+      name: elevator_id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: エレベーターのID
   examples:
     pgm_linkURL:
       value:
