@@ -10,36 +10,14 @@
       "$ref": "./common/registDateObject.json"
     },
     {
+      "$ref": "./common/updateDateObject.json"
+    },
+    {
+      "$ref": "./facilityParams.v1.json"
+    },
+    {
       "type": "object",
       "properties": {
-        "maps": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "floorNum": {
-                "type": "number"
-              },
-              "mapMeta": {
-                "$ref": "./mapMeta.v2.json"
-              }
-            },
-            "required": [
-              "floorNum",
-              "mapMeta"
-            ]
-          }
-        },
-        "floor": {
-          "type": "number",
-          "description": "建物の実際の階数"
-        },
-        "elevators": {
-          "type": "array",
-          "items": {
-            "$ref": "./elevator.json"
-          }
-        },
         "robots": {
           "type": "array",
           "items": {
@@ -48,14 +26,8 @@
         }
       },
       "required": [
-        "maps",
-        "floor",
-        "elevators",
         "robots"
       ]
-    },
-    {
-      "$ref": "./common/updateDateObject.json"
     }
   ]
 }

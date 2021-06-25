@@ -8,23 +8,17 @@
       "$ref": "./mapParams.v2.json"
     },
     {
-      "$ref": "./owner.v1.json"
-    },
-    {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "各階の名前というよりも、その画像の名前。”NIC6F”のような"
-        },
-        "description": {
-          "type": "string"
-        },
         "pgm_link": {
-          "type": "string"
+          "type": "string",
+          "format": "uri",
+          "description": "このマップのpgmマップを取得するためのAPI URI"
         },
         "costmap_link": {
-          "type": "string"
+          "type": "string",
+          "format": "uri",
+          "description": "このマップのコストマップを取得するためのAPI URI"
         },
         "yaw": {
           "type": "number",
@@ -34,7 +28,6 @@
         }
       },
       "required": [
-        "name",
         "pgm_link",
         "costmap_link",
         "yaw"

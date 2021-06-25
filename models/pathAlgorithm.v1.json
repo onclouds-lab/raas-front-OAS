@@ -1,0 +1,18 @@
+{
+  "title": "pathAlgorithm",
+  "type": "object",
+  "description": "Waypoint間のPath生成アルゴリズム",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "straight",
+        "AStar",
+        "navMesh"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ]
+}

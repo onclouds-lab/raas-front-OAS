@@ -1,0 +1,44 @@
+{
+  "title": "rawRobotParams",
+  "type": "object",
+  "description": "ロボットのリアルタイム情報",
+  "x-examples": {
+    "example-1": {}
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "ユーザにとってのロボットの名前"
+    },
+    "current_map_id": {
+      "type": "string"
+    },
+    "since": {
+      "type": "string",
+      "description": "接続したときのタイムスタンプ",
+      "format": "date-time"
+    },
+    "owner_id": {
+      "type": "string"
+    },
+    "IP": {
+      "type": "string",
+      "description": "IPアドレス。管理者ユーザ向け？",
+      "format": "ipv4"
+    },
+    "point": {
+      "$ref": "./common/point2d.v1.json"
+    },
+    "battery": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "0~100%"
+    }
+  },
+  "required": [
+    "current_map_id",
+    "since",
+    "point"
+  ]
+}

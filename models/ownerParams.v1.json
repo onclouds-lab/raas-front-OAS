@@ -1,0 +1,30 @@
+{
+  "title": "ownerParams",
+  "type": "object",
+  "description": "新規登録のownerのModel。",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "エンドユーザにとってのユーザの名前"
+    },
+    "owned_robot": {
+      "type": "array",
+      "description": "ユーザが所有しているrobotのidリスト",
+      "items": {
+        "type": "string"
+      }
+    },
+    "owned_map": {
+      "type": "array",
+      "description": "ユーザが所有しているmapのidリスト",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "owned_robot",
+    "owned_map"
+  ]
+}
