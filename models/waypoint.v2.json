@@ -1,0 +1,12 @@
+{
+  "title": "waypoint",
+  "description": "waypointのModel。waypointは目的地設定などに使用されます。",
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json"
+    },
+    {
+      "$ref": "./waypointParams.v2.json"
+    }
+  ]
+}

@@ -3,6 +3,14 @@
   "type": "object",
   "description": "YAMLデータ",
   "properties": {
+    "name": {
+      "type": "string",
+      "description": "エンドユーザにとってのマップの名前"
+    },
+    "description": {
+      "type": "string",
+      "description": "このマップの説明。どこで使うかはわからないがとりあえず設定した。"
+    },
     "resolution": {
       "type": "number",
       "description": "PGMマップの解像度。ロボットが使う"
@@ -31,9 +39,13 @@
     },
     "size": {
       "$ref": "./common/size2d.v1.json"
+    },
+    "owner": {
+      "$ref": "./owner.v1.json"
     }
   },
   "required": [
+    "name",
     "resolution",
     "origin",
     "size"

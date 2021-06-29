@@ -1,0 +1,30 @@
+{
+  "title": "pathParams",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "エンドユーザにとってのpath名"
+    },
+    "map_id": {
+      "type": "string",
+      "description": "このpathのマップのid"
+    },
+    "point": {
+      "description": "pathのx,y座標配列",
+      "type": "array",
+      "items": {
+        "$ref": "./common/point2d.v1.json"
+      }
+    },
+    "owner_id": {
+      "type": "string",
+      "description": "pathの所有userのid"
+    }
+  },
+  "required": [
+    "name",
+    "map_id",
+    "point"
+  ]
+}

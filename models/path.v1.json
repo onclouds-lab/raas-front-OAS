@@ -1,0 +1,12 @@
+{
+  "title": "path",
+  "description": "pathのModel",
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json"
+    },
+    {
+      "$ref": "./pathParams.v1.json"
+    }
+  ]
+}

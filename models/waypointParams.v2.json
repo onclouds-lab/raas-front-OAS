@@ -1,0 +1,26 @@
+{
+  "title": "waypointParam",
+  "type": "object",
+  "description": "新規登録のwaypointのModel。waypointは目的地設定などに使用されます。",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "ユーザにとってのwaypointの名前"
+    },
+    "map_id": {
+      "type": "string",
+      "description": "waypointの存在するmapのid"
+    },
+    "point": {
+      "$ref": "./common/point2d.v1.json"
+    },
+    "owner_id": {
+      "type": "string",
+      "description": "waypoint所有userのid"
+    }
+  },
+  "required": [
+    "map_id",
+    "point"
+  ]
+}

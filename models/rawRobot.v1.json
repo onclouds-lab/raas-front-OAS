@@ -1,11 +1,11 @@
 {
-  "title": "owner",
+  "title": "rawRobot",
   "allOf": [
     {
       "$ref": "./common/idObject.v1.json"
     },
     {
-      "$ref": "./ownerParams.v1.json"
+      "$ref": "./rawRobotParams.v1.json"
     }
   ]
 }
