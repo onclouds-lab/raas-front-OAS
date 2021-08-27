@@ -338,6 +338,34 @@ paths:
       operationId: delete-elevator
     parameters:
       - $ref: '#/components/parameters/elevator_id'
+  /attribute:
+    get:
+      summary: getAttributes
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/attribute.json
+      operationId: get-attribute
+  /actions:
+    get:
+      summary: getActions
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../models/action.json
+      operationId: get-actions
 components:
   schemas: {}
   responses: {}

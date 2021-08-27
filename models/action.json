@@ -1,0 +1,22 @@
+{
+  "title": "action",
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method"
+      ]
+    }
+  ],
+  "examples": [
+    "string"
+  ]
+}

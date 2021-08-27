@@ -17,10 +17,21 @@
     "owner_id": {
       "type": "string",
       "description": "waypoint所有userのid"
+    },
+    "action_id": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "attribute_id": {
+      "type": "string"
     }
   },
   "required": [
     "map_id",
-    "point"
+    "point",
+    "action_id",
+    "attribute_id"
   ]
 }

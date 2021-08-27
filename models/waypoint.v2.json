@@ -7,6 +7,17 @@
     },
     {
       "$ref": "./waypointParams.v2.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "facilityID": {
+          "type": "string"
+        },
+        "floor": {
+          "type": "number"
+        }
+      }
     }
   ]
 }
