@@ -14,7 +14,7 @@
       "description": "pathのx,y座標配列",
       "type": "array",
       "items": {
-        "$ref": "./common/point2d.v1.json"
+        "$ref": "./common/point3d.json"
       }
     },
     "owner_id": {

@@ -12,15 +12,28 @@
       "description": "waypointの存在するmapのid"
     },
     "point": {
-      "$ref": "./common/point2d.v1.json"
+      "$ref": "./common/point3d.json"
     },
     "owner_id": {
       "type": "string",
       "description": "waypoint所有userのid"
+    },
+    "attribute": {
+      "type": "string",
+      "description": "attributeのListは、別のAPIから取得できる？"
+    },
+    "action": {
+      "type": "array",
+      "description": "actionのListは、別のAPIから取得できる。",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [
     "map_id",
-    "point"
+    "point",
+    "attribute",
+    "action"
   ]
 }
