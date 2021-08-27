@@ -1,0 +1,15 @@
+{
+  "title": "robot.response",
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json"
+    },
+    {
+      "$ref": "./robotParams.v1.json"
+    },
+    {
+      "$ref": "./robotModel.json"
+    }
+  ],
+  "examples": []
+}
