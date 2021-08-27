@@ -626,7 +626,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/robot.v1.json
+                $ref: ../models/robot.response.json
       description: |
         ロボットDBレコード取得
         get one robot DB record
@@ -689,7 +689,7 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: ../models/robot.v1.json
+                      $ref: ../models/robot.response.json
               examples:
                 example-1:
                   value:
@@ -798,6 +798,45 @@ paths:
                       name: offline
       tags:
         - rawRobot
+  /robotTypes:
+    get:
+      summary: getRobotTypes
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pagenate:
+                    $ref: ../models/common/pagenateTemplate.v1.json
+                  data:
+                    type: array
+                    items:
+                      $ref: ../models/robotType.json
+      operationId: get-robotTypes
+      parameters: []
+  /robotModels:
+    get:
+      summary: getRobotModels
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pagenate:
+                    $ref: ../models/common/pagenateTemplate.v1.json
+                  data:
+                    type: array
+                    items:
+                      $ref: ../models/robotModel.json
+      operationId: get-robotModels
 components:
   schemas: {}
   responses: {}
