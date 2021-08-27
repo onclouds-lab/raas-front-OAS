@@ -1,451 +1,13 @@
-openapi: 3.0.1
-tags:
-  - name: facility
-  - name: robot
-  - name: map
-  - name: waypoint
-  - name: path
-  - name: owner
-  - name: rawRobot
+openapi: 3.1.0
 info:
   title: RaaSWebAPIv2
   version: '1.0'
-  contact:
-    name: onClouds
-  description: rass APiv2
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /maps:
-    get:
-      summary: Your GET endpoint
-      tags:
-        - map
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  pagenate:
-                    $ref: ../models/common/pagenateTemplate.v1.json
-                  data:
-                    type: array
-                    items:
-                      $ref: ../models/mapMeta.v2.json
-                required:
-                  - pagenate
-                  - data
-      operationId: getMaps
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: search
-          description: 検索文字列
-        - schema:
-            type: number
-          in: query
-          name: page
-          description: ページ数
-        - schema:
-            type: number
-          in: query
-          name: limit
-          description: 表示数
-      description: 地図一覧を取得
-    parameters: []
-    post:
-      summary: add a new map
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/mapMeta.v2.json
-      description: 新規に地図を登録する
-      operationId: createMap
-      tags:
-        - map
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              title: createMapType
-              properties:
-                param:
-                  $ref: ../models/mapParams.v2.json
-                pgm:
-                  type: string
-                  description: バイナリ型のpgmファイル
-                  format: binary
-              required:
-                - param
-                - pgm
-        description: ''
-  '/maps/{mapId}':
-    description: mapの取得
-    get:
-      summary: get MapMeta
-      tags:
-        - map
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/mapMeta.v2.json
-      operationId: getMap
-      description: Idを指定してMapの取得
-    parameters:
-      - schema:
-          type: string
-        name: mapId
-        in: path
-        required: true
-    delete:
-      summary: ''
-      operationId: deleteMap
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-      description: map 削除
-      tags:
-        - map
-    put:
-      summary: update a map
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/mapMeta.v2.json
-      description: 地図の内容を変更
-      parameters: []
-      operationId: updateMap
-      tags:
-        - map
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: ../models/mapParams.v2.json
-        description: ''
-  '/maps/{mapId}/pgm':
-    parameters:
-      - schema:
-          type: string
-        name: mapId
-        in: path
-        required: true
-    get:
-      summary: get pgm url
-      tags:
-        - map
-      responses:
-        '200':
-          description: OK
-      operationId: getPGMmapURL
-      description: 詳細説明なし
-    put:
-      summary: ''
-      operationId: putPGMmap
-      responses:
-        '200':
-          description: OK
-      tags:
-        - map
-      description: 詳細説明なし
-  '/maps/{mapId}/cost':
-    parameters:
-      - schema:
-          type: string
-        name: mapId
-        in: path
-        required: true
-    get:
-      summary: Your GET endpoint
-      tags:
-        - map
-      responses:
-        '200':
-          description: OK
-      operationId: getCostmapURL
-      description: 詳細説明なし
-    put:
-      summary: ''
-      operationId: putCostmap
-      responses:
-        '200':
-          description: OK
-      description: 詳細説明なし
-      tags:
-        - map
-  /facilities:
-    get:
-      summary: Your GET endpoint
-      tags:
-        - facility
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  pagenate:
-                    $ref: ../models/common/pagenateTemplate.v1.json
-                  data:
-                    type: array
-                    items:
-                      $ref: ../models/facility.json
-      operationId: getFacilities
-      description: 詳細説明なし
-    parameters: []
-    post:
-      summary: post facility
-      operationId: createFacility
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/facility.json
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: ../models/facilityParams.v1.json
-      description: Facilityの作成
-      tags:
-        - facility
-  '/facilities/{facilityId}':
-    parameters:
-      - schema:
-          type: string
-        name: facilityId
-        in: path
-        required: true
-    get:
-      summary: get Facility
-      tags:
-        - facility
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/facility.json
-      operationId: getFacility
-      description: 詳細説明なし
-    delete:
-      summary: ''
-      operationId: deleteFacility
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-      description: facilityの削除
-      tags:
-        - facility
-    put:
-      summary: Update a Facility
-      operationId: updateFacility
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/facility.json
-      description: facilityの更新
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: ../models/facilityParams.v1.json
-      tags:
-        - facility
-  /waypoints:
-    get:
-      summary: get waypoints
-      tags:
-        - waypoint
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  pagenate:
-                    $ref: ../models/common/pagenateTemplate.v1.json
-                  data:
-                    $ref: ../models/waypoint.v2.json
-                required:
-                  - pagenate
-                  - data
-      operationId: getWaypoints
-      description: waypointの一覧を取得
-      parameters:
-        - schema:
-            type: integer
-          in: query
-          name: page
-        - schema:
-            type: integer
-          in: query
-          name: limit
-    post:
-      summary: add new waypoint
-      operationId: createWaypoint
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/waypoint.v2.json
-      description: waypointの追加
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: ../models/waypointParams.v2.json
-      tags:
-        - waypoint
-  '/waypoints/{waypointID}':
-    parameters:
-      - schema:
-          type: string
-        name: waypointID
-        in: path
-        required: true
-    get:
-      summary: Your GET endpoint
-      tags:
-        - waypoint
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/waypoint.v2.json
-      operationId: getWaypoint
-      description: 指定されたwaypointIDのwaypointを返す
-      parameters: []
-    put:
-      summary: ''
-      operationId: updateWaypoint
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/waypoint.v2.json
-      description: waypoint 変更
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: ../models/waypointParams.v2.json
-      tags:
-        - waypoint
-    delete:
-      summary: ''
-      operationId: deleteWaypoint
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-      description: waypointの削除
-      tags:
-        - waypoint
-  /autopath:
-    post:
-      summary: get auto generate path
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: ../models/common/point2d.v1.json
-              examples:
-                '0000000000000001':
-                  value:
-                    - x: -3.2
-                      'y': 7
-                    - x: -1.2
-                      'y': 12.5
-                    - x: 1.8
-                      'y': 24.3
-                    - x: 3.8
-                      'y': 32
-      description: 自動生成したpathを取得
-      operationId: generatePath
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              title: GeneratePathType
-              description: waypoint array
-              properties:
-                points:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      point:
-                        $ref: ../models/common/point2d.v1.json
-                    required:
-                      - point
-                algorithms:
-                  type: array
-                  items:
-                    $ref: ../models/pathAlgorithm.v1.json
-              required:
-                - points
-        description: ''
-      tags:
-        - path
-      parameters:
-        - schema:
-            type: string
-          in: query
-          name: map_id
-          description: Pathを生成するmapのID
   /owners:
     get:
-      summary: Your GET endpoint
+      summary: get owners
       tags:
         - owner
       responses:
@@ -457,347 +19,325 @@ paths:
                 type: object
                 properties:
                   pagenate:
-                    $ref: ../models/common/pagenateTemplate.v1.json
+                    $ref: ../models/pagenateTemplate.v1.json
                   data:
-                    $ref: ../models/owner.v1.json
+                    type: array
+                    items:
+                      $ref: ../models/owner.v1.json
+              examples:
+                example-1:
+                  value:
+                    data:
+                      - id: 0123456789aaabbb
+                        name: owner1
+                        owned_robot: []
+                        owned_map: []
       operationId: getOwners
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/limit'
       description: Ownerの一覧を取得
-      parameters:
-        - schema:
-            type: integer
-          in: query
-          name: page
-        - schema:
-            type: integer
-          in: query
-          name: limit
-  /paths:
+  '/maps/{map_id}':
     get:
-      summary: get all paths
+      summary: get MapMeta
+      tags: []
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  pagenate:
-                    $ref: ../models/common/pagenateTemplate.v1.json
-                  data:
-                    type: array
-                    items:
-                      $ref: ../models/path.v1.json
+                $ref: ../models/mapMeta.v2.json
               examples:
                 example-1:
                   value:
-                    data:
-                      - id: 0123456789aaaaaa
-                        name: path-1
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -18.69999999999999
-                            'y': 26.400000000000006
-                          - x: 12
-                            'y': 15
-                        owner_id: 0123456789aaabbb
-                      - id: '0000000000000001'
-                        name: path-01212
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -2.4499999999999886
-                            'y': 4.3500000000000085
-                          - x: 11.5
-                            'y': -5
-                        owner_id: 0123456789aaabbb
-                      - id: '0000000000000003'
-                        name: path-03
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -85.5
-                            'y': 4.35
-                          - x: 61.5
-                            'y': 4
-                        owner_id: 0123456789aaabbb
-                      - id: '0000000000000004'
-                        name: path-04
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -85.5
-                            'y': -85.35
-                          - x: 61.5
-                            'y': 64
-                        owner_id: 0123456789aaabbb
-      operationId: getPaths
-      description: pathの一覧を取得
-      tags:
-        - path
-      parameters:
-        - schema:
-            type: integer
-          in: query
-          name: page
-        - schema:
-            type: integer
-          in: query
-          name: limit
+                    id: '0000000000000054'
+                    name: ToyotaStadiumv2
+                    description: ToyotaStadium-res0.1
+                    resolution: 0.1
+                    origin:
+                      x: -200
+                      'y': -200
+                    negate: false
+                    occupied_thresh: 0.65
+                    free_thresh: 0.196
+                    size:
+                      width: 4000
+                      height: 4000
+                    pgm_link: '{url}/maps/{map_id}/pgm'
+                    costmap_link: '{url}/maps/{map_id}/cost'
+                    yaw: 0
+      operationId: get-mapMeta
     post:
-      summary: add new path
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/path.v1.json
-      description: pathの追加
-      operationId: createPath
-      tags:
-        - path
+      summary: post new MapMeta
+      tags: []
+      responses: {}
+      operationId: post-mapMeta
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/pathParams.v1.json
-  '/paths/{pathID}':
+              allOf:
+                - $ref: ../models/common/updateDateObject.json
+                - $ref: ../models/mapParams.v2.json
     parameters:
-      - schema:
-          type: string
-        name: pathID
-        in: path
-        required: true
-    get:
-      summary: get a Path
-      tags:
-        - path
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/path.v1.json
-      operationId: getPath
-      description: Pathの取得
-    put:
-      summary: update a path
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/path.v1.json
-      description: Pathの変更
-      operationId: updatePath
-      tags:
-        - path
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: ../models/pathParams.v1.json
-    delete:
-      summary: delete a path
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-      description: Pathの削除
-      operationId: deletePath
-      tags:
-        - path
-  '/robots/{robotID}':
+      - $ref: '#/components/parameters/map_id'
+  '/maps/{map_id}/params':
     parameters:
-      - schema:
-          type: string
-        name: robotID
-        in: path
-        required: true
-    get:
-      summary: get one robot info
+      - $ref: '#/components/parameters/map_id'
+    post:
+      summary: post map params
+      tags: []
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: ../models/robot.v1.json
-      description: |
-        ロボットDBレコード取得
-        get one robot DB record
-      parameters: []
-      operationId: getRobot
-      tags:
-        - robot
-    put:
-      summary: update a robot
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/robot.v1.json
-      description: |-
-        ロボットDB変更
-        update robot DB
-      parameters: []
-      operationId: updateRobot
-      tags:
-        - robot
+                $ref: ../models/mapParams.v2.json
+      operationId: post-mapMeta-id-params
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/robotParams.v1.json
-        description: ''
-    delete:
-      summary: delete a robot
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-      description: |-
-        ロボットDB削除
-        delete a robot form robot DB
-      operationId: deleteRobot
-      tags:
-        - robot
-  /robots:
+              $ref: ../models/mapParams.v2.json
     get:
-      summary: get robots
+      summary: get map params
+      tags: []
       responses:
         '200':
           description: OK
-          headers: {}
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  pagenate:
-                    $ref: ../models/common/pagenateTemplate.v1.json
-                  data:
-                    type: array
-                    items:
-                      $ref: ../models/robot.v1.json
+                $ref: ../models/mapParams.v2.json
+      operationId: get-mapMeta-id-params
+  '/maps/{map_id}/pgm':
+    parameters:
+      - $ref: '#/components/parameters/map_id'
+    get:
+      summary: get pgm url
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/url.v1.json
               examples:
                 example-1:
-                  value:
-                    data:
-                      - id: '0000000000000001'
-                        name: test_robot
-                        init_map_id: '0000000000000001'
-                        init_slam_map_version: '1'
-                        owner_id: 0123456789aaabbb
-                      - id: '0000000000000002'
-                        name: ロボット２３号
-                        init_map_id: '0000000000000001'
-                        init_slam_map_version: '1'
-                        owner_id: 0123456789aaabbb
-      description: |-
-        ロボットDB一覧取
-        get all robot DB record
-
-        絞り込みはbodyで
-        TODO: ページング
+                  $ref: '#/components/examples/pgm_linkURL'
+      operationId: getPGMmapURL
+    put:
+      summary: ''
+      operationId: putPGMmap
+      responses:
+        '200':
+          description: OK
+  '/maps/{map_id}/cost':
+    parameters:
+      - $ref: '#/components/parameters/map_id'
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/url.v1.json
+              examples:
+                example-1:
+                  $ref: '#/components/examples/costmap_linkURL'
+      operationId: getCostmapURL
+    put:
+      summary: ''
+      operationId: putCostmap
+      responses:
+        '200':
+          description: OK
+  '/facilities/{facility_id}':
+    parameters:
+      - $ref: '#/components/parameters/facility_id'
+    get:
+      summary: get Facility
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/facility.json
+      operationId: getFacilityByID
+    post:
+      summary: post Facility
+      operationId: potFacilityByID
+      responses:
+        '200':
+          description: OK
+  /facilities/:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: ../models/common/pagenateTemplate.v1.json
+                  - type: array
+                    items:
+                      $ref: ../models/facility.json
+      operationId: getFacilities
+  /maps/:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: ../models/common/pagenateTemplate.v1.json
+                  - type: array
+                    items:
+                      $ref: ../models/mapMeta.v2.json
+      operationId: get-maps
       parameters:
-        - schema:
-            type: integer
-            default: '1'
-          in: query
-          name: page
-        - schema:
-            type: integer
-          in: query
-          name: limit
         - schema:
             type: string
           in: query
-          name: sort
-      operationId: getRobots
-      tags:
-        - robot
-    post:
-      summary: add a new robot
+          name: search
+          description: 検索文字列
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/limit'
+  '/facilities/{facility_id}/elevators':
+    parameters:
+      - $ref: '#/components/parameters/facility_id'
+    get:
+      summary: getElevetorsByFacilityID
+      tags: []
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: ../models/robot.v1.json
-      operationId: createRobot
-      description: |-
-        ロボットDB追加
-        add new robot to robot DB
-      tags:
-        - robot
+                allOf:
+                  - $ref: ../models/common/pagenateTemplate.v1.json
+                  - type: array
+                    items:
+                      $ref: ../models/elevator.json
+      operationId: get-facility-facility_id-elevators
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/limit'
+    post:
+      summary: postElevetorsByFacilityID
+      operationId: post-facilities-facility_id-elevators
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - description: 登録された分だけ返す
+                    items:
+                      $ref: ../models/elevator.json
+                type: array
       requestBody:
         content:
           application/json:
             schema:
-              $ref: ../models/robotParams.v1.json
-  '/rawRobot/{robotID}':
+              allOf:
+                - maxItems: 20
+                  uniqueItems: true
+                  items:
+                    $ref: ../models/elevator.post.json
+              type: array
+  '/facilities/{facility_id}/elevators/{elevator_id}':
     parameters:
-      - schema:
-          type: string
-        name: robotID
-        in: path
-        required: true
+      - $ref: '#/components/parameters/facility_id'
+      - $ref: '#/components/parameters/elevator_id'
     get:
-      summary: get robot infos
-      description: |-
-        現在のロボット情報取得
-        get robot infomation
-      operationId: getRawRobot
+      summary: get Elevator By Elovator ID
+      tags: []
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema:
-                $ref: ../models/rawRobot.v1.json
-              examples:
-                '0000000000000001':
-                  value:
-                    id: '0000000000000001'
-                    name: test_robot
-                    current_map_id: '0000000000000001'
-                    since: '2020-01-01T01:01:01Z'
-                    IP: 100.100.100.001
-                    point:
-                      x: -3.2
-                      'y': 7
-                    battery: 50
-                    task:
-                      id: '123'
-                      name: idoling
-                '0000000000000002':
-                  value:
-                    id: '0000000000000002'
-                    name: ロボット２３号
-                    current_map_id: '0000000000000001'
-                    since: '2020-01-01T01:01:01Z'
-                    IP: 100.100.100.002
-                    point:
-                      x: -3
-                      'y': 40
-                    battery: 80
-                    task:
-                      id: '124'
-                      name: offline
-      tags:
-        - rawRobot
+                $ref: ../models/elevator.json
+      operationId: get-facilities-facility_id-elevators-elevator_id
+    delete:
+      summary: delete Elevator By Elovator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: delete-facilities-facility_id-elevators-elevator_id
+    put:
+      summary: put Elevator By Elovator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/elevator.json
+      operationId: put-facilities-facility_id-elevators-elevator_id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/elevator.post.json
+  /elevator:
+    get:
+      summary: get Elevator By only Elevator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/elevator.json
+      operationId: get-elevator
+    put:
+      summary: put Elevator By only Elevator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/elevator.json
+      operationId: put-elevator
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/elevator.post.json
+    delete:
+      summary: delete Elevator By only Elevator ID
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: delete-elevator
+    parameters:
+      - $ref: '#/components/parameters/elevator_id'
 components:
   schemas: {}
   responses: {}
@@ -808,4 +348,62 @@ components:
       required: true
       schema:
         type: string
-  securitySchemes: {}
+        example: '0000000000000013'
+        minLength: 16
+        maxLength: 16
+        pattern: '[0-9]{16}'
+    page:
+      name: page
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        minimum: 1
+        default: 1
+      description: ページ数
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 100
+        minimum: 1
+      description: 表示数
+    facility_id:
+      name: facility_id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: 施設のID
+    elevator_id:
+      name: elevator_id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: エレベーターのID
+  examples:
+    pgm_linkURL:
+      value:
+        description: Example shared example
+        type: object
+        properties:
+          url:
+            type: string
+            example: 'http://localhost/pgmimage.pgm'
+        required:
+          - url
+    costmap_linkURL:
+      value:
+        description: Example shared example
+        type: object
+        properties:
+          url:
+            type: string
+            example: 'http://localhost/costmapimage.png'
+        required:
+          - url

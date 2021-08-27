@@ -1,0 +1,24 @@
+{
+  "title": "Elevator",
+  "type": "object",
+  "description": "構造物としてのエレベーター\nロボット、籠とは別。という意味。",
+  "properties": {
+    "postion": {
+      "$ref": "./common/point3d.json"
+    },
+    "stopFloor": {
+      "type": "array",
+      "description": "停止可能な階",
+      "items": {
+        "type": "number"
+      }
+    },
+    "supportTypes": {
+      "$ref": "./robotType.v2.json"
+    }
+  },
+  "required": [
+    "stopFloor",
+    "supportTypes"
+  ]
+}

@@ -25,7 +25,6 @@
         "position",
         "stopFloor",
         "supportTypes"
-      ]
-    }
-  ]
+      ],
+  "description": "構造物としてのエレベーター\nロボット、籠とは別。という意味。"
 }
