@@ -8,7 +8,12 @@
       "$ref": "./robotParams.v1.json"
     },
     {
-      "$ref": "./robotModel.json"
+      "properties": {
+        "model": {
+          "$ref": "./robotModel.json"
+        }
+      },
+      "type": "object"
     }
   ],
   "examples": []

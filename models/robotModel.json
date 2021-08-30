@@ -29,6 +29,12 @@
         },
         "Description": {
           "type": "string"
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "$ref": "./robotType.json"
+          }
         }
       },
       "required": [
@@ -37,12 +43,6 @@
         "max_acceleration ",
         "max_angular_speed"
       ]
-    },
-    {
-      "type": "array",
-      "items": {
-        "$ref": "./robotType.json"
-      }
     }
   ],
   "description": "ロボットの諸元、及び実行可能な動作"
