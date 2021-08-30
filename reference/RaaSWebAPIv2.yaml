@@ -798,7 +798,8 @@ paths:
   /robotTypes:
     get:
       summary: getRobotTypes
-      tags: []
+      tags:
+        - robotType
       responses:
         '200':
           description: OK
@@ -815,10 +816,31 @@ paths:
                       $ref: ../models/robotType.json
       operationId: get-robotTypes
       parameters: []
+  '/robotTypes/{robotType_id}':
+    parameters:
+      - schema:
+          type: string
+        name: robotType_id
+        in: path
+        required: true
+    get:
+      summary: getRobotType
+      tags:
+        - robotType
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: ../models/robotType.json
+      operationId: get-robotTypes-robotType_id
   /robotModels:
     get:
       summary: getRobotModels
-      tags: []
+      tags:
+        - robotModel
       responses:
         '200':
           description: OK
@@ -834,6 +856,25 @@ paths:
                     items:
                       $ref: ../models/robotModel.json
       operationId: get-robotModels
+  '/robotModles/{robotModel_id}':
+    parameters:
+      - schema:
+          type: string
+        name: robotModel_id
+        in: path
+        required: true
+    get:
+      summary: getRobotModel
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: ../models/robotModel.json
+      operationId: get-robotModles-robotModel_id
 components:
   schemas: {}
   responses: {}
