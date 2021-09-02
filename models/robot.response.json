@@ -8,12 +8,15 @@
       "$ref": "./robotParams.post.json"
     },
     {
+      "type": "object",
       "properties": {
         "model": {
           "$ref": "./robotModel.json"
+        },
+        "owner": {
+          "$ref": "./owner.v1.json"
         }
-      },
-      "type": "object"
+      }
     }
   ],
   "examples": []

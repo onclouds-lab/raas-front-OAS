@@ -395,20 +395,8 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: ../models/common/point2d.v1.json
-              examples:
-                '0000000000000001':
-                  value:
-                    - x: -3.2
-                      'y': 7
-                    - x: -1.2
-                      'y': 12.5
-                    - x: 1.8
-                      'y': 24.3
-                    - x: 3.8
-                      'y': 32
+                $ref: ../models/roboOrder.json
+              examples: {}
       description: 自動生成したpathを取得
       operationId: generatePath
       requestBody:
@@ -425,7 +413,9 @@ paths:
                     type: object
                     properties:
                       point:
-                        $ref: ../models/common/point2d.v1.json
+                        $ref: ../models/common/pointFacility.json
+                      attribute:
+                        type: string
                     required:
                       - point
                 algorithms:
@@ -441,8 +431,8 @@ paths:
         - schema:
             type: string
           in: query
-          name: map_id
-          description: Pathを生成するmapのID
+          name: facility_id
+          description: Pathを生成するfacilityのID
   /owners:
     get:
       summary: Your GET endpoint
@@ -875,6 +865,23 @@ paths:
                 allOf:
                   - $ref: ../models/robotModel.json
       operationId: get-robotModles-robotModel_id
+  '/sendOrder/{robot_id}':
+    parameters:
+      - schema:
+          type: string
+        name: robot_id
+        in: path
+        required: true
+    post:
+      summary: sendOrder
+      tags: []
+      responses: {}
+      operationId: post-sendOrder-robot_id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/roboOrder.json
 components:
   schemas: {}
   responses: {}

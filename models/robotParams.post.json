@@ -12,15 +12,15 @@
         },
         "init_slam_map_version": {
           "type": "string"
-        },
-        "owner_id": {
-          "type": "string"
         }
       }
     },
     {
       "properties": {
         "model": {
+          "$ref": "./common/idObject.v1.json"
+        },
+        "owner": {
           "$ref": "./common/idObject.v1.json"
         }
       }
