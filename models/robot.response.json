@@ -5,7 +5,7 @@
       "$ref": "./common/idObject.v1.json"
     },
     {
-      "$ref": "./robotParams.v1.json"
+      "$ref": "./robotParams.post.json"
     },
     {
       "properties": {
