@@ -1,45 +1,40 @@
 {
   "title": "facilityParams",
-  "x-internal": false,
+  "type": "object",
   "description": "",
-  "allOf": [
-    {
-      "properties": {
-        "maps": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "floorNum": {
-                "type": "number"
-              },
-              "mapMeta": {
-                "$ref": "./mapMeta.v2.json"
-              }
-            },
-            "required": [
-              "floorNum",
-              "mapMeta"
-            ]
+  "properties": {
+    "maps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "floorNum": {
+            "type": "number"
+          },
+          "mapMeta": {
+            "$ref": "./mapMeta.v2.json"
           }
         },
-        "floor": {
-          "type": "number",
-          "description": "建物の実際の階数"
-        },
-        "elevators": {
-          "type": "array",
-          "items": {
-            "$ref": "./elevator.json"
-          }
-        }
-      },
-      "required": [
-        "maps",
-        "floor",
-        "elevators"
-      ]
+        "required": [
+          "floorNum",
+          "mapMeta"
+        ]
+      }
+    },
+    "floor": {
+      "type": "number",
+      "description": "建物の実際の階数"
+    },
+    "elevators": {
+      "type": "array",
+      "items": {
+        "$ref": "./elevator.json"
+      }
     }
-  ],
-  "type": "object"
+  },
+  "required": [
+    "maps",
+    "floor",
+    "elevators"
+  ]
 }
