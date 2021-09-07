@@ -395,7 +395,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/roboOrder.json
+                type: array
+                items:
+                  $ref: ../models/roboOrder.json
               examples: {}
       description: 自動生成したpathを取得
       operationId: generatePath
@@ -804,7 +806,7 @@ paths:
                     type: array
                     items:
                       $ref: ../models/robotType.json
-      operationId: get-robotTypes
+      operationId: getRobotTypes
       parameters: []
   '/robotTypes/{robotType_id}':
     parameters:
@@ -823,8 +825,7 @@ paths:
           content:
             application/json:
               schema:
-                allOf:
-                  - $ref: ../models/robotType.json
+                $ref: ../models/robotType.json
       operationId: getRobotType
   /robotModels:
     get:
@@ -862,8 +863,7 @@ paths:
           content:
             application/json:
               schema:
-                allOf:
-                  - $ref: ../models/robotModel.json
+                $ref: ../models/robotModel.json
       operationId: getRobotModel
   '/sendOrder/{robot_id}':
     parameters:
@@ -889,7 +889,9 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../models/roboOrder.json
+              type: array
+              items:
+                $ref: ../models/roboOrder.json
 components:
   schemas: {}
   responses: {}

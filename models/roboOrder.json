@@ -1,16 +1,13 @@
 {
   "title": "roboOrder",
-  "type": "array",
+  "type": "object",
   "description": "move:ロボットを動かす\n  arg:Array[{point:pointFaciliy,attribute:string}]",
-  "items": {
-    "type": "object",
-    "properties": {
-      "method": {
-        "type": "string"
-      },
-      "argment": {
-        "type": "object"
-      }
+  "properties": {
+    "method": {
+      "type": "string"
+    },
+    "argment": {
+      "type": "object"
     }
   }
 }
