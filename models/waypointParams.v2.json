@@ -1,39 +1,37 @@
 {
   "title": "waypointParam",
-  "type": "object",
   "description": "新規登録のwaypointのModel。waypointは目的地設定などに使用されます。",
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "ユーザにとってのwaypointの名前"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "ユーザにとってのwaypointの名前"
+        },
+        "facility": {
+          "$ref": "./common/idObject.v1.json"
+        },
+        "owner": {
+          "$ref": "./common/idObject.v1.json"
+        },
+        "action": {
+          "type": "array",
+          "description": "actionのListは、別のAPIから取得できる。",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "facility",
+        "owner",
+        "action"
+      ]
     },
-    "map_id": {
-      "type": "string",
-      "description": "waypointの存在するmapのid"
-    },
-    "point": {
-      "$ref": "./common/point3d.json"
-    },
-    "owner_id": {
-      "type": "string",
-      "description": "waypoint所有userのid"
-    },
-    "attribute": {
-      "type": "string",
-      "description": "attributeのListは、別のAPIから取得できる？"
-    },
-    "action": {
-      "type": "array",
-      "description": "actionのListは、別のAPIから取得できる。",
-      "items": {
-        "type": "string"
-      }
+    {
+      "$ref": "./common/floorAttribute.json"
     }
-  },
-  "required": [
-    "map_id",
-    "point",
-    "attribute",
-    "action"
   ]
 }

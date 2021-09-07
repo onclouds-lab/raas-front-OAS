@@ -1,44 +1,43 @@
 {
   "title": "rawRobotParams",
-  "type": "object",
   "description": "ロボットのリアルタイム情報",
   "x-examples": {
     "example-1": {}
   },
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "ユーザにとってのロボットの名前"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "ユーザにとってのロボットの名前"
+        },
+        "since": {
+          "type": "string",
+          "description": "接続したときのタイムスタンプ",
+          "format": "date-time"
+        },
+        "IP": {
+          "type": "string",
+          "description": "IPアドレス。管理者ユーザ向け？",
+          "format": "ipv4"
+        },
+        "battery": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "0~100%"
+        },
+        "owner": {
+          "$ref": "./common/idObject.v1.json"
+        }
+      },
+      "required": [
+        "since"
+      ]
     },
-    "current_map_id": {
-      "type": "string"
-    },
-    "since": {
-      "type": "string",
-      "description": "接続したときのタイムスタンプ",
-      "format": "date-time"
-    },
-    "owner_id": {
-      "type": "string"
-    },
-    "IP": {
-      "type": "string",
-      "description": "IPアドレス。管理者ユーザ向け？",
-      "format": "ipv4"
-    },
-    "point": {
-      "$ref": "./common/point3d.json"
-    },
-    "battery": {
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 100,
-      "description": "0~100%"
+    {
+      "$ref": "./common/pointMap.json"
     }
-  },
-  "required": [
-    "current_map_id",
-    "since",
-    "point"
   ]
 }
