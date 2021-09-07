@@ -3,6 +3,9 @@
   "type": "object",
   "description": "",
   "properties": {
+    "name": {
+      "type": "string"
+    },
     "maps": {
       "type": "array",
       "items": {
@@ -33,6 +36,7 @@
     }
   },
   "required": [
+    "name",
     "maps",
     "floor",
     "elevators"
