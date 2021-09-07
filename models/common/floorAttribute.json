@@ -1,0 +1,17 @@
+{
+  "title": "floorAttribute",
+  "allOf": [
+    {
+      "$ref": "./pointFloor.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "type": "string",
+          "description": "attributeのListは、別のAPIから取得できる。"
+        }
+      }
+    }
+  ]
+}

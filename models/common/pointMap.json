@@ -1,0 +1,13 @@
+{
+  "title": "pointMap",
+  "type": "object",
+  "properties": {
+    "map": {
+      "$ref": "./idObject.v1.json"
+    },
+    "point": {
+      "$ref": "./point3d.json"
+    }
+  },
+  "description": "Map上の位置を示す。Map座標系"
+}

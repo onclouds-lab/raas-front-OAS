@@ -1,0 +1,17 @@
+{
+  "title": "pointFloor",
+  "type": "object",
+  "properties": {
+    "floor": {
+      "type": "integer"
+    },
+    "point": {
+      "$ref": "./point3d.json"
+    }
+  },
+  "required": [
+    "floor",
+    "point"
+  ],
+  "description": "Floorの場所を表す。Floor座標系"
+}
