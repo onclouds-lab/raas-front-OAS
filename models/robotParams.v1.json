@@ -1,30 +1,29 @@
 {
   "title": "robotParams",
-  "allOf": [
-    {
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "エンドユーザにとってのロボットの名前"
-        },
-        "init_map_id": {
-          "type": "string"
-        },
-        "init_slam_map_version": {
-          "type": "string"
-        },
-        "owner_id": {
-          "type": "string"
-        }
-      }
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "エンドユーザにとってのロボットの名前"
     },
-    {
-      "properties": {
-        "model": {
-          "$ref": "./common/idObject.v1.json"
-        }
-      }
+    "init_map_id": {
+      "type": "string"
+    },
+    "init_slam_map_version": {
+      "type": "string"
+    },
+    "model": {
+      "$ref": "./common/idObject.v1.json"
+    },
+    "owner": {
+      "$ref": "./common/idObject.v1.json"
     }
-  ],
-  "type": "object"
+  },
+  "required": [
+    "name",
+    "init_map_id",
+    "init_slam_map_version",
+    "model",
+    "owner"
+  ]
 }

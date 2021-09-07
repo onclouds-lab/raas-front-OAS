@@ -626,7 +626,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/robot.response.json
+                $ref: ../models/robot.v1.json
       description: |
         ロボットDBレコード取得
         get one robot DB record
@@ -689,7 +689,7 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: ../models/robot.response.json
+                      $ref: ../models/robot.v1.json
               examples: {}
       description: |-
         ロボットDB一覧取
