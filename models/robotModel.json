@@ -1,0 +1,49 @@
+{
+  "title": "robotModel",
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "型番"
+        },
+        "radius": {
+          "type": "number",
+          "description": "ロボットの大きさ（半径）[m]"
+        },
+        "max_speed": {
+          "type": "number",
+          "description": "最大速度[m/s]"
+        },
+        "max_acceleration ": {
+          "type": "number",
+          "description": "最大加速度[m/(s^2)]"
+        },
+        "max_angular_speed": {
+          "type": "number",
+          "description": "最大角速度[rad/s]"
+        },
+        "description": {
+          "type": "string"
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "$ref": "./robotType.json"
+          }
+        }
+      },
+      "required": [
+        "radius",
+        "max_speed",
+        "max_acceleration ",
+        "max_angular_speed"
+      ]
+    }
+  ],
+  "description": "ロボットの諸元、及び実行可能な動作"
+}

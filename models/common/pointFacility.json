@@ -1,0 +1,15 @@
+{
+  "title": "pointFacility",
+  "type": "object",
+  "properties": {
+    "point": {
+      "$ref": "./point3d.json"
+    },
+    "floor": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "floor"
+  ]
+}
