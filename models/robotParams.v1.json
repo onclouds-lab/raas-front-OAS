@@ -12,8 +12,18 @@
     "init_slam_map_version": {
       "type": "string"
     },
-    "owner_id": {
-      "type": "string"
+    "model": {
+      "$ref": "./common/idObject.v1.json"
+    },
+    "owner": {
+      "$ref": "./common/idObject.v1.json"
     }
-  }
+  },
+  "required": [
+    "name",
+    "init_map_id",
+    "init_slam_map_version",
+    "model",
+    "owner"
+  ]
 }

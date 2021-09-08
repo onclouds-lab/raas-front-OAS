@@ -397,18 +397,8 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../models/common/point2d.v1.json
-              examples:
-                '0000000000000001':
-                  value:
-                    - x: -3.2
-                      'y': 7
-                    - x: -1.2
-                      'y': 12.5
-                    - x: 1.8
-                      'y': 24.3
-                    - x: 3.8
-                      'y': 32
+                  $ref: ../models/roboOrder.json
+              examples: {}
       description: 自動生成したpathを取得
       operationId: generatePath
       requestBody:
@@ -425,7 +415,9 @@ paths:
                     type: object
                     properties:
                       point:
-                        $ref: ../models/common/point2d.v1.json
+                        $ref: ../models/common/pointFacility.json
+                      attribute:
+                        type: string
                     required:
                       - point
                 algorithms:
@@ -441,8 +433,8 @@ paths:
         - schema:
             type: string
           in: query
-          name: map_id
-          description: Pathを生成するmapのID
+          name: facility_id
+          description: Pathを生成するfacilityのID
   /owners:
     get:
       summary: Your GET endpoint
@@ -498,8 +490,10 @@ paths:
                         point:
                           - x: -18.69999999999999
                             'y': 26.400000000000006
+                            z: 0
                           - x: 12
                             'y': 15
+                            z: 0
                         owner_id: 0123456789aaabbb
                       - id: '0000000000000001'
                         name: path-01212
@@ -507,8 +501,10 @@ paths:
                         point:
                           - x: -2.4499999999999886
                             'y': 4.3500000000000085
+                            z: 0
                           - x: 11.5
                             'y': -5
+                            z: 0
                         owner_id: 0123456789aaabbb
                       - id: '0000000000000003'
                         name: path-03
@@ -516,8 +512,10 @@ paths:
                         point:
                           - x: -85.5
                             'y': 4.35
+                            z: 0
                           - x: 61.5
                             'y': 4
+                            z: 0
                         owner_id: 0123456789aaabbb
                       - id: '0000000000000004'
                         name: path-04
@@ -525,8 +523,10 @@ paths:
                         point:
                           - x: -85.5
                             'y': -85.35
+                            z: 0
                           - x: 61.5
                             'y': 64
+                            z: 0
                         owner_id: 0123456789aaabbb
       operationId: getPaths
       description: pathの一覧を取得
@@ -690,20 +690,7 @@ paths:
                     type: array
                     items:
                       $ref: ../models/robot.v1.json
-              examples:
-                example-1:
-                  value:
-                    data:
-                      - id: '0000000000000001'
-                        name: test_robot
-                        init_map_id: '0000000000000001'
-                        init_slam_map_version: '1'
-                        owner_id: 0123456789aaabbb
-                      - id: '0000000000000002'
-                        name: ロボット２３号
-                        init_map_id: '0000000000000001'
-                        init_slam_map_version: '1'
-                        owner_id: 0123456789aaabbb
+              examples: {}
       description: |-
         ロボットDB一覧取
         get all robot DB record
@@ -712,12 +699,12 @@ paths:
         TODO: ページング
       parameters:
         - schema:
-            type: integer
-            default: '1'
+            type: number
+            default: 1
           in: query
           name: page
         - schema:
-            type: integer
+            type: number
           in: query
           name: limit
         - schema:
@@ -778,6 +765,7 @@ paths:
                     point:
                       x: -3.2
                       'y': 7
+                      z: 0
                     battery: 50
                     task:
                       id: '123'
@@ -792,12 +780,118 @@ paths:
                     point:
                       x: -3
                       'y': 40
+                      z: 0
                     battery: 80
                     task:
                       id: '124'
                       name: offline
       tags:
         - rawRobot
+  /robotTypes:
+    get:
+      summary: getRobotTypes
+      tags:
+        - robot
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pagenate:
+                    $ref: ../models/common/pagenateTemplate.v1.json
+                  data:
+                    type: array
+                    items:
+                      $ref: ../models/robotType.json
+      operationId: getRobotTypes
+      parameters: []
+  '/robotTypes/{robotType_id}':
+    parameters:
+      - schema:
+          type: string
+        name: robotType_id
+        in: path
+        required: true
+    get:
+      summary: getRobotType
+      tags:
+        - robot
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/robotType.json
+      operationId: getRobotType
+  /robotModels:
+    get:
+      summary: getRobotModels
+      tags:
+        - robot
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pagenate:
+                    $ref: ../models/common/pagenateTemplate.v1.json
+                  data:
+                    type: array
+                    items:
+                      $ref: ../models/robotModel.json
+      operationId: getRobotModels
+  '/robotModles/{robotModel_id}':
+    parameters:
+      - schema:
+          type: string
+        name: robotModel_id
+        in: path
+        required: true
+    get:
+      summary: getRobotModel
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/robotModel.json
+      operationId: getRobotModel
+  '/sendOrder/{robot_id}':
+    parameters:
+      - schema:
+          type: string
+        name: robot_id
+        in: path
+        required: true
+    post:
+      summary: sendOrder
+      tags:
+        - robot
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+      operationId: operateRobot
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: ../models/roboOrder.json
 components:
   schemas: {}
   responses: {}
@@ -808,4 +902,62 @@ components:
       required: true
       schema:
         type: string
-  securitySchemes: {}
+        example: '0000000000000013'
+        minLength: 16
+        maxLength: 16
+        pattern: '[0-9]{16}'
+    page:
+      name: page
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        minimum: 1
+        default: 1
+      description: ページ数
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 100
+        minimum: 1
+      description: 表示数
+    facility_id:
+      name: facility_id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: 施設のID
+    elevator_id:
+      name: elevator_id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: エレベーターのID
+  examples:
+    pgm_linkURL:
+      value:
+        description: Example shared example
+        type: object
+        properties:
+          url:
+            type: string
+            example: 'http://localhost/pgmimage.pgm'
+        required:
+          - url
+    costmap_linkURL:
+      value:
+        description: Example shared example
+        type: object
+        properties:
+          url:
+            type: string
+            example: 'http://localhost/costmapimage.png'
+        required:
+          - url
