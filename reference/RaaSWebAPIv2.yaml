@@ -451,7 +451,9 @@ paths:
                   pagenate:
                     $ref: ../models/common/pagenateTemplate.v1.json
                   data:
-                    $ref: ../models/owner.v1.json
+                    type: array
+                    items:
+                      $ref: ../models/owner.v1.json
       operationId: getOwners
       description: Ownerの一覧を取得
       parameters:
