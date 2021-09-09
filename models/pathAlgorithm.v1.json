@@ -7,8 +7,7 @@
       "type": "string",
       "enum": [
         "straight",
-        "AStar",
-        "navMesh"
+        "graph"
       ]
     }
   },
