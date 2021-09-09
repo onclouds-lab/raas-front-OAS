@@ -7,9 +7,12 @@
     {
       "type": "object",
       "properties": {
-        "attribute": {
-          "type": "string",
-          "description": "attributeのListは、別のAPIから取得できる。"
+        "attributes": {
+          "type": "array",
+          "description": "attributeのListは、別のAPIから取得できる。",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }

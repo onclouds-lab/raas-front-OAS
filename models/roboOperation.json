@@ -1,5 +1,5 @@
 {
-  "title": "roboOrder",
+  "title": "roboOperation",
   "type": "object",
   "description": "move:ロボットを動かす\n  arg:Array[{point:pointFaciliy,attribute:string}]",
   "properties": {
