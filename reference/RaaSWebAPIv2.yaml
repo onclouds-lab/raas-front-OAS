@@ -397,7 +397,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: ../models/roboOrder.json
+                  $ref: ../models/roboOperation.json
               examples: {}
       description: 自動生成したpathを取得
       operationId: generatePath
@@ -756,13 +756,12 @@ paths:
                     current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.001
-                    position:
-                      map:
-                        id: '0000000000000001'
-                      point:
-                        x: -3.2
-                        'y': 7
-                        z: 0
+                    map:
+                      id: '0000000000000001'
+                    point:
+                      x: -3.2
+                      'y': 7
+                      z: 0
                     battery: 50
                     task:
                       id: '123'
@@ -774,13 +773,12 @@ paths:
                     current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.002
-                    position:
-                      map:
-                        id: '0000000000000001'
-                      point:
-                        x: -3
-                        'y': 40
-                        z: 0
+                    map:
+                      id: '0000000000000001'
+                    point:
+                      x: -3
+                      'y': 40
+                      z: 0
                     battery: 80
                     task:
                       id: '124'
@@ -808,6 +806,7 @@ paths:
                       $ref: ../models/robotType.json
       operationId: getRobotTypes
       parameters: []
+      description: ''
   '/robotTypes/{robotType_id}':
     parameters:
       - schema:
@@ -827,9 +826,9 @@ paths:
               schema:
                 $ref: ../models/robotType.json
       operationId: getRobotType
-  /robotModels:
+  /robotSpecification:
     get:
-      summary: getRobotModels
+      summary: getRobotSpecification
       tags:
         - robot
       responses:
@@ -845,9 +844,10 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: ../models/robotModel.json
-      operationId: getRobotModels
-  '/robotModles/{robotModel_id}':
+                      $ref: ../models/robotSpecification.json
+      operationId: getRobotSpecifications
+    parameters: []
+  '/robotSpecification/{robotModel_id}':
     parameters:
       - schema:
           type: string
@@ -855,7 +855,7 @@ paths:
         in: path
         required: true
     get:
-      summary: getRobotModel
+      summary: getRobotSpecification
       tags: []
       responses:
         '200':
@@ -863,9 +863,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/robotModel.json
-      operationId: getRobotModel
-  '/sendOrder/{robot_id}':
+                $ref: ../models/robotSpecification.json
+      operationId: getRobotSpecification
+  '/sendOperation/{robot_id}':
     parameters:
       - schema:
           type: string
@@ -873,7 +873,7 @@ paths:
         in: path
         required: true
     post:
-      summary: sendOrder
+      summary: sendOperation
       tags:
         - robot
       responses:
@@ -891,7 +891,7 @@ paths:
             schema:
               type: array
               items:
-                $ref: ../models/roboOrder.json
+                $ref: ../models/roboOperation.json
 components:
   schemas: {}
   responses: {}

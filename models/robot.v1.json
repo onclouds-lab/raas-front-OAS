@@ -12,15 +12,15 @@
     {
       "type": "object",
       "properties": {
-        "model": {
-          "$ref": "./robotModel.json"
+        "specification": {
+          "$ref": "./robotSpecification.json"
         },
         "owner": {
           "$ref": "./owner.v1.json"
         }
       },
       "required": [
-        "model",
+        "specification",
         "owner"
       ]
     }
