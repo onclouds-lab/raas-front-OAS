@@ -15,7 +15,7 @@
             "type": "number"
           },
           "mapMeta": {
-            "$ref": "./mapMeta.v2.json"
+            "$ref": "./common/idObject.v1.json"
           }
         },
         "required": [
