@@ -480,48 +480,88 @@ paths:
                     data:
                       - id: 0123456789aaaaaa
                         name: path-1
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -18.69999999999999
-                            'y': 26.400000000000006
-                            z: 0
-                          - x: 12
-                            'y': 15
-                            z: 0
-                        owner_id: 0123456789aaabbb
+                        facility:
+                          id: '0000000000000001'
+                        operations:
+                          - method: move
+                            arguments:
+                              - floor: 1
+                                point:
+                                  x: -18.69999999999999
+                                  'y': 26.400000000000006
+                                  z: 0
+                                attributes: []
+                              - floor: 1
+                                point:
+                                  x: 12
+                                  'y': 15
+                                  z: 0
+                                attributes: []
+                        owner:
+                          id: 0123456789aaabbb
                       - id: '0000000000000001'
                         name: path-01212
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -2.4499999999999886
-                            'y': 4.3500000000000085
-                            z: 0
-                          - x: 11.5
-                            'y': -5
-                            z: 0
-                        owner_id: 0123456789aaabbb
+                        facility:
+                          id: '0000000000000001'
+                        operations:
+                          - method: move
+                            arguments:
+                              - floor: 1
+                                point:
+                                  x: -2.4499999999999886
+                                  'y': 4.3500000000000085
+                                  z: 0
+                                attributes: []
+                              - floor: 1
+                                point:
+                                  x: 11.5
+                                  'y': -5
+                                  z: 0
+                                attributes: []
+                        owner:
+                          id: 0123456789aaabbb
                       - id: '0000000000000003'
                         name: path-03
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -85.5
-                            'y': 4.35
-                            z: 0
-                          - x: 61.5
-                            'y': 4
-                            z: 0
-                        owner_id: 0123456789aaabbb
+                        facility:
+                          id: '0000000000000001'
+                        operations:
+                          - method: move
+                            arguments:
+                              - floor: 1
+                                point:
+                                  x: -85.5
+                                  'y': 4.35
+                                  z: 0
+                                attributes: []
+                              - floor: 1
+                                point:
+                                  x: 61.5
+                                  'y': 4
+                                  z: 0
+                                attributes: []
+                        owner:
+                          id: 0123456789aaabbb
                       - id: '0000000000000004'
                         name: path-04
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -85.5
-                            'y': -85.35
-                            z: 0
-                          - x: 61.5
-                            'y': 64
-                            z: 0
-                        owner_id: 0123456789aaabbb
+                        facility:
+                          id: '0000000000000001'
+                        operations:
+                          - method: move
+                            arguments:
+                              - floor: 1
+                                point:
+                                  x: -85.5
+                                  'y': -85.35
+                                  z: 0
+                                attributes: []
+                              - floor: 1
+                                point:
+                                  x: 61.5
+                                  'y': 64
+                                  z: 0
+                                attributes: []
+                        owner:
+                          id: 0123456789aaabbb
       operationId: getPaths
       description: pathの一覧を取得
       tags:

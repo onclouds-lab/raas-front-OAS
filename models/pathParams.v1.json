@@ -9,7 +9,7 @@
     "facility": {
       "$ref": "./common/idObject.v1.json"
     },
-    "operation": {
+    "operations": {
       "description": "",
       "type": "array",
       "items": {
@@ -23,6 +23,6 @@
   "required": [
     "name",
     "facility",
-    "operation"
+    "operations"
   ]
 }
