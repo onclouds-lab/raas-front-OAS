@@ -6,25 +6,23 @@
       "type": "string",
       "description": "エンドユーザにとってのpath名"
     },
-    "map_id": {
-      "type": "string",
-      "description": "このpathのマップのid"
+    "facility": {
+      "$ref": "./common/idObject.v1.json"
     },
-    "point": {
-      "description": "pathのx,y座標配列",
+    "operation": {
+      "description": "",
       "type": "array",
       "items": {
-        "$ref": "./common/point3d.json"
+        "$ref": "./roboOperation.json"
       }
     },
-    "owner_id": {
-      "type": "string",
-      "description": "pathの所有userのid"
+    "owner": {
+      "$ref": "./common/idObject.v1.json"
     }
   },
   "required": [
     "name",
-    "map_id",
-    "point"
+    "facility",
+    "operation"
   ]
 }
