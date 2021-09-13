@@ -1,0 +1,24 @@
+{
+  "title": "rideOperation",
+  "allOf": [
+    {
+      "$ref": "./operationMethod.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "argment": {
+          "type": "object",
+          "properties": {
+            "target": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "argment"
+      ]
+    }
+  ]
+}
