@@ -9,12 +9,8 @@
     "facility": {
       "$ref": "./common/idObject.v1.json"
     },
-    "operations": {
-      "description": "",
-      "type": "array",
-      "items": {
-        "$ref": "./roboOperation.json"
-      }
+    "operation": {
+      "$ref": "./roboOperation.json"
     },
     "owner": {
       "$ref": "./common/idObject.v1.json"
@@ -23,6 +19,6 @@
   "required": [
     "name",
     "facility",
-    "operations"
+    "operation"
   ]
 }
