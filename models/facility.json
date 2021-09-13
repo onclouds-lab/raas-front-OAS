@@ -23,10 +23,29 @@
           "items": {
             "$ref": "./robot.v1.json"
           }
+        },
+        "maps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "mapMeta": {
+                "$ref": "./mapMeta.v2.json"
+              },
+              "floorNum": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "mapMeta",
+              "floorNum"
+            ]
+          }
         }
       },
       "required": [
-        "robots"
+        "robots",
+        "maps"
       ]
     }
   ]

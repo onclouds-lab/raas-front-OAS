@@ -412,20 +412,14 @@ paths:
                 points:
                   type: array
                   items:
-                    type: object
-                    properties:
-                      point:
-                        $ref: ../models/common/pointFacility.json
-                      attribute:
-                        type: string
-                    required:
-                      - point
+                    $ref: ../models/common/floorAttribute.json
                 algorithms:
                   type: array
                   items:
                     $ref: ../models/pathAlgorithm.v1.json
               required:
                 - points
+                - algorithms
         description: ''
       tags:
         - path
@@ -762,10 +756,13 @@ paths:
                     current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.001
-                    point:
-                      x: -3.2
-                      'y': 7
-                      z: 0
+                    position:
+                      map:
+                        id: '0000000000000001'
+                      point:
+                        x: -3.2
+                        'y': 7
+                        z: 0
                     battery: 50
                     task:
                       id: '123'
@@ -777,10 +774,13 @@ paths:
                     current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.002
-                    point:
-                      x: -3
-                      'y': 40
-                      z: 0
+                    position:
+                      map:
+                        id: '0000000000000001'
+                      point:
+                        x: -3
+                        'y': 40
+                        z: 0
                     battery: 80
                     task:
                       id: '124'
