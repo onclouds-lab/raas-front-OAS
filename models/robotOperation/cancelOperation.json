@@ -1,0 +1,8 @@
+{
+  "title": "cancelOperation",
+  "allOf": [
+    {
+      "$ref": "./operationMethod.json"
+    }
+  ]
+}

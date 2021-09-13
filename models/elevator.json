@@ -18,7 +18,7 @@
           }
         },
         "supportTypes": {
-          "$ref": "./robotType.v2.json"
+          "$ref": "./robotSpecification.json"
         }
       },
       "required": [

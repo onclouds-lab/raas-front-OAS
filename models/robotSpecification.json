@@ -32,6 +32,7 @@
         },
         "type": {
           "type": "array",
+          "description": "２輪モデル、４輪モデル、飛行ドローンみたいな",
           "items": {
             "$ref": "./robotType.json"
           }

@@ -1,0 +1,20 @@
+{
+  "title": "moveOperation",
+  "allOf": [
+    {
+      "$ref": "./operationMethod.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "argment": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/floorAttribute.json"
+          }
+        }
+      }
+    }
+  ],
+  "description": ""
+}
