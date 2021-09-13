@@ -1123,7 +1123,7 @@ paths:
     post:
       summary: sendOperation
       tags:
-        - robot
+        - rawRobot
       responses:
         '200':
           description: OK
