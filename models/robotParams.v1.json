@@ -12,7 +12,7 @@
     "init_slam_map_version": {
       "type": "string"
     },
-    "model": {
+    "specification": {
       "$ref": "./common/idObject.v1.json"
     },
     "owner": {
@@ -23,7 +23,7 @@
     "name",
     "init_map_id",
     "init_slam_map_version",
-    "model",
+    "specification",
     "owner"
   ]
 }

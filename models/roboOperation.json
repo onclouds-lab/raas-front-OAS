@@ -1,0 +1,15 @@
+{
+  "title": "roboOperation",
+  "description": "method = move:moveOperation\nmethod = cancel: cancelOperation\nmethod = ride: rideOperation",
+  "oneOf": [
+    {
+      "$ref": "./robotOperation/moveOperation.json"
+    },
+    {
+      "$ref": "./robotOperation/cancelOperation.json"
+    },
+    {
+      "$ref": "./robotOperation/rideOperation.json"
+    }
+  ]
+}

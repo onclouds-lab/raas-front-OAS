@@ -1,0 +1,20 @@
+{
+  "title": "operationMethod",
+  "type": "object",
+  "description": "robot 操作の基本Interface",
+  "properties": {
+    "method": {
+      "type": "string",
+      "enum": [
+        "move",
+        "cancel"
+      ]
+    },
+    "robotSpecifications": {
+      "type": "array",
+      "items": {
+        "$ref": "../common/idObject.v1.json"
+      }
+    }
+  }
+}

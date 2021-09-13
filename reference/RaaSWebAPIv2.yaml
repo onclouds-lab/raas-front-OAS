@@ -181,6 +181,17 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+              examples:
+                '0000000000000001':
+                  value: /resource/bitmap/chinokyoten1f.png
+                '0000000000000002':
+                  value: /resource/bitmap/chinokyoten2f.png
+                '0000000000000003':
+                  value: /resource/bitmap/chinokyoten3f.png
       operationId: getCostmapURL
       description: 詳細説明なし
     put:
@@ -194,7 +205,7 @@ paths:
         - map
   /facilities:
     get:
-      summary: Your GET endpoint
+      summary: GET Facilities
       tags:
         - facility
       responses:
@@ -211,6 +222,180 @@ paths:
                     type: array
                     items:
                       $ref: ../models/facility.json
+              examples:
+                example-1:
+                  value:
+                    pagenate:
+                      current_page: 0
+                      from: 0
+                      to: 0
+                      first_page_url: string
+                      last_page_url: string
+                      next_page_url: string
+                      prev_page_url: string
+                      path: string
+                      last_page: 0
+                      per_page: 0
+                      total: 0
+                    data:
+                      - id: '0000000000000001'
+                        registDate: '1964-02-02T18:25:36.294Z'
+                        updateDate: '2019-11-20T16:31:46.928Z'
+                        name: chinokyoten
+                        maps:
+                          - floorNum: 0
+                            mapMeta:
+                              id: '0000000000000001'
+                              name: chinokyoten1
+                              description: ''
+                              resolution: 0.05
+                              origin:
+                                x: -100
+                                'y': -100
+                              negate: false
+                              occupied_thresh: 0.65
+                              free_thresh: 0.196
+                              size:
+                                width: 4000
+                                height: 4000
+                              owner:
+                                id: '0000000000000001'
+                                name: veniam
+                                owned_robot: []
+                                owned_map: []
+                              pgm_link: 'http://localhost:4010/maps/0000000000000001/pgm?__example=0000000000000001'
+                              costmap_link: 'http://localhost:4010/maps/0000000000000001/cost?__example=0000000000000001'
+                              yaw: 100
+                          - floorNum: 1
+                            mapMeta:
+                              id: '0000000000000001'
+                              name: chinokyoten2
+                              description: ''
+                              resolution: 0.05
+                              origin:
+                                x: -100
+                                'y': -100
+                              negate: false
+                              occupied_thresh: 0.65
+                              free_thresh: 0.196
+                              size:
+                                width: 4000
+                                height: 4000
+                              owner:
+                                id: '0000000000000001'
+                                name: veniam
+                                owned_robot: []
+                                owned_map: []
+                              pgm_link: 'http://localhost:4010/maps/0000000000000002/pgm?__example=0000000000000002'
+                              costmap_link: 'http://localhost:4010/maps/0000000000000002/cost?__example=0000000000000002'
+                              yaw: 0
+                          - floorNum: 2
+                            mapMeta:
+                              id: '0000000000000004'
+                              name: chinokyoten3
+                              description: ''
+                              resolution: 0.05
+                              origin:
+                                x: -100
+                                'y': -100
+                              negate: false
+                              occupied_thresh: 0.65
+                              free_thresh: 0.196
+                              size:
+                                width: 4000
+                                height: 4000
+                              owner:
+                                id: '0000000000000001'
+                                name: veniam
+                                owned_robot: []
+                                owned_map: []
+                              pgm_link: 'http://localhost:4010/maps/0000000000000003/pgm?__example=0000000000000003'
+                              costmap_link: 'http://localhost:4010/maps/0000000000000003/cost?__example=0000000000000003'
+                              yaw: 100
+                        floor: 3
+                        elevators:
+                          - id: '0000000000000010'
+                            position:
+                              x: -11
+                              'y': 12
+                              z: 10
+                            stopFloor:
+                              - 0
+                              - 1
+                              - 2
+                            supportTypes:
+                              id: '0000000000000001'
+                              size:
+                                height: 2.5
+                                width: 1.5
+                                deepth: 1.5
+                              radius: 0
+                              max_speed: 2
+                              'max_acceleration ': 2
+                              max_angular_speed: 1
+                              maxVel: 5
+                              minRad: 1
+                        robots:
+                          - id: '0000000000000001'
+                            name: robot-1
+                            init_map_id: '0000000000000002'
+                            init_slam_map_version: '1'
+                            specification:
+                              id: '0000000000000001'
+                              name: 型番1
+                              radius: 2
+                              max_speed: 1.5
+                              'max_acceleration ': 2
+                              max_angular_speed: 1
+                              description: description
+                              type:
+                                - id: '0000000000000001'
+                                  type: normal
+                            owner:
+                              id: '0000000000000001'
+                              name: oci
+                              owned_robot: []
+                              owned_map: []
+                          - id: '0000000000000002'
+                            name: robot-2
+                            init_map_id: '0000000000000003'
+                            init_slam_map_version: '1'
+                            specification:
+                              id: '0000000000000001'
+                              name: 型番1
+                              radius: 2
+                              max_speed: 1.5
+                              'max_acceleration ': 2
+                              max_angular_speed: 1
+                              description: description
+                              type:
+                                - id: '0000000000000001'
+                                  type: normal
+                            owner:
+                              id: '0000000000000001'
+                              name: oci
+                              owned_robot: []
+                              owned_map: []
+                          - id: '0000000000000003'
+                            name: robot-3
+                            init_map_id: '0000000000000001'
+                            init_slam_map_version: '1'
+                            specification:
+                              id: '0000000000000001'
+                              name: 型番1
+                              radius: 2
+                              max_speed: 1.5
+                              'max_acceleration ': 2
+                              max_angular_speed: 1
+                              description: description
+                              type:
+                                - id: '0000000000000001'
+                                  type: normal
+                            owner:
+                              id: '0000000000000001'
+                              name: oci
+                              owned_robot: []
+                              owned_map: []
       operationId: getFacilities
       description: 詳細説明なし
     parameters: []
@@ -393,13 +578,13 @@ paths:
       summary: get auto generate path
       responses:
         '200':
-          description: OK
+          description: |-
+            OK
+            methodは'move'で返ってくる
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: ../models/roboOrder.json
+                $ref: ../models/roboOperation.json
               examples: {}
       description: 自動生成したpathを取得
       operationId: generatePath
@@ -414,20 +599,22 @@ paths:
                 points:
                   type: array
                   items:
-                    type: object
-                    properties:
-                      point:
-                        $ref: ../models/common/pointFacility.json
-                      attribute:
-                        type: string
-                    required:
-                      - point
+                    $ref: ../models/common/floorAttribute.json
                 algorithms:
                   type: array
                   items:
                     $ref: ../models/pathAlgorithm.v1.json
+                robot:
+                  type: object
+                  required:
+                    - specification
+                  properties:
+                    specification:
+                      $ref: ../models/common/idObject.v1.json
               required:
                 - points
+                - algorithms
+                - robot
         description: ''
       tags:
         - path
@@ -490,48 +677,88 @@ paths:
                     data:
                       - id: 0123456789aaaaaa
                         name: path-1
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -18.69999999999999
-                            'y': 26.400000000000006
-                            z: 0
-                          - x: 12
-                            'y': 15
-                            z: 0
-                        owner_id: 0123456789aaabbb
+                        facility:
+                          id: '0000000000000001'
+                        operations:
+                          - method: move
+                            arguments:
+                              - floor: 1
+                                point:
+                                  x: -18.69999999999999
+                                  'y': 26.400000000000006
+                                  z: 0
+                                attributes: []
+                              - floor: 1
+                                point:
+                                  x: 12
+                                  'y': 15
+                                  z: 0
+                                attributes: []
+                        owner:
+                          id: 0123456789aaabbb
                       - id: '0000000000000001'
                         name: path-01212
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -2.4499999999999886
-                            'y': 4.3500000000000085
-                            z: 0
-                          - x: 11.5
-                            'y': -5
-                            z: 0
-                        owner_id: 0123456789aaabbb
+                        facility:
+                          id: '0000000000000001'
+                        operations:
+                          - method: move
+                            arguments:
+                              - floor: 1
+                                point:
+                                  x: -2.4499999999999886
+                                  'y': 4.3500000000000085
+                                  z: 0
+                                attributes: []
+                              - floor: 1
+                                point:
+                                  x: 11.5
+                                  'y': -5
+                                  z: 0
+                                attributes: []
+                        owner:
+                          id: 0123456789aaabbb
                       - id: '0000000000000003'
                         name: path-03
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -85.5
-                            'y': 4.35
-                            z: 0
-                          - x: 61.5
-                            'y': 4
-                            z: 0
-                        owner_id: 0123456789aaabbb
+                        facility:
+                          id: '0000000000000001'
+                        operations:
+                          - method: move
+                            arguments:
+                              - floor: 1
+                                point:
+                                  x: -85.5
+                                  'y': 4.35
+                                  z: 0
+                                attributes: []
+                              - floor: 1
+                                point:
+                                  x: 61.5
+                                  'y': 4
+                                  z: 0
+                                attributes: []
+                        owner:
+                          id: 0123456789aaabbb
                       - id: '0000000000000004'
                         name: path-04
-                        map_id: '0000000000000001'
-                        point:
-                          - x: -85.5
-                            'y': -85.35
-                            z: 0
-                          - x: 61.5
-                            'y': 64
-                            z: 0
-                        owner_id: 0123456789aaabbb
+                        facility:
+                          id: '0000000000000001'
+                        operations:
+                          - method: move
+                            arguments:
+                              - floor: 1
+                                point:
+                                  x: -85.5
+                                  'y': -85.35
+                                  z: 0
+                                attributes: []
+                              - floor: 1
+                                point:
+                                  x: 61.5
+                                  'y': 64
+                                  z: 0
+                                attributes: []
+                        owner:
+                          id: 0123456789aaabbb
       operationId: getPaths
       description: pathの一覧を取得
       tags:
@@ -766,9 +993,11 @@ paths:
                     current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.001
+                    map:
+                      id: '0000000000000002'
                     point:
-                      x: -3.2
-                      'y': 7
+                      x: 7.7
+                      'y': -35
                       z: 0
                     battery: 50
                     task:
@@ -781,14 +1010,31 @@ paths:
                     current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.002
+                    map:
+                      id: '0000000000000003'
                     point:
-                      x: -3
-                      'y': 40
+                      x: -25
+                      'y': -15.9
                       z: 0
                     battery: 80
                     task:
                       id: '124'
                       name: offline
+                '0000000000000003':
+                  value:
+                    id: '0000000000000003'
+                    name: ロボット３号
+                    since: '2019-08-24T14:15:22Z'
+                    IP: 100.100.100.003
+                    battery: 20
+                    owner:
+                      id: '0000000000000001'
+                    map:
+                      id: '0000000000000001'
+                    point:
+                      x: -2
+                      'y': -15
+                      z: 0
       tags:
         - rawRobot
   /robotTypes:
@@ -812,6 +1058,7 @@ paths:
                       $ref: ../models/robotType.json
       operationId: getRobotTypes
       parameters: []
+      description: ''
   '/robotTypes/{robotType_id}':
     parameters:
       - schema:
@@ -831,9 +1078,9 @@ paths:
               schema:
                 $ref: ../models/robotType.json
       operationId: getRobotType
-  /robotModels:
+  /robotSpecification:
     get:
-      summary: getRobotModels
+      summary: getRobotSpecification
       tags:
         - robot
       responses:
@@ -849,9 +1096,10 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: ../models/robotModel.json
-      operationId: getRobotModels
-  '/robotModles/{robotModel_id}':
+                      $ref: ../models/robotSpecification.json
+      operationId: getRobotSpecifications
+    parameters: []
+  '/robotSpecification/{robotModel_id}':
     parameters:
       - schema:
           type: string
@@ -859,7 +1107,7 @@ paths:
         in: path
         required: true
     get:
-      summary: getRobotModel
+      summary: getRobotSpecification
       tags: []
       responses:
         '200':
@@ -867,9 +1115,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ../models/robotModel.json
-      operationId: getRobotModel
-  '/sendOrder/{robot_id}':
+                $ref: ../models/robotSpecification.json
+      operationId: getRobotSpecification
+  '/sendOperation/{robot_id}':
     parameters:
       - schema:
           type: string
@@ -877,9 +1125,9 @@ paths:
         in: path
         required: true
     post:
-      summary: sendOrder
+      summary: sendOperation
       tags:
-        - robot
+        - rawRobot
       responses:
         '200':
           description: OK
@@ -895,7 +1143,7 @@ paths:
             schema:
               type: array
               items:
-                $ref: ../models/roboOrder.json
+                $ref: ../models/roboOperation.json
 components:
   schemas: {}
   responses: {}

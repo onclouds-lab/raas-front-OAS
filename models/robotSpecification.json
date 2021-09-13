@@ -1,5 +1,5 @@
 {
-  "title": "robotModel",
+  "title": "robotSpecification",
   "allOf": [
     {
       "$ref": "./common/idObject.v1.json"
@@ -32,6 +32,7 @@
         },
         "type": {
           "type": "array",
+          "description": "２輪モデル、４輪モデル、飛行ドローンみたいな",
           "items": {
             "$ref": "./robotType.json"
           }
