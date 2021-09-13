@@ -268,7 +268,7 @@ paths:
                               yaw: 100
                           - floorNum: 1
                             mapMeta:
-                              id: '0000000000000001'
+                              id: '0000000000000002'
                               name: chinokyoten2
                               description: ''
                               resolution: 0.05
@@ -291,7 +291,7 @@ paths:
                               yaw: 0
                           - floorNum: 2
                             mapMeta:
-                              id: '0000000000000004'
+                              id: '0000000000000003'
                               name: chinokyoten3
                               description: ''
                               resolution: 0.05
