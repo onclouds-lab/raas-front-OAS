@@ -274,7 +274,7 @@ paths:
                               resolution: 0.05
                               origin:
                                 x: -100
-                                'y': -100
+                                'y': -80
                               negate: false
                               occupied_thresh: 0.65
                               free_thresh: 0.196
@@ -296,8 +296,8 @@ paths:
                               description: ''
                               resolution: 0.05
                               origin:
-                                x: -100
-                                'y': -100
+                                x: -130
+                                'y': -70
                               negate: false
                               occupied_thresh: 0.65
                               free_thresh: 0.196
@@ -515,7 +515,7 @@ paths:
                           id: '0001000000000001'
                         action:
                           - string
-                        floor: 1
+                        floor: 0
                         point:
                           x: -18.7
                           'y': 26.4
@@ -530,7 +530,7 @@ paths:
                           id: '0001000000000001'
                         action:
                           - string
-                        floor: 2
+                        floor: 1
                         point:
                           x: 3.8
                           'y': 32
@@ -544,7 +544,7 @@ paths:
                           id: '0001000000000001'
                         action:
                           - string
-                        floor: 3
+                        floor: 2
                         point:
                           x: -100
                           'y': 100
@@ -658,7 +658,20 @@ paths:
             application/json:
               schema:
                 $ref: ../models/roboOperation.json
-              examples: {}
+              examples:
+                example-1:
+                  value:
+                    method: move
+                    robotSpecifications:
+                      - id: string
+                    argment:
+                      - floor: 0
+                        point:
+                          x: 0
+                          'y': 0
+                          z: 0
+                        attributes:
+                          - string
       description: 自動生成したpathを取得
       operationId: generatePath
       requestBody:
@@ -688,6 +701,7 @@ paths:
                 - points
                 - algorithms
                 - robot
+            examples: {}
         description: ''
       tags:
         - path
