@@ -715,15 +715,56 @@ paths:
                   value:
                     method: move
                     robotSpecifications:
-                      - id: string
+                      - id: '0000000000000001'
                     argment:
                       - floor: 0
                         point:
-                          x: 0
-                          'y': 0
+                          x: 15.12
+                          'y': 0.635
+                          z: 0
+                        attributes: []
+                      - floor: 0
+                        point:
+                          x: -5.5
+                          'y': 23.1
                           z: 0
                         attributes:
-                          - string
+                          - attribute1
+                      - floor: 0
+                        point:
+                          x: -21.8
+                          'y': 43
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - floor: 1
+                        point:
+                          x: -20
+                          'y': 14.4
+                          z: 0
+                        attributes:
+                          - attribute2
+                      - floor: 1
+                        point:
+                          x: -2
+                          'y': -4.6
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - floor: 2
+                        point:
+                          x: 18.8
+                          'y': -28.8
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - floor: 2
+                        point:
+                          x: 10
+                          'y': -2.2
+                          z: 0
+                        attributes:
+                          - attribute1
       description: 自動生成したpathを取得
       operationId: generatePath
       requestBody:
