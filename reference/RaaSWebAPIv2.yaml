@@ -719,8 +719,8 @@ paths:
                     argment:
                       - floor: 0
                         point:
-                          x: -2
-                          'y': -15
+                          x: 15.12
+                          'y': 0.635
                           z: 0
                         attributes: []
                       - floor: 0
