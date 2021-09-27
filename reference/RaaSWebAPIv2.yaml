@@ -514,14 +514,29 @@ paths:
                         owner:
                           id: '0001000000000001'
                         action:
-                          - string
+                          - action1
                         floor: 0
                         point:
-                          x: -18.7
-                          'y': 26.4
+                          x: -5.5
+                          'y': 23.1
                           z: 0
                         attributes:
-                          - evpoint
+                          - attribute1
+                      - id: '0000000000000105'
+                        name: floor01-2
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - action1
+                        floor: 0
+                        point:
+                          x: -21.8
+                          'y': 43
+                          z: 0
+                        attributes:
+                          - attribute1
                       - id: '0000000000000102'
                         name: Laboratory
                         facility:
@@ -532,10 +547,26 @@ paths:
                           - string
                         floor: 1
                         point:
-                          x: 3.8
-                          'y': 32
+                          x: -20
+                          'y': 14.4
                           z: 0
-                        attributes: []
+                        attributes:
+                          - attribute2
+                      - id: '0000000000000106'
+                        name: floor2-2
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - string
+                        floor: 1
+                        point:
+                          x: -2
+                          'y': -4.6
+                          z: 0
+                        attributes:
+                          - attribute2
                       - id: '0000000000000103'
                         name: test1
                         facility:
@@ -543,13 +574,31 @@ paths:
                         owner:
                           id: '0001000000000001'
                         action:
-                          - string
+                          - action2
                         floor: 2
                         point:
-                          x: -100
-                          'y': 100
+                          x: 18.8
+                          'y': -28.8
                           z: 0
-                        attributes: []
+                        attributes:
+                          - attribute1
+                          - attribute2
+                      - id: '0000000000000107'
+                        name: floor3-2
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - action2
+                        floor: 2
+                        point:
+                          x: 10
+                          'y': -2.2
+                          z: 0
+                        attributes:
+                          - attribute1
+                          - attribute2
                       - id: '0000000000000104'
                         name: center
                         facility:
@@ -557,7 +606,8 @@ paths:
                         owner:
                           id: '0001000000000001'
                         action:
-                          - string
+                          - action3
+                          - action1
                         floor: 1
                         point:
                           x: 0
@@ -585,12 +635,14 @@ paths:
             application/json:
               schema:
                 $ref: ../models/waypoint.v2.json
+              examples: {}
       description: waypointの追加
       requestBody:
         content:
           application/json:
             schema:
               $ref: ../models/waypointParams.v2.json
+            examples: {}
       tags:
         - waypoint
   '/waypoints/{waypointID}':
