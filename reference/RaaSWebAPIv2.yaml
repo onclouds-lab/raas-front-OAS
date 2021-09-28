@@ -268,13 +268,13 @@ paths:
                               yaw: 100
                           - floorNum: 1
                             mapMeta:
-                              id: '0000000000000001'
+                              id: '0000000000000002'
                               name: chinokyoten2
                               description: ''
                               resolution: 0.05
                               origin:
                                 x: -100
-                                'y': -100
+                                'y': -80
                               negate: false
                               occupied_thresh: 0.65
                               free_thresh: 0.196
@@ -291,13 +291,13 @@ paths:
                               yaw: 0
                           - floorNum: 2
                             mapMeta:
-                              id: '0000000000000004'
+                              id: '0000000000000003'
                               name: chinokyoten3
                               description: ''
                               resolution: 0.05
                               origin:
-                                x: -100
-                                'y': -100
+                                x: -130
+                                'y': -70
                               negate: false
                               occupied_thresh: 0.65
                               free_thresh: 0.196
@@ -491,6 +491,129 @@ paths:
                 required:
                   - pagenate
                   - data
+              examples:
+                example-1:
+                  value:
+                    pagenate:
+                      current_page: 0
+                      from: 0
+                      to: 0
+                      first_page_url: string
+                      last_page_url: string
+                      next_page_url: string
+                      prev_page_url: string
+                      path: string
+                      last_page: 0
+                      per_page: 0
+                      total: 0
+                    data:
+                      - id: '0000000000000101'
+                        name: Entrance
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - action1
+                        floor: 0
+                        point:
+                          x: -5.5
+                          'y': 23.1
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - id: '0000000000000105'
+                        name: floor01-2
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - action1
+                        floor: 0
+                        point:
+                          x: -21.8
+                          'y': 43
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - id: '0000000000000102'
+                        name: Laboratory
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - string
+                        floor: 1
+                        point:
+                          x: -20
+                          'y': 14.4
+                          z: 0
+                        attributes:
+                          - attribute2
+                      - id: '0000000000000106'
+                        name: floor2-2
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - string
+                        floor: 1
+                        point:
+                          x: -2
+                          'y': -4.6
+                          z: 0
+                        attributes:
+                          - attribute2
+                      - id: '0000000000000103'
+                        name: test1
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - action2
+                        floor: 2
+                        point:
+                          x: 18.8
+                          'y': -28.8
+                          z: 0
+                        attributes:
+                          - attribute1
+                          - attribute2
+                      - id: '0000000000000107'
+                        name: floor3-2
+                        facility:
+                          id: '0000000000000001'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - action2
+                        floor: 2
+                        point:
+                          x: 10
+                          'y': -2.2
+                          z: 0
+                        attributes:
+                          - attribute1
+                          - attribute2
+                      - id: '0000000000000104'
+                        name: center
+                        facility:
+                          id: '0000000000000002'
+                        owner:
+                          id: '0001000000000001'
+                        action:
+                          - action3
+                          - action1
+                        floor: 1
+                        point:
+                          x: 0
+                          'y': 0
+                          z: 0
+                        attributes: []
       operationId: getWaypoints
       description: waypointの一覧を取得
       parameters:
@@ -512,12 +635,14 @@ paths:
             application/json:
               schema:
                 $ref: ../models/waypoint.v2.json
+              examples: {}
       description: waypointの追加
       requestBody:
         content:
           application/json:
             schema:
               $ref: ../models/waypointParams.v2.json
+            examples: {}
       tags:
         - waypoint
   '/waypoints/{waypointID}':
@@ -585,7 +710,61 @@ paths:
             application/json:
               schema:
                 $ref: ../models/roboOperation.json
-              examples: {}
+              examples:
+                example-1:
+                  value:
+                    method: move
+                    robotSpecifications:
+                      - id: '0000000000000001'
+                    argment:
+                      - floor: 0
+                        point:
+                          x: 15.12
+                          'y': 0.635
+                          z: 0
+                        attributes: []
+                      - floor: 0
+                        point:
+                          x: -5.5
+                          'y': 23.1
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - floor: 0
+                        point:
+                          x: -21.8
+                          'y': 43
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - floor: 1
+                        point:
+                          x: -20
+                          'y': 14.4
+                          z: 0
+                        attributes:
+                          - attribute2
+                      - floor: 1
+                        point:
+                          x: -2
+                          'y': -4.6
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - floor: 2
+                        point:
+                          x: 18.8
+                          'y': -28.8
+                          z: 0
+                        attributes:
+                          - attribute1
+                      - floor: 2
+                        point:
+                          x: 10
+                          'y': -2.2
+                          z: 0
+                        attributes:
+                          - attribute1
       description: 自動生成したpathを取得
       operationId: generatePath
       requestBody:
@@ -615,6 +794,7 @@ paths:
                 - points
                 - algorithms
                 - robot
+            examples: {}
         description: ''
       tags:
         - path
@@ -643,6 +823,28 @@ paths:
                     type: array
                     items:
                       $ref: ../models/owner.v1.json
+              examples:
+                example-1:
+                  value:
+                    pagenate:
+                      current_page: 0
+                      from: 0
+                      to: 0
+                      first_page_url: string
+                      last_page_url: string
+                      next_page_url: string
+                      prev_page_url: string
+                      path: string
+                      last_page: 0
+                      per_page: 0
+                      total: 0
+                    data:
+                      - id: '0001000000000001'
+                        name: sample owner
+                        owned_robot:
+                          - string
+                        owned_map:
+                          - string
       operationId: getOwners
       description: Ownerの一覧を取得
       parameters:
