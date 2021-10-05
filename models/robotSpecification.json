@@ -41,7 +41,7 @@
       "required": [
         "radius",
         "max_speed",
-        "max_acceleration ",
+        "max_acceleration",
         "max_angular_speed"
       ]
     }
