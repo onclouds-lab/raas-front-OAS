@@ -19,7 +19,7 @@
           "type": "number",
           "description": "最大速度[m/s]"
         },
-        "max_acceleration ": {
+        "max_acceleration": {
           "type": "number",
           "description": "最大加速度[m/(s^2)]"
         },
