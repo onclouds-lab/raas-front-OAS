@@ -3,6 +3,15 @@
   "allOf": [
     {
       "$ref": "./operationMethod.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "pattern": "cancel"
+        }
+      }
     }
   ]
 }
