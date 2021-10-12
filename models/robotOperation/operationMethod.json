@@ -16,5 +16,8 @@
         "$ref": "../common/idObject.v1.json"
       }
     }
-  }
+  },
+  "required": [
+    "method"
+  ]
 }

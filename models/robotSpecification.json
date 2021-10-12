@@ -19,7 +19,7 @@
           "type": "number",
           "description": "最大速度[m/s]"
         },
-        "max_acceleration ": {
+        "max_acceleration": {
           "type": "number",
           "description": "最大加速度[m/(s^2)]"
         },
@@ -41,7 +41,7 @@
       "required": [
         "radius",
         "max_speed",
-        "max_acceleration ",
+        "max_acceleration",
         "max_angular_speed"
       ]
     }

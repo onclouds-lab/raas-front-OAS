@@ -331,7 +331,7 @@ paths:
                                 deepth: 1.5
                               radius: 0
                               max_speed: 2
-                              'max_acceleration ': 2
+                              max_acceleration: 2
                               max_angular_speed: 1
                               maxVel: 5
                               minRad: 1
@@ -345,7 +345,7 @@ paths:
                               name: 型番1
                               radius: 2
                               max_speed: 1.5
-                              'max_acceleration ': 2
+                              max_acceleration: 2
                               max_angular_speed: 1
                               description: description
                               type:
@@ -365,7 +365,7 @@ paths:
                               name: 型番1
                               radius: 2
                               max_speed: 1.5
-                              'max_acceleration ': 2
+                              max_acceleration: 2
                               max_angular_speed: 1
                               description: description
                               type:
@@ -385,7 +385,7 @@ paths:
                               name: 型番1
                               radius: 2
                               max_speed: 1.5
-                              'max_acceleration ': 2
+                              max_acceleration: 2
                               max_angular_speed: 1
                               description: description
                               type:
