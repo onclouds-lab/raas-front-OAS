@@ -1,0 +1,28 @@
+{
+  "title": "robot.interface",
+  "x-examples": {},
+  "description": "RaaSで扱うロボットのインターフェース",
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "$ref": "./owner.v1.json"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Navigation",
+            "Elevator"
+          ]
+        }
+      },
+      "required": [
+        "owner"
+      ]
+    }
+  ]
+}
