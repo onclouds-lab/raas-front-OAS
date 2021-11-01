@@ -9,7 +9,11 @@
       "properties": {
         "type": {
           "type": "string",
-          "description": "タイプ一覧から1つのタイプを持つ"
+          "description": "タイプ一覧から1つのタイプを持つ",
+          "enum": [
+            "Navigation",
+            "Elevator"
+          ]
         }
       },
       "required": [

@@ -9,22 +9,24 @@
     {
       "type": "object",
       "properties": {
-        "owner": {
-          "$ref": "../owner.v1.json"
+        "maker": {
+          "type": "string"
         },
-        "types": {
-          "type": "array",
-          "enum": [
-            "Navigation",
-            "Elevator"
-          ],
-          "items": {
-            "$ref": "../robotType.json"
-          }
+        "type": {
+          "$ref": "../robotType.json"
+        },
+        "MQTT": {
+          "type": "boolean"
+        },
+        "webRTC": {
+          "type": "boolean"
         }
       },
       "required": [
-        "owner"
+        "maker",
+        "type",
+        "MQTT",
+        "webRTC"
       ]
     }
   ]

@@ -8,7 +8,7 @@
       "type": "object",
       "properties": {
         "position": {
-          "$ref": "../common/point3d.json"
+          "$ref": "../common/pointFloor.json"
         },
         "stopFloor": {
           "type": "array",
