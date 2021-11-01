@@ -1,5 +1,5 @@
 {
-  "title": "robotSpecification",
+  "title": "NavigationRobot",
   "allOf": [
     {
       "$ref": "./common/idObject.v1.json"
