@@ -7,23 +7,26 @@
     {
       "type": "object",
       "properties": {
-        "position": {
-          "$ref": "../common/pointFloor.json"
-        },
-        "stopFloor": {
+        "stopFloors": {
           "type": "array",
           "description": "停止可能な階",
           "items": {
-            "type": "number"
+            "$ref": "../waypoint.v2.json"
           }
         },
         "supportTypes": {
-          "$ref": "./NavigationRobot.json"
+          "type": "array",
+          "items": {
+            "$ref": "./NavigationRobot.json"
+          }
+        },
+        "type": {
+          "type": "string",
+          "pattern": "Elevator"
         }
       },
       "required": [
-        "position",
-        "stopFloor",
+        "stopFloors",
         "supportTypes"
       ]
     }

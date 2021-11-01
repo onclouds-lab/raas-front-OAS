@@ -31,7 +31,7 @@
     "robots": {
       "type": "array",
       "items": {
-        "$ref": "./robotSpecification.json"
+        "$ref": "./robot.v1.json"
       }
     }
   },

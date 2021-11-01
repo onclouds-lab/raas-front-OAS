@@ -1144,6 +1144,14 @@ paths:
             type: string
           in: query
           name: sort
+        - schema:
+            type: string
+          in: query
+          name: type
+        - schema:
+            type: string
+          in: query
+          name: facility
       operationId: getRobots
       tags:
         - robot
@@ -1239,28 +1247,7 @@ paths:
                       z: 0
       tags:
         - rawRobot
-  /robotTypes:
-    get:
-      summary: getRobotTypes
-      tags:
-        - robot
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  pagenate:
-                    $ref: ../models/common/pagenateTemplate.v1.json
-                  data:
-                    type: array
-                    items:
-                      $ref: ../models/robotType.json
-      operationId: getRobotTypes
-      parameters: []
-      description: ''
+  /robotTypes: {}
   '/robotTypes/{robotType_id}':
     parameters:
       - schema:
@@ -1379,6 +1366,7 @@ components:
         format: int32
         default: 100
         minimum: 1
+        maximum: 50
       description: 表示数
     facility_id:
       name: facility_id

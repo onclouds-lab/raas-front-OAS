@@ -31,14 +31,16 @@
           "type": "string"
         },
         "type": {
-          "type": "string"
+          "type": "string",
+          "example": "Navigation"
         }
       },
       "required": [
         "radius",
         "max_speed",
         "max_acceleration",
-        "max_angular_speed"
+        "max_angular_speed",
+        "type"
       ]
     }
   ],

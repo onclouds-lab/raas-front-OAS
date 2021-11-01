@@ -13,7 +13,11 @@
           "type": "string"
         },
         "type": {
-          "$ref": "../robotType.json"
+          "enum": [
+            "Navigation",
+            "Elevator"
+          ],
+          "type": "string"
         },
         "MQTT": {
           "type": "boolean"
