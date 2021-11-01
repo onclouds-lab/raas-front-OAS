@@ -1,0 +1,13 @@
+{
+  "title": "roboSpecification",
+  "description": "",
+  "oneOf": [
+    {
+      "$ref": "./robotSpecification/elevator.json"
+    },
+    {
+      "$ref": "./robotSpecification/NavigationRobot.json"
+    }
+  ],
+  "examples": []
+}

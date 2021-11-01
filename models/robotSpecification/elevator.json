@@ -1,14 +1,14 @@
 {
-  "title": "Elevator",
+  "title": "ElevatorRobot",
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./robot.interface.json"
     },
     {
       "type": "object",
       "properties": {
         "position": {
-          "$ref": "./common/point3d.json"
+          "$ref": "../common/point3d.json"
         },
         "stopFloor": {
           "type": "array",
@@ -18,7 +18,7 @@
           }
         },
         "supportTypes": {
-          "$ref": "./robotSpecification.json"
+          "$ref": "./NavigationRobot.json"
         }
       },
       "required": [

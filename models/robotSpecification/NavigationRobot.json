@@ -1,8 +1,8 @@
 {
-  "title": "NavigationRobot",
+  "title": "navigationRobot",
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./robot.interface.json"
     },
     {
       "type": "object",
@@ -34,7 +34,7 @@
           "type": "array",
           "description": "２輪モデル、４輪モデル、飛行ドローンみたいな",
           "items": {
-            "$ref": "./robotType.json"
+            "$ref": "../robotType.json"
           }
         }
       },
