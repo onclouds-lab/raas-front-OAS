@@ -12,12 +12,15 @@
         "owner": {
           "$ref": "../owner.v1.json"
         },
-        "type": {
-          "type": "string",
+        "types": {
+          "type": "array",
           "enum": [
             "Navigation",
             "Elevator"
-          ]
+          ],
+          "items": {
+            "$ref": "../robotType.json"
+          }
         }
       },
       "required": [
