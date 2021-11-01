@@ -2,7 +2,7 @@
   "title": "navigationRobot",
   "allOf": [
     {
-      "$ref": "./robot.interface.json"
+      "$ref": "./robotSpecification.interface.json"
     },
     {
       "type": "object",

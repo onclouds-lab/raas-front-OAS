@@ -1,0 +1,8 @@
+{
+  "title": "robotParams.elevator",
+  "allOf": [
+    {
+      "$ref": "./robotParams.interface.json"
+    }
+  ]
+}

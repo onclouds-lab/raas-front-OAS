@@ -1,0 +1,21 @@
+{
+  "title": "robotParams",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "エンドユーザにとってのロボットの名前"
+    },
+    "specification": {
+      "$ref": "../common/idObject.v1.json"
+    },
+    "owner": {
+      "$ref": "../common/idObject.v1.json"
+    }
+  },
+  "required": [
+    "name",
+    "specification",
+    "owner"
+  ]
+}

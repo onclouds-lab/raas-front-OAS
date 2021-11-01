@@ -1,0 +1,28 @@
+{
+  "title": "robot",
+  "x-examples": {},
+  "description": "データベース上のロボットの情報",
+  "allOf": [
+    {
+      "$ref": "../common/idObject.v1.json"
+    },
+    {
+      "$ref": "../robotParams/robotParams.elevator.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "specification": {
+          "$ref": "../robotSpecification/robotSpecification.elevator.json"
+        },
+        "owner": {
+          "$ref": "../owner.v1.json"
+        }
+      },
+      "required": [
+        "specification",
+        "owner"
+      ]
+    }
+  ]
+}

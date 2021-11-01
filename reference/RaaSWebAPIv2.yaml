@@ -341,6 +341,9 @@ paths:
                             init_map_id: '0000000000000002'
                             init_slam_map_version: '1'
                             specification:
+                              maker: robo maker
+                              MQTT: true
+                              webRTC: true
                               id: '0000000000000001'
                               name: 型番1
                               radius: 2
@@ -348,9 +351,7 @@ paths:
                               max_acceleration: 2
                               max_angular_speed: 1
                               description: description
-                              type:
-                                - id: '0000000000000001'
-                                  type: normal
+                              type: 'Navigation'
                             owner:
                               id: '0000000000000001'
                               name: oci
@@ -362,15 +363,16 @@ paths:
                             init_slam_map_version: '1'
                             specification:
                               id: '0000000000000001'
+                              maker: robo maker
                               name: 型番1
+                              MQTT: true
+                              webRTC: true
                               radius: 2
                               max_speed: 1.5
                               max_acceleration: 2
                               max_angular_speed: 1
                               description: description
-                              type:
-                                - id: '0000000000000001'
-                                  type: normal
+                              type: 'Navigation'
                             owner:
                               id: '0000000000000001'
                               name: oci
@@ -381,16 +383,17 @@ paths:
                             init_map_id: '0000000000000001'
                             init_slam_map_version: '1'
                             specification:
+                              maker: robo maker
                               id: '0000000000000001'
                               name: 型番1
+                              MQTT: true
+                              webRTC: true
                               radius: 2
                               max_speed: 1.5
                               max_acceleration: 2
                               max_angular_speed: 1
                               description: description
-                              type:
-                                - id: '0000000000000001'
-                                  type: normal
+                              type: 'Navigation'
                             owner:
                               id: '0000000000000001'
                               name: oci
@@ -856,6 +859,49 @@ paths:
             type: integer
           in: query
           name: limit
+  /me:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - owner
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/owner.v1.json
+              examples:
+                example-1:
+                  value:
+                    pagenate:
+                      current_page: 0
+                      from: 0
+                      to: 0
+                      first_page_url: string
+                      last_page_url: string
+                      next_page_url: string
+                      prev_page_url: string
+                      path: string
+                      last_page: 0
+                      per_page: 0
+                      total: 0
+                    data:
+                      - id: '0001000000000001'
+                        name: sample owner
+                        owned_robot:
+                          - string
+                        owned_map:
+                          - string
+        '':
+          content:
+            application/json:
+              schema:
+                $ref: ../models/owner.v1.json
+      operationId: getMeInfo
+      description: Ownerの一覧を取得
+      parameters: []
+    parameters: []
   /paths:
     get:
       summary: get all paths
@@ -1255,18 +1301,6 @@ paths:
         name: robotType_id
         in: path
         required: true
-    get:
-      summary: getRobotType
-      tags:
-        - robot
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/robotType.json
-      operationId: getRobotType
   /robotSpecification:
     get:
       summary: getRobotSpecification
@@ -1366,7 +1400,7 @@ components:
         format: int32
         default: 100
         minimum: 1
-        maximum: 50
+        maximum: 300
       description: 表示数
     facility_id:
       name: facility_id

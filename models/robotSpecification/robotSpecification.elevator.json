@@ -2,22 +2,22 @@
   "title": "ElevatorRobot",
   "allOf": [
     {
-      "$ref": "./robot.interface.json"
+      "$ref": "./robotSpecification.interface.json"
     },
     {
       "type": "object",
       "properties": {
-        "stopFloors": {
+        "stopWaypoints": {
           "type": "array",
           "description": "停止可能な階",
           "items": {
             "$ref": "../waypoint.v2.json"
           }
         },
-        "supportTypes": {
+        "supportSpecs": {
           "type": "array",
           "items": {
-            "$ref": "./NavigationRobot.json"
+            "$ref": "./robotSpecification.navigation.json"
           }
         },
         "type": {
@@ -26,8 +26,8 @@
         }
       },
       "required": [
-        "stopFloors",
-        "supportTypes"
+        "stopWaypoints",
+        "supportSpecs"
       ]
     }
   ]
