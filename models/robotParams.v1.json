@@ -6,6 +6,14 @@
     },
     {
       "$ref": "./robotParams/robotParams.elevator.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "$ref": "./common/idObject.v1.json"
+        }
+      }
     }
   ]
 }

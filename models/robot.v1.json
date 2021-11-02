@@ -14,15 +14,12 @@
       "properties": {
         "specification": {
           "$ref": "./robotSpecification.json"
-        },
-        "owner": {
-          "$ref": "./owner.v1.json"
         }
       },
       "required": [
-        "specification",
-        "owner"
+        "specification"
       ]
     }
-  ]
+  ],
+  "examples": []
 }
