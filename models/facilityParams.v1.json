@@ -9,22 +9,10 @@
     "maps": {
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "floorNum": {
-            "type": "number"
-          },
-          "mapMeta": {
-            "$ref": "./common/idObject.v1.json"
-          }
-        },
-        "required": [
-          "floorNum",
-          "mapMeta"
-        ]
+        "$ref": "./mapMeta.v2.json"
       }
     },
-    "floor": {
+    "CountOfFloor": {
       "type": "number",
       "description": "建物の実際の階数"
     },
@@ -44,7 +32,7 @@
   "required": [
     "name",
     "maps",
-    "floor",
+    "CountOfFloor",
     "robots"
   ]
 }
