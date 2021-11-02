@@ -1,6 +1,6 @@
 {
   "title": "robotParams",
-  "allOf": [
+  "oneOf": [
     {
       "$ref": "./robotParams/robotParams.navigation.json"
     },
