@@ -15,19 +15,14 @@
         "owner": {
           "$ref": "./common/idObject.v1.json"
         },
-        "action": {
-          "type": "array",
-          "description": "actionのListは、別のAPIから取得できる。",
-          "items": {
-            "type": "string"
-          }
+        "floor": {
+          "$ref": "./common/idObject.v1.json"
         }
       },
       "required": [
         "name",
         "facility",
-        "owner",
-        "action"
+        "owner"
       ]
     },
     {
