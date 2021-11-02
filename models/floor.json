@@ -1,0 +1,11 @@
+{
+  "title": "floor",
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json"
+    },
+    {
+      "$ref": "./floorParams.json"
+    }
+  ]
+}
