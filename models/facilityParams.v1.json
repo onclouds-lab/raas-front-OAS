@@ -33,6 +33,12 @@
       "items": {
         "$ref": "./robot.v1.json"
       }
+    },
+    "floors": {
+      "type": "array",
+      "items": {
+        "$ref": "./floor.json"
+      }
     }
   },
   "required": [
