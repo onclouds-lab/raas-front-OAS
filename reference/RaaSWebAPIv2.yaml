@@ -1293,7 +1293,6 @@ paths:
                       z: 0
       tags:
         - rawRobot
-  /robotTypes: {}
   '/robotTypes/{robotType_id}':
     parameters:
       - schema:
