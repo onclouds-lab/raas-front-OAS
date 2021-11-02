@@ -27,9 +27,6 @@
           "type": "number",
           "description": "最大角速度[rad/s]"
         },
-        "description": {
-          "type": "string"
-        },
         "type": {
           "type": "string",
           "example": "Navigation"

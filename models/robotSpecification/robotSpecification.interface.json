@@ -9,7 +9,7 @@
     {
       "type": "object",
       "properties": {
-        "maker": {
+        "manufacturer": {
           "type": "string"
         },
         "type": {
@@ -24,10 +24,30 @@
         },
         "webRTC": {
           "type": "boolean"
+        },
+        "discription": {
+          "type": "string"
+        },
+        "size": {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "number",
+              "description": "単位はメートル"
+            },
+            "width": {
+              "type": "number",
+              "description": "単位はメートル"
+            },
+            "depth": {
+              "type": "number",
+              "description": "単位はメートル"
+            }
+          }
         }
       },
       "required": [
-        "maker",
+        "manufacturer",
         "type",
         "MQTT",
         "webRTC"

@@ -7,10 +7,13 @@
       "description": "エンドユーザにとってのロボットの名前"
     },
     "specification": {
-      "$ref": "../common/idObject.v1.json"
+      "$ref": "../robotSpecification/robotSpecification.interface.json"
     },
     "owner": {
       "$ref": "../common/idObject.v1.json"
+    },
+    "home": {
+      "$ref": "../waypoint.v2.json"
     }
   },
   "required": [
