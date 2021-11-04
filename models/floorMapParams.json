@@ -1,12 +1,13 @@
 {
   "title": "floorMapParams",
   "type": "object",
+  "description": "",
   "properties": {
     "map": {
       "$ref": "./common/idObject.v1.json"
     },
     "origin": {
-      "$ref": "./common/point2d.v1.json"
+      "$ref": "./common/point3d.json"
     },
     "rotation": {
       "$ref": "./common/rotation.json"
@@ -16,6 +17,5 @@
     "map",
     "origin",
     "rotation"
-  ],
-  "description": ""
+  ]
 }
