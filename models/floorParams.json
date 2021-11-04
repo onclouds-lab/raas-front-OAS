@@ -1,6 +1,7 @@
 {
   "title": "floorParams",
   "type": "object",
+  "description": "",
   "properties": {
     "traslation": {
       "type": "object",
@@ -21,33 +22,20 @@
         }
       }
     },
-    "roation": {
-      "type": "object",
-      "required": [
-        "x",
-        "y",
-        "z"
-      ],
-      "properties": {
-        "x": {
-          "type": "string"
-        },
-        "y": {
-          "type": "string"
-        },
-        "z": {
-          "type": "string"
-        }
-      }
-    },
-    "maps": {
-      "$ref": "./common/idObject.v1.json"
+    "rotation": {
+      "$ref": "./common/rotation.json"
     },
     "floorNumber": {
       "type": "number"
     },
     "description": {
       "type": "string"
+    },
+    "maps": {
+      "type": "array",
+      "items": {
+        "$ref": "./floorMapParams.json"
+      }
     },
     "waypoints": {
       "type": "array",
@@ -59,10 +47,10 @@
   },
   "required": [
     "traslation",
-    "roation",
-    "maps",
+    "rotation",
     "floorNumber",
     "description",
+    "maps",
     "waypoints"
   ]
 }

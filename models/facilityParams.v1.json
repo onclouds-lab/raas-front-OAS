@@ -6,33 +6,20 @@
     "name": {
       "type": "string"
     },
-    "maps": {
-      "type": "array",
-      "items": {
-        "$ref": "./mapMeta.v2.json"
-      }
-    },
-    "CountOfFloor": {
+    "countOfFloor": {
       "type": "number",
       "description": "建物の実際の階数"
-    },
-    "robots": {
-      "type": "array",
-      "items": {
-        "$ref": "./robot.v1.json"
-      }
     },
     "floors": {
       "type": "array",
       "items": {
-        "$ref": "./floor.json"
+        "$ref": "./floorParams.json"
       }
     }
   },
   "required": [
     "name",
-    "maps",
-    "CountOfFloor",
-    "robots"
+    "countOfFloor",
+    "floors"
   ]
 }

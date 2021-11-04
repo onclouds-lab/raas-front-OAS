@@ -11,13 +11,6 @@
       "type": "string",
       "description": "このマップの説明。どこで使うかはわからないがとりあえず設定した。"
     },
-    "resolution": {
-      "type": "number",
-      "description": "PGMマップの解像度。ロボットが使う"
-    },
-    "origin": {
-      "$ref": "./common/point2d.v1.json"
-    },
     "negate": {
       "type": "boolean",
       "default": false,
@@ -42,28 +35,10 @@
     },
     "owner": {
       "$ref": "./owner.v1.json"
-    },
-    "roation": {
-      "type": "object",
-      "default": 0,
-      "format": "float",
-      "properties": {
-        "x": {
-          "type": "string"
-        },
-        "y": {
-          "type": "string"
-        },
-        "z": {
-          "type": "string"
-        }
-      }
     }
   },
   "required": [
     "name",
-    "resolution",
-    "origin",
     "size"
   ]
 }
