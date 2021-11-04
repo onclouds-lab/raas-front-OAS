@@ -42,6 +42,22 @@
     },
     "owner": {
       "$ref": "./owner.v1.json"
+    },
+    "roation": {
+      "type": "object",
+      "default": 0,
+      "format": "float",
+      "properties": {
+        "x": {
+          "type": "string"
+        },
+        "y": {
+          "type": "string"
+        },
+        "z": {
+          "type": "string"
+        }
+      }
     }
   },
   "required": [

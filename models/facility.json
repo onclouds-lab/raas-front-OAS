@@ -14,20 +14,6 @@
     },
     {
       "$ref": "./facilityParams.v1.json"
-    },
-    {
-      "type": "object",
-      "properties": {
-        "robots": {
-          "type": "array",
-          "items": {
-            "$ref": "./robot.v1.json"
-          }
-        }
-      },
-      "required": [
-        "robots"
-      ]
     }
   ]
 }

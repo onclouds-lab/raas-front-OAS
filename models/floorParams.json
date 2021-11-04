@@ -1,0 +1,68 @@
+{
+  "title": "floorParams",
+  "type": "object",
+  "properties": {
+    "traslation": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "type": "string"
+        },
+        "y": {
+          "type": "string"
+        },
+        "z": {
+          "type": "string"
+        }
+      }
+    },
+    "roation": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "type": "string"
+        },
+        "y": {
+          "type": "string"
+        },
+        "z": {
+          "type": "string"
+        }
+      }
+    },
+    "maps": {
+      "$ref": "./common/idObject.v1.json"
+    },
+    "floorNumber": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "waypoints": {
+      "type": "array",
+      "description": "floorに持たせるべきか要相談",
+      "items": {
+        "$ref": "./common/idObject.v1.json"
+      }
+    }
+  },
+  "required": [
+    "traslation",
+    "roation",
+    "maps",
+    "floorNumber",
+    "description",
+    "waypoints"
+  ]
+}
