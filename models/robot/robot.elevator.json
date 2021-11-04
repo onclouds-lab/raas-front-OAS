@@ -17,6 +17,16 @@
         },
         "owner": {
           "$ref": "../owner.v1.json"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "elevator"
+        },
+        "stopWaypoints": {
+          "type": "array",
+          "items": {
+            "$ref": "../waypoint.v2.json"
+          }
         }
       },
       "required": [

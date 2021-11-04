@@ -3,6 +3,18 @@
   "allOf": [
     {
       "$ref": "./robotParams.interface.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "navigation"
+        }
+      },
+      "required": [
+        "type"
+      ]
     }
   ]
 }

@@ -6,18 +6,26 @@
       "type": "string",
       "description": "エンドユーザにとってのロボットの名前"
     },
+    "type": {
+      "type": "string",
+      "enum": [
+        "elevator",
+        "navigation"
+      ]
+    },
     "specification": {
-      "$ref": "../robotSpecification/robotSpecification.interface.json"
+      "$ref": "../common/idObject.v1.json"
     },
     "owner": {
       "$ref": "../common/idObject.v1.json"
     },
     "home": {
-      "$ref": "../waypoint.v2.json"
+      "$ref": "../common/idObject.v1.json"
     }
   },
   "required": [
     "name",
+    "type",
     "specification",
     "owner"
   ]
