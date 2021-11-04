@@ -7,6 +7,10 @@
     {
       "type": "object",
       "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "navigation"
+        },
         "name": {
           "type": "string",
           "description": "型番"
@@ -26,18 +30,14 @@
         "max_angular_speed": {
           "type": "number",
           "description": "最大角速度[rad/s]"
-        },
-        "type": {
-          "type": "string",
-          "example": "navigation"
         }
       },
       "required": [
+        "type",
         "radius",
         "max_speed",
         "max_acceleration",
-        "max_angular_speed",
-        "type"
+        "max_angular_speed"
       ]
     }
   ],
