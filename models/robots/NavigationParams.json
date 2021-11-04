@@ -2,7 +2,7 @@
   "title": "NavigationParams",
   "allOf": [
     {
-      "$ref": "./IRobotParams.json"
+      "$ref": "./CommonRobotParams.json"
     },
     {
       "type": "object",

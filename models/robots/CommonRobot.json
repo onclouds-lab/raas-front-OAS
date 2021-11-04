@@ -1,13 +1,13 @@
 {
-  "title": "IRobot",
+  "title": "CommonRobot",
   "x-examples": {},
-  "description": "データベース上のロボットの情報",
+  "description": "データベース上のロボットの共通情報",
   "allOf": [
     {
       "$ref": "../common/idObject.v1.json"
     },
     {
-      "$ref": "./IRobotParams.json"
+      "$ref": "./CommonRobotParams.json"
     },
     {
       "type": "object",

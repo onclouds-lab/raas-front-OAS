@@ -2,7 +2,7 @@
   "title": "ElevatorSpecification",
   "allOf": [
     {
-      "$ref": "./ISpecification.json"
+      "$ref": "./CommonSpecification.json"
     },
     {
       "type": "object",
@@ -22,5 +22,6 @@
         "supportSpecs"
       ]
     }
-  ]
+  ],
+  "description": "エレベーターの諸元"
 }

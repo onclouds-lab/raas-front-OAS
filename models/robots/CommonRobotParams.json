@@ -1,5 +1,5 @@
 {
-  "title": "IRobotParams",
+  "title": "CommonRobotParams",
   "type": "object",
   "properties": {
     "name": {

@@ -2,7 +2,7 @@
   "title": "NavigationSpecification",
   "allOf": [
     {
-      "$ref": "./ISpecification.json"
+      "$ref": "./CommonSpecification.json"
     },
     {
       "type": "object",
@@ -41,5 +41,5 @@
       ]
     }
   ],
-  "description": "ロボットの諸元、及び実行可能な動作"
+  "description": "移動ロボットの諸元"
 }

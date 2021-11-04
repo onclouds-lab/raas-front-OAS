@@ -1,7 +1,7 @@
 {
   "title": "Navigation",
   "x-examples": {},
-  "description": "データベース上のロボットの情報",
+  "description": "移動ロボットの情報",
   "allOf": [
     {
       "$ref": "../common/idObject.v1.json"

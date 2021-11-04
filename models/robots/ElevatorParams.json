@@ -2,7 +2,7 @@
   "title": "ElevatorParams",
   "allOf": [
     {
-      "$ref": "./IRobotParams.json"
+      "$ref": "./CommonRobotParams.json"
     },
     {
       "type": "object",

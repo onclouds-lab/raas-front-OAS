@@ -1,7 +1,7 @@
 {
-  "title": "ISpecification",
+  "title": "CommonSpecification",
   "x-examples": {},
-  "description": "RaaSで扱うロボットのインターフェース",
+  "description": "RaaSで扱う共通のロボット仕様",
   "allOf": [
     {
       "$ref": "../common/idObject.v1.json"
