@@ -14,6 +14,17 @@
     },
     {
       "$ref": "./facilityParams.v1.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "floors": {
+          "type": "array",
+          "items": {
+            "$ref": "./floor.json"
+          }
+        }
+      }
     }
   ]
 }

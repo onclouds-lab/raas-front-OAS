@@ -1,8 +1,8 @@
 {
-  "title": "ElevatorRobot",
+  "title": "ElevatorSpecification",
   "allOf": [
     {
-      "$ref": "./robotSpecification.interface.json"
+      "$ref": "./ISpecification.json"
     },
     {
       "type": "object",
@@ -10,7 +10,7 @@
         "supportSpecs": {
           "type": "array",
           "items": {
-            "$ref": "./robotSpecification.navigation.json"
+            "$ref": "./NavigationSpecification.json"
           }
         },
         "type": {

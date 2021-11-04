@@ -6,6 +6,27 @@
     },
     {
       "$ref": "./floorParams.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "maps": {
+          "type": "array",
+          "items": {
+            "$ref": "./floorMap.json"
+          }
+        },
+        "waypoints": {
+          "type": "array",
+          "items": {
+            "$ref": "./waypoint.v2.json"
+          }
+        }
+      },
+      "required": [
+        "maps",
+        "waypoints"
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "title": "robot",
+  "title": "Navigation",
   "x-examples": {},
   "description": "データベース上のロボットの情報",
   "allOf": [
@@ -7,7 +7,7 @@
       "$ref": "../common/idObject.v1.json"
     },
     {
-      "$ref": "../robotParams/robotParams.navigation.json"
+      "$ref": "./NavigationParams.json"
     },
     {
       "type": "object",
@@ -17,7 +17,7 @@
           "pattern": "navigation"
         },
         "specification": {
-          "$ref": "../robotSpecification/robotSpecification.navigation.json"
+          "$ref": "../specs/NavigationSpecification.json"
         },
         "owner": {
           "$ref": "../owner.v1.json"

@@ -1,5 +1,5 @@
 {
-  "title": "robot",
+  "title": "IRobot",
   "x-examples": {},
   "description": "データベース上のロボットの情報",
   "allOf": [
@@ -7,26 +7,19 @@
       "$ref": "../common/idObject.v1.json"
     },
     {
-      "$ref": "../robotParams/robotParams.elevator.json"
+      "$ref": "./IRobotParams.json"
     },
     {
       "type": "object",
       "properties": {
         "specification": {
-          "$ref": "../robotSpecification/robotSpecification.elevator.json"
+          "$ref": "../specs/ISpecification.json"
         },
         "owner": {
           "$ref": "../owner.v1.json"
         },
-        "type": {
-          "type": "string",
-          "pattern": "elevator"
-        },
-        "stopWaypoints": {
-          "type": "array",
-          "items": {
-            "$ref": "../waypoint.v2.json"
-          }
+        "home": {
+          "$ref": "../waypoint.v2.json"
         }
       },
       "required": [

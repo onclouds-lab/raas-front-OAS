@@ -893,11 +893,6 @@ paths:
                           - string
                         owned_map:
                           - string
-        '':
-          content:
-            application/json:
-              schema:
-                $ref: ../models/owner.v1.json
       operationId: getMeInfo
       description: Ownerの一覧を取得
       parameters: []

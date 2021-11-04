@@ -36,13 +36,6 @@
       "items": {
         "$ref": "./floorMapParams.json"
       }
-    },
-    "waypoints": {
-      "type": "array",
-      "description": "floorに持たせるべきか要相談",
-      "items": {
-        "$ref": "./common/idObject.v1.json"
-      }
     }
   },
   "required": [
@@ -50,7 +43,6 @@
     "rotation",
     "floorNumber",
     "description",
-    "maps",
-    "waypoints"
+    "maps"
   ]
 }

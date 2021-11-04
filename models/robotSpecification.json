@@ -3,10 +3,10 @@
   "description": "",
   "oneOf": [
     {
-      "$ref": "./robotSpecification/robotSpecification.navigation.json"
+      "$ref": "./specs/NavigationSpecification.json"
     },
     {
-      "$ref": "./robotSpecification/robotSpecification.elevator.json"
+      "$ref": "./specs/ElevatorSpecification.json"
     }
   ],
   "examples": []

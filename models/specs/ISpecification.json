@@ -1,5 +1,5 @@
 {
-  "title": "robot.interface",
+  "title": "ISpecification",
   "x-examples": {},
   "description": "RaaSで扱うロボットのインターフェース",
   "allOf": [
@@ -13,11 +13,11 @@
           "type": "string"
         },
         "type": {
+          "type": "string",
           "enum": [
-            "Navigation",
-            "Elevator"
-          ],
-          "type": "string"
+            "navigation",
+            "elevator"
+          ]
         },
         "MQTT": {
           "type": "boolean"

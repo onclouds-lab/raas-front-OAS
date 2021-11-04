@@ -34,7 +34,7 @@
       "$ref": "./common/size2d.v1.json"
     },
     "owner": {
-      "$ref": "./owner.v1.json"
+      "$ref": "./common/idObject.v1.json"
     }
   },
   "required": [

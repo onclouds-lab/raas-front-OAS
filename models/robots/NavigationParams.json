@@ -1,8 +1,8 @@
 {
-  "title": "robotParams",
+  "title": "NavigationParams",
   "allOf": [
     {
-      "$ref": "./robotParams.interface.json"
+      "$ref": "./IRobotParams.json"
     },
     {
       "type": "object",

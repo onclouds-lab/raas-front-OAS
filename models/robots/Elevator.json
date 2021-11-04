@@ -1,5 +1,5 @@
 {
-  "title": "robot.interface",
+  "title": "Elevator",
   "x-examples": {},
   "description": "データベース上のロボットの情報",
   "allOf": [
@@ -7,16 +7,26 @@
       "$ref": "../common/idObject.v1.json"
     },
     {
-      "$ref": "../robotParams.v1.json"
+      "$ref": "./ElevatorParams.json"
     },
     {
       "type": "object",
       "properties": {
         "specification": {
-          "$ref": "../robotSpecification.json"
+          "$ref": "../specs/ElevatorSpecification.json"
         },
         "owner": {
           "$ref": "../owner.v1.json"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "elevator"
+        },
+        "stopWaypoints": {
+          "type": "array",
+          "items": {
+            "$ref": "../waypoint.v2.json"
+          }
         }
       },
       "required": [

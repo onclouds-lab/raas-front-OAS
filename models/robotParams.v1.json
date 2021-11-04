@@ -2,10 +2,10 @@
   "title": "robotParams",
   "oneOf": [
     {
-      "$ref": "./robotParams/robotParams.navigation.json"
+      "$ref": "./robots/NavigationParams.json"
     },
     {
-      "$ref": "./robotParams/robotParams.elevator.json"
+      "$ref": "./robots/ElevatorParams.json"
     }
   ]
 }

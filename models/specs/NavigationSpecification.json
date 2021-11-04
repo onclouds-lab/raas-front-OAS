@@ -1,8 +1,8 @@
 {
-  "title": "navigationRobot",
+  "title": "NavigationSpecification",
   "allOf": [
     {
-      "$ref": "./robotSpecification.interface.json"
+      "$ref": "./ISpecification.json"
     },
     {
       "type": "object",

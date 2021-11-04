@@ -19,6 +19,9 @@
           "type": "string",
           "format": "uri",
           "description": "このマップのコストマップを取得するためのAPI URI"
+        },
+        "owner": {
+          "$ref": "./owner.v1.json"
         }
       },
       "required": [
