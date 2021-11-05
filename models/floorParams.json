@@ -1,0 +1,48 @@
+{
+  "title": "floorParams",
+  "type": "object",
+  "description": "",
+  "properties": {
+    "traslation": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "type": "string"
+        },
+        "y": {
+          "type": "string"
+        },
+        "z": {
+          "type": "string"
+        }
+      }
+    },
+    "rotation": {
+      "$ref": "./common/rotation.json"
+    },
+    "floorNumber": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "maps": {
+      "type": "array",
+      "items": {
+        "$ref": "./floorMapParams.json"
+      }
+    }
+  },
+  "required": [
+    "traslation",
+    "rotation",
+    "floorNumber",
+    "description",
+    "maps"
+  ]
+}

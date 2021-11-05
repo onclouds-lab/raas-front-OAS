@@ -1,0 +1,31 @@
+{
+  "title": "CommonRobot",
+  "x-examples": {},
+  "description": "データベース上のロボットの共通情報",
+  "allOf": [
+    {
+      "$ref": "../common/idObject.v1.json"
+    },
+    {
+      "$ref": "./CommonRobotParams.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "specification": {
+          "$ref": "../specs/ISpecification.json"
+        },
+        "owner": {
+          "$ref": "../owner.v1.json"
+        },
+        "home": {
+          "$ref": "../waypoint.v2.json"
+        }
+      },
+      "required": [
+        "specification",
+        "owner"
+      ]
+    }
+  ]
+}

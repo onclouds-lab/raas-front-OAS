@@ -37,7 +37,7 @@
       ]
     },
     {
-      "$ref": "./common/pointMap.json"
+      "$ref": "./common/pointFloor.json"
     }
   ]
 }

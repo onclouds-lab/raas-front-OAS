@@ -1,0 +1,32 @@
+{
+  "title": "Navigation",
+  "x-examples": {},
+  "description": "移動ロボットの情報",
+  "allOf": [
+    {
+      "$ref": "../common/idObject.v1.json"
+    },
+    {
+      "$ref": "./NavigationParams.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "navigation"
+        },
+        "specification": {
+          "$ref": "../specs/NavigationSpecification.json"
+        },
+        "owner": {
+          "$ref": "../owner.v1.json"
+        }
+      },
+      "required": [
+        "specification",
+        "owner"
+      ]
+    }
+  ]
+}

@@ -18,35 +18,13 @@
     {
       "type": "object",
       "properties": {
-        "robots": {
+        "floors": {
           "type": "array",
           "items": {
-            "$ref": "./robot.v1.json"
-          }
-        },
-        "maps": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "mapMeta": {
-                "$ref": "./mapMeta.v2.json"
-              },
-              "floorNum": {
-                "type": "number"
-              }
-            },
-            "required": [
-              "mapMeta",
-              "floorNum"
-            ]
+            "$ref": "./floor.json"
           }
         }
-      },
-      "required": [
-        "robots",
-        "maps"
-      ]
+      }
     }
   ]
 }
