@@ -11,6 +11,10 @@
       "type": "string",
       "description": "このマップの説明。どこで使うかはわからないがとりあえず設定した。"
     },
+    "resolution": {
+      "type": "number",
+      "description": "PGMマップの解像度。ロボットが使う"
+    },
     "negate": {
       "type": "boolean",
       "default": false,

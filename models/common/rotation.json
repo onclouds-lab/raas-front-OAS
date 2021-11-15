@@ -3,15 +3,15 @@
   "type": "object",
   "properties": {
     "roll": {
-      "type": "string",
-      "description": "X軸で回転。単位はradian。"
+      "description": "X軸で回転。単位はradian。",
+      "type": "number"
     },
     "pitch": {
-      "type": "string",
+      "type": "number",
       "description": "Y軸で回転。単位はradian。"
     },
     "yaw": {
-      "type": "string",
+      "type": "number",
       "description": "Z軸で回転。単位はradian。"
     }
   }
