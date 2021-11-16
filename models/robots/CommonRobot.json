@@ -13,7 +13,7 @@
       "type": "object",
       "properties": {
         "specification": {
-          "$ref": "../specs/ISpecification.json"
+          "$ref": "../specs/CommonSpecification.json"
         },
         "owner": {
           "$ref": "../owner.v1.json"
