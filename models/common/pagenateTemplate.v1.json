@@ -1,7 +1,8 @@
 {
-  "title": "pagenateTemplate",
   "type": "object",
+  "title": "pagenateTemplate",
   "x-examples": {},
+  "minProperties": 1,
   "properties": {
     "current_page": {
       "type": "integer"
@@ -31,7 +32,8 @@
       "type": "integer"
     },
     "per_page": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": 1
     },
     "total": {
       "type": "integer"
