@@ -4,7 +4,7 @@
   "description": "エレベーターの情報",
   "allOf": [
     {
-      "$ref": "../common/idObject.v1.json"
+      "$ref": "./CommonRobot.json"
     },
     {
       "$ref": "./ElevatorParams.json"
