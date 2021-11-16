@@ -14,5 +14,10 @@
       "type": "number",
       "description": "Z軸で回転。単位はradian。"
     }
-  }
+  },
+  "required": [
+    "roll",
+    "pitch",
+    "yaw"
+  ]
 }
