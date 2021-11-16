@@ -185,15 +185,17 @@ paths:
             application/json:
               schema:
                 type: string
+                pattern: '^(http|https)://([\w-]+\.)+[\w-]+(/[\w-./?%&=]*)?$'
+                readOnly: true
               examples:
                 '0000000000000001':
-                  value: /resource/bitmap/chinokyoten1f.png
+                  value: 'http://onclouds.example/resource/bitmap/chinokyoten1f.png'
                 '0000000000000002':
-                  value: /resource/bitmap/chinokyoten2f.png
+                  value: 'https://onclouds.example/resource/bitmap/chinokyoten2f.png'
                 '0000000000000003':
-                  value: /resource/bitmap/chinokyoten3f.png
+                  value: 'https://onclouds.example/resource/bitmap/chinokyoten3f.png'
       operationId: getCostmapURL
-      description: 詳細説明なし
+      description: mapIdで指定される画像(PNG)を取得可能なURLが返る
     put:
       summary: ''
       operationId: putCostmap
@@ -351,7 +353,7 @@ paths:
                               max_acceleration: 2
                               max_angular_speed: 1
                               description: description
-                              type: 'Navigation'
+                              type: Navigation
                             owner:
                               id: '0000000000000001'
                               name: oci
@@ -372,7 +374,7 @@ paths:
                               max_acceleration: 2
                               max_angular_speed: 1
                               description: description
-                              type: 'Navigation'
+                              type: Navigation
                             owner:
                               id: '0000000000000001'
                               name: oci
@@ -393,7 +395,7 @@ paths:
                               max_acceleration: 2
                               max_angular_speed: 1
                               description: description
-                              type: 'Navigation'
+                              type: Navigation
                             owner:
                               id: '0000000000000001'
                               name: oci

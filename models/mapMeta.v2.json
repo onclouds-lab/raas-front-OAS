@@ -22,11 +22,17 @@
         },
         "owner": {
           "$ref": "./owner.v1.json"
+        },
+        "gen_preSingnedUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "画像にアクセス可能なURLを発行するAPI-endpointへのリンク",
+          "readOnly": true
         }
       },
       "required": [
         "pgm_link",
-        "guidemap_link"
+        "gen_preSingnedUrl"
       ]
     }
   ],
