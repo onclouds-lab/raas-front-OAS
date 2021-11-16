@@ -3,7 +3,7 @@
   "type": "object",
   "description": "",
   "properties": {
-    "traslation": {
+    "translation": {
       "type": "object",
       "required": [
         "x",
@@ -39,7 +39,7 @@
     }
   },
   "required": [
-    "traslation",
+    "translation",
     "rotation",
     "floorNumber",
     "description",
