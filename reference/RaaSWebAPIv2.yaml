@@ -500,7 +500,7 @@ paths:
                 example-1:
                   value:
                     pagenate:
-                      current_page: 0
+                      current_page: 1
                       from: 0
                       to: 0
                       first_page_url: string
@@ -509,7 +509,7 @@ paths:
                       prev_page_url: string
                       path: string
                       last_page: 0
-                      per_page: 0
+                      per_page: 1
                       total: 0
                     data:
                       - id: '0000000000000101'
@@ -841,7 +841,7 @@ paths:
                       prev_page_url: string
                       path: string
                       last_page: 0
-                      per_page: 0
+                      per_page: 1
                       total: 0
                     data:
                       - id: '0001000000000001'
@@ -1189,6 +1189,9 @@ paths:
           name: sort
         - schema:
             type: string
+            enum:
+              - elevator
+              - navigation
           in: query
           name: type
         - schema:
