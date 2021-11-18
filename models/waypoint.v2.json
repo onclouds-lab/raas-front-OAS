@@ -7,9 +7,6 @@
     },
     {
       "$ref": "./waypointParams.v2.json"
-    },
-    {
-      "type": "object"
     }
   ]
 }

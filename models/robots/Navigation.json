@@ -21,6 +21,9 @@
         },
         "owner": {
           "$ref": "../owner.v1.json"
+        },
+        "home": {
+          "$ref": "../waypoint.v2.json"
         }
       },
       "required": [
