@@ -7,6 +7,14 @@
     },
     {
       "$ref": "./waypointParams.v2.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "owner": {
+          "$ref": "./owner.v1.json"
+        }
+      }
     }
   ]
 }
