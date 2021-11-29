@@ -43,6 +43,11 @@
   },
   "required": [
     "name",
-    "size"
+    "resolution",
+    "negate",
+    "occupied_thresh",
+    "free_thresh",
+    "size",
+    "owner"
   ]
 }
