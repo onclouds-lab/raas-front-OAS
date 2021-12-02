@@ -30,7 +30,7 @@ jobs:
       run: |
         git pull
         git checkout OpenDocument
-        git merge master --allow-unrelated-histories
+        git merge master --allow-unrelated-histories --no-commit
     - name: Generate Document
       run: npx redoc-cli bundle reference/RaaSWebAPIv2.yaml -o ./html/OAS.html
     - name: Commit files
