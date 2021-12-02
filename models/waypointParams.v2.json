@@ -24,6 +24,9 @@
     },
     {
       "$ref": "./common/floorAttribute.json"
+    },
+    {
+      "$ref": "./common/updateDateObject.json"
     }
   ]
 }
