@@ -1546,7 +1546,6 @@ paths:
         required: true
     get:
       summary: getRobotSpecification
-      tags: []
       responses:
         '200':
           description: OK
@@ -1555,6 +1554,8 @@ paths:
               schema:
                 $ref: ../models/robotSpecification.json
       operationId: getRobotSpecification
+      tags:
+        - robot
   '/sendOperation/{robot_id}':
     parameters:
       - schema:
