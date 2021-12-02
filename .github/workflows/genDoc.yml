@@ -28,6 +28,7 @@ jobs:
          node-version: '14'
     - name: Branch merge
       run: |
+        git pull
         git checkout html
         git merge master
     - name: Generate Document
