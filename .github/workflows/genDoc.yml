@@ -27,4 +27,9 @@ jobs:
       with:
          node-version: '14'
     - run: npx redoc-cli bundle reference/RaaSWebAPIv2.yaml -o ./html/OAS.html
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: html
 
