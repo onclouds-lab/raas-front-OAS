@@ -28,19 +28,19 @@ jobs:
          node-version: '14'
     - name: Branch merge
       run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git pull
-        git checkout html
-        git merge master
+        git checkout OpenDocument
+        git merge master --allow-unrelated-histories --no-commit
     - name: Generate Document
       run: npx redoc-cli bundle reference/RaaSWebAPIv2.yaml -o ./html/OAS.html
     - name: Commit files
       run: |
-        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
         git commit -m "document html gen" -a
     - name: GitHub Push
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: html
+        branch: OpenDocument
 
