@@ -19,10 +19,14 @@
               "pattern": "navigation"
             }
           }
+        },
+        "home": {
+          "$ref": "../common/idObject.v1.json"
         }
       },
       "required": [
-        "type"
+        "type",
+        "home"
       ]
     }
   ],

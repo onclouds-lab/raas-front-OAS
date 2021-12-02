@@ -268,13 +268,12 @@ paths:
                                 size:
                                   width: 4000
                                   height: 4000
-                                pgm_link: 'http://hogehoge.com/hoge'
-                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
                                 owner:
                                   id: owner-1
                                   name: veniam
                                   owned_robot: []
                                   owned_map: []
+                                  updateDate: '2019-11-20T16:31:46.928Z'
                                 floor:
                                   id: fl-1
                                 origin:
@@ -285,6 +284,9 @@ paths:
                                   roll: 0
                                   pitch: 0
                                   yaw: 1.75
+                                updateDate: '2019-11-20T16:31:46.928Z'
+                                pgm_link: 'http://hogehoge.com/hoge'
+                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
                             waypoints: []
                           - id: fl-2
                             translation:
@@ -297,6 +299,7 @@ paths:
                               yaw: 0
                             floorNumber: 2
                             description: ''
+                            updateDate: '2019-11-20T16:31:46.928Z'
                             maps:
                               - id: '0000000000000002'
                                 name: map-2
@@ -308,13 +311,12 @@ paths:
                                 size:
                                   width: 4000
                                   height: 4000
-                                pgm_link: 'http://hogehoge.com/hoge'
-                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
                                 owner:
                                   id: owner-1
                                   name: veniam
                                   owned_robot: []
                                   owned_map: []
+                                  updateDate: '2019-11-20T16:31:46.928Z'
                                 floor:
                                   id: fl-2
                                 origin:
@@ -325,6 +327,9 @@ paths:
                                   roll: 0
                                   pitch: 0
                                   yaw: 0
+                                updateDate: '2019-11-20T16:31:46.928Z'
+                                pgm_link: 'http://hogehoge.com/hoge'
+                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
                             waypoints: []
                           - id: fl-3
                             translation:
@@ -337,6 +342,7 @@ paths:
                               yaw: 0
                             floorNumber: 3
                             description: ''
+                            updateDate: '2019-11-20T16:31:46.928Z'
                             maps:
                               - id: '0000000000000003'
                                 name: map-3
@@ -348,13 +354,12 @@ paths:
                                 size:
                                   width: 4000
                                   height: 4000
-                                pgm_link: 'http://hogehoge.com/hoge'
-                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
                                 owner:
                                   id: owner-1
                                   name: veniam
                                   owned_robot: []
                                   owned_map: []
+                                  updateDate: '2019-11-20T16:31:46.928Z'
                                 floor:
                                   id: fl-3
                                 origin:
@@ -365,6 +370,8 @@ paths:
                                   roll: 0
                                   pitch: 0
                                   yaw: 0
+                                pgm_link: 'http://hogehoge.com/hoge'
+                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
                             waypoints: []
         '201':
           description: Created

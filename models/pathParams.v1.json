@@ -1,28 +1,35 @@
 {
   "title": "pathParams",
-  "type": "object",
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "エンドユーザにとってのpath名"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "エンドユーザにとってのpath名"
+        },
+        "facility": {
+          "$ref": "./common/idObject.v1.json"
+        },
+        "operations": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "./roboOperation.json"
+          }
+        },
+        "owner": {
+          "$ref": "./common/idObject.v1.json"
+        }
+      },
+      "required": [
+        "name",
+        "facility",
+        "operations"
+      ]
     },
-    "facility": {
-      "$ref": "./common/idObject.v1.json"
-    },
-    "operations": {
-      "description": "",
-      "type": "array",
-      "items": {
-        "$ref": "./roboOperation.json"
-      }
-    },
-    "owner": {
-      "$ref": "./common/idObject.v1.json"
+    {
+      "$ref": "./common/updateDateObject.json"
     }
-  },
-  "required": [
-    "name",
-    "facility",
-    "operations"
   ]
 }
