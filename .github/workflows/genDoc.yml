@@ -37,6 +37,7 @@ jobs:
       run: npx redoc-cli bundle reference/RaaSWebAPIv2.yaml -o ./html/OAS.html
     - name: Commit files
       run: |
+        git add ./html/OAS.html
         git commit -m "document html gen" -a
     - name: GitHub Push
       uses: ad-m/github-push-action@v0.6.0
