@@ -32,7 +32,6 @@
       },
       "required": [
         "pgm_link",
-        "guidemap_link",
         "owner",
         "gen_preSingnedUrl"
       ]

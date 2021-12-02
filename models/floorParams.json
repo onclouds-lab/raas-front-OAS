@@ -32,20 +32,13 @@
         },
         "description": {
           "type": "string"
-        },
-        "maps": {
-          "type": "array",
-          "items": {
-            "$ref": "./floorMapParams.json"
-          }
         }
       },
       "required": [
         "translation",
         "rotation",
         "floorNumber",
-        "description",
-        "maps"
+        "description"
       ]
     },
     {

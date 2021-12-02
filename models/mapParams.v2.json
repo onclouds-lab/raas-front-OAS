@@ -41,6 +41,15 @@
         },
         "owner": {
           "$ref": "./common/idObject.v1.json"
+        },
+        "floor": {
+          "$ref": "./common/idObject.v1.json"
+        },
+        "origin": {
+          "$ref": "./common/point3d.json"
+        },
+        "rotation": {
+          "$ref": "./common/rotation.json"
         }
       },
       "required": [
