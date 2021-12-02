@@ -27,5 +27,5 @@ jobs:
       with:
          node-version: '14'
          cache: 'npm'
-    - run: npx redoc-cli bundle reference/RaaSWebAPI.yaml -o ./html/OAS.html
+   # - run: npx redoc-cli bundle reference/RaaSWebAPI.yaml -o ./html/OAS.html
 
