@@ -1,32 +1,39 @@
 {
   "title": "CommonRobotParams",
-  "type": "object",
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "エンドユーザにとってのロボットの名前"
-    },
-    "type": {
-      "type": "string",
-      "enum": [
-        "elevator",
-        "navigation"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "エンドユーザにとってのロボットの名前"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "elevator",
+            "navigation"
+          ]
+        },
+        "specification": {
+          "$ref": "../common/idObject.v1.json"
+        },
+        "owner": {
+          "$ref": "../common/idObject.v1.json"
+        },
+        "home": {
+          "$ref": "../common/idObject.v1.json"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "specification",
+        "owner"
       ]
     },
-    "specification": {
-      "$ref": "../common/idObject.v1.json"
-    },
-    "owner": {
-      "$ref": "../common/idObject.v1.json"
-    },
-    "home": {
-      "$ref": "../common/idObject.v1.json"
+    {
+      "$ref": "../common/updateDateObject.json"
     }
-  },
-  "required": [
-    "name",
-    "type",
-    "specification",
-    "owner"
   ]
 }

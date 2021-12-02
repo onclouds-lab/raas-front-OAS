@@ -1,21 +1,28 @@
 {
   "title": "floorMapParams",
-  "type": "object",
   "description": "",
-  "properties": {
-    "map": {
-      "$ref": "./common/idObject.v1.json"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "map": {
+          "$ref": "./common/idObject.v1.json"
+        },
+        "origin": {
+          "$ref": "./common/point3d.json"
+        },
+        "rotation": {
+          "$ref": "./common/rotation.json"
+        }
+      },
+      "required": [
+        "map",
+        "origin",
+        "rotation"
+      ]
     },
-    "origin": {
-      "$ref": "./common/point3d.json"
-    },
-    "rotation": {
-      "$ref": "./common/rotation.json"
+    {
+      "$ref": "./common/updateDateObject.json"
     }
-  },
-  "required": [
-    "map",
-    "origin",
-    "rotation"
   ]
 }
