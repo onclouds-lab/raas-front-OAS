@@ -1,25 +1,32 @@
 {
   "title": "facilityParams",
-  "type": "object",
   "description": "",
-  "properties": {
-    "name": {
-      "type": "string"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "countOfFloor": {
+          "type": "number",
+          "description": "建物の実際の階数"
+        },
+        "floors": {
+          "type": "array",
+          "items": {
+            "$ref": "./floorParams.json"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "countOfFloor",
+        "floors"
+      ]
     },
-    "countOfFloor": {
-      "type": "number",
-      "description": "建物の実際の階数"
-    },
-    "floors": {
-      "type": "array",
-      "items": {
-        "$ref": "./floorParams.json"
-      }
+    {
+      "$ref": "./common/updateDateObject.json"
     }
-  },
-  "required": [
-    "name",
-    "countOfFloor",
-    "floors"
   ]
 }

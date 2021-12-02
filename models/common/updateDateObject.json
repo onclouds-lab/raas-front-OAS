@@ -1,12 +1,11 @@
 {
   "title": "updateDate",
   "type": "object",
+  "description": "",
   "properties": {
     "updateDate": {
-      "type": "string"
+      "type": "string",
+      "description": "更新時必須。getしたモデルの値をセット"
     }
-  },
-  "required": [
-    "updateDate"
-  ]
+  }
 }
