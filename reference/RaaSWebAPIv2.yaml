@@ -189,11 +189,11 @@ paths:
                 readOnly: true
               examples:
                 '0000000000000001':
-                  value: 'http://onclouds.example/resource/bitmap/chinokyoten1f.png'
+                  value: 'http://localhost:3000/resource/bitmap/chinokyoten1f.png'
                 '0000000000000002':
-                  value: 'https://onclouds.example/resource/bitmap/chinokyoten2f.png'
+                  value: 'http://localhost:3000/resource/bitmap/chinokyoten2f.png'
                 '0000000000000003':
-                  value: 'https://onclouds.example/resource/bitmap/chinokyoten3f.png'
+                  value: 'http://localhost:3000/resource/bitmap/chinokyoten3f.png'
       operationId: getCostmapURL
       description: mapIdで指定される画像(PNG)を取得可能なURLが返る
     put:
@@ -228,179 +228,146 @@ paths:
                 example-1:
                   value:
                     pagenate:
-                      current_page: 0
-                      from: 0
-                      to: 0
+                      current_page: 1
+                      from: 1
+                      to: 1
                       first_page_url: string
                       last_page_url: string
                       next_page_url: string
                       prev_page_url: string
                       path: string
-                      last_page: 0
-                      per_page: 0
-                      total: 0
+                      last_page: 1
+                      per_page: 100
+                      total: 1
                     data:
                       - id: '0000000000000001'
                         registDate: '1964-02-02T18:25:36.294Z'
                         updateDate: '2019-11-20T16:31:46.928Z'
                         name: chinokyoten
-                        maps:
-                          - floorNum: 0
-                            mapMeta:
-                              id: '0000000000000001'
-                              name: chinokyoten1
-                              description: ''
-                              resolution: 0.05
-                              origin:
-                                x: -100
-                                'y': -100
-                              negate: false
-                              occupied_thresh: 0.65
-                              free_thresh: 0.196
-                              size:
-                                width: 4000
-                                height: 4000
-                              owner:
-                                id: '0000000000000001'
-                                name: veniam
-                                owned_robot: []
-                                owned_map: []
-                              pgm_link: 'http://localhost:4010/maps/0000000000000001/pgm?__example=0000000000000001'
-                              costmap_link: 'http://localhost:4010/maps/0000000000000001/cost?__example=0000000000000001'
-                              yaw: 100
-                          - floorNum: 1
-                            mapMeta:
-                              id: '0000000000000002'
-                              name: chinokyoten2
-                              description: ''
-                              resolution: 0.05
-                              origin:
-                                x: -100
-                                'y': -80
-                              negate: false
-                              occupied_thresh: 0.65
-                              free_thresh: 0.196
-                              size:
-                                width: 4000
-                                height: 4000
-                              owner:
-                                id: '0000000000000001'
-                                name: veniam
-                                owned_robot: []
-                                owned_map: []
-                              pgm_link: 'http://localhost:4010/maps/0000000000000002/pgm?__example=0000000000000002'
-                              costmap_link: 'http://localhost:4010/maps/0000000000000002/cost?__example=0000000000000002'
+                        countOfFloor: 3
+                        floors:
+                          - id: fl-1
+                            translation:
+                              x: '0'
+                              'y': '0'
+                              z: '0'
+                            rotation:
+                              roll: 0
+                              pitch: 0
                               yaw: 0
-                          - floorNum: 2
-                            mapMeta:
-                              id: '0000000000000003'
-                              name: chinokyoten3
-                              description: ''
-                              resolution: 0.05
-                              origin:
-                                x: -130
-                                'y': -70
-                              negate: false
-                              occupied_thresh: 0.65
-                              free_thresh: 0.196
-                              size:
-                                width: 4000
-                                height: 4000
-                              owner:
-                                id: '0000000000000001'
-                                name: veniam
-                                owned_robot: []
-                                owned_map: []
-                              pgm_link: 'http://localhost:4010/maps/0000000000000003/pgm?__example=0000000000000003'
-                              costmap_link: 'http://localhost:4010/maps/0000000000000003/cost?__example=0000000000000003'
-                              yaw: 100
-                        floor: 3
-                        elevators:
-                          - id: '0000000000000010'
-                            position:
-                              x: -11
-                              'y': 12
-                              z: 10
-                            stopFloor:
-                              - 0
-                              - 1
-                              - 2
-                            supportTypes:
-                              id: '0000000000000001'
-                              size:
-                                height: 2.5
-                                width: 1.5
-                                deepth: 1.5
-                              radius: 0
-                              max_speed: 2
-                              max_acceleration: 2
-                              max_angular_speed: 1
-                              maxVel: 5
-                              minRad: 1
-                        robots:
-                          - id: '0000000000000001'
-                            name: robot-1
-                            init_map_id: '0000000000000002'
-                            init_slam_map_version: '1'
-                            specification:
-                              maker: robo maker
-                              MQTT: true
-                              webRTC: true
-                              id: '0000000000000001'
-                              name: 型番1
-                              radius: 2
-                              max_speed: 1.5
-                              max_acceleration: 2
-                              max_angular_speed: 1
-                              description: description
-                              type: Navigation
-                            owner:
-                              id: '0000000000000001'
-                              name: oci
-                              owned_robot: []
-                              owned_map: []
-                          - id: '0000000000000002'
-                            name: robot-2
-                            init_map_id: '0000000000000003'
-                            init_slam_map_version: '1'
-                            specification:
-                              id: '0000000000000001'
-                              maker: robo maker
-                              name: 型番1
-                              MQTT: true
-                              webRTC: true
-                              radius: 2
-                              max_speed: 1.5
-                              max_acceleration: 2
-                              max_angular_speed: 1
-                              description: description
-                              type: Navigation
-                            owner:
-                              id: '0000000000000001'
-                              name: oci
-                              owned_robot: []
-                              owned_map: []
-                          - id: '0000000000000003'
-                            name: robot-3
-                            init_map_id: '0000000000000001'
-                            init_slam_map_version: '1'
-                            specification:
-                              maker: robo maker
-                              id: '0000000000000001'
-                              name: 型番1
-                              MQTT: true
-                              webRTC: true
-                              radius: 2
-                              max_speed: 1.5
-                              max_acceleration: 2
-                              max_angular_speed: 1
-                              description: description
-                              type: Navigation
-                            owner:
-                              id: '0000000000000001'
-                              name: oci
-                              owned_robot: []
-                              owned_map: []
+                            floorNumber: 1
+                            description: ''
+                            maps:
+                              - id: '0000000000000001'
+                                name: map-1
+                                description: ''
+                                resolution: 0.05
+                                negate: false
+                                occupied_thresh: 0.65
+                                free_thresh: 0.196
+                                size:
+                                  width: 4000
+                                  height: 4000
+                                pgm_link: 'http://hogehoge.com/hoge'
+                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
+                                owner:
+                                  id: owner-1
+                                  name: veniam
+                                  owned_robot: []
+                                  owned_map: []
+                                floor:
+                                  id: fl-1
+                                origin:
+                                  x: -100
+                                  'y': -100
+                                  z: 0
+                                rotation:
+                                  roll: 0
+                                  pitch: 0
+                                  yaw: 1.75
+                            waypoints: []
+                          - id: fl-2
+                            translation:
+                              x: '0'
+                              'y': '0'
+                              z: '0'
+                            rotation:
+                              roll: 0
+                              pitch: 0
+                              yaw: 0
+                            floorNumber: 2
+                            description: ''
+                            maps:
+                              - id: '0000000000000002'
+                                name: map-2
+                                description: ''
+                                resolution: 0.05
+                                negate: false
+                                occupied_thresh: 0.65
+                                free_thresh: 0.196
+                                size:
+                                  width: 4000
+                                  height: 4000
+                                pgm_link: 'http://hogehoge.com/hoge'
+                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
+                                owner:
+                                  id: owner-1
+                                  name: veniam
+                                  owned_robot: []
+                                  owned_map: []
+                                floor:
+                                  id: fl-2
+                                origin:
+                                  x: -100
+                                  'y': -80
+                                  z: 0
+                                rotation:
+                                  roll: 0
+                                  pitch: 0
+                                  yaw: 0
+                            waypoints: []
+                          - id: fl-3
+                            translation:
+                              x: '0'
+                              'y': '0'
+                              z: '0'
+                            rotation:
+                              roll: 0
+                              pitch: 0
+                              yaw: 0
+                            floorNumber: 3
+                            description: ''
+                            maps:
+                              - id: '0000000000000003'
+                                name: map-3
+                                description: ''
+                                resolution: 0.05
+                                negate: false
+                                occupied_thresh: 0.65
+                                free_thresh: 0.196
+                                size:
+                                  width: 4000
+                                  height: 4000
+                                pgm_link: 'http://hogehoge.com/hoge'
+                                gen_preSingnedUrl: 'http://hogehoge.com/hoge'
+                                owner:
+                                  id: owner-1
+                                  name: veniam
+                                  owned_robot: []
+                                  owned_map: []
+                                floor:
+                                  id: fl-3
+                                origin:
+                                  x: -130
+                                  'y': -70
+                                  z: 0
+                                rotation:
+                                  roll: 0
+                                  pitch: 0
+                                  yaw: 0
+                            waypoints: []
+        '201':
+          description: Created
       operationId: getFacilities
       description: 詳細説明なし
     parameters: []
@@ -518,9 +485,10 @@ paths:
                           id: '0000000000000001'
                         owner:
                           id: '0001000000000001'
-                        action:
-                          - action1
-                        floor: 0
+                          name: owner-1
+                          owned_robot: []
+                          owned_map: []
+                        floor: 1
                         point:
                           x: -5.5
                           'y': 23.1
@@ -533,9 +501,10 @@ paths:
                           id: '0000000000000001'
                         owner:
                           id: '0001000000000001'
-                        action:
-                          - action1
-                        floor: 0
+                          name: owner-1
+                          owned_robot: []
+                          owned_map: []
+                        floor: 1
                         point:
                           x: -21.8
                           'y': 43
@@ -548,9 +517,10 @@ paths:
                           id: '0000000000000001'
                         owner:
                           id: '0001000000000001'
-                        action:
-                          - string
-                        floor: 1
+                          name: owner-1
+                          owned_robot: []
+                          owned_map: []
+                        floor: 2
                         point:
                           x: -20
                           'y': 14.4
@@ -563,9 +533,12 @@ paths:
                           id: '0000000000000001'
                         owner:
                           id: '0001000000000001'
+                          name: owner-1
+                          owned_robot: []
+                          owned_map: []
                         action:
                           - string
-                        floor: 1
+                        floor: 2
                         point:
                           x: -2
                           'y': -4.6
@@ -578,9 +551,12 @@ paths:
                           id: '0000000000000001'
                         owner:
                           id: '0001000000000001'
+                          name: owner-1
+                          owned_robot: []
+                          owned_map: []
                         action:
                           - action2
-                        floor: 2
+                        floor: 3
                         point:
                           x: 18.8
                           'y': -28.8
@@ -594,9 +570,10 @@ paths:
                           id: '0000000000000001'
                         owner:
                           id: '0001000000000001'
-                        action:
-                          - action2
-                        floor: 2
+                          name: owner-1
+                          owned_robot: []
+                          owned_map: []
+                        floor: 3
                         point:
                           x: 10
                           'y': -2.2
@@ -610,10 +587,10 @@ paths:
                           id: '0000000000000002'
                         owner:
                           id: '0001000000000001'
-                        action:
-                          - action3
-                          - action1
-                        floor: 1
+                          name: owner-1
+                          owned_robot: []
+                          owned_map: []
+                        floor: 2
                         point:
                           x: 0
                           'y': 0
@@ -876,25 +853,12 @@ paths:
               examples:
                 example-1:
                   value:
-                    pagenate:
-                      current_page: 0
-                      from: 0
-                      to: 0
-                      first_page_url: string
-                      last_page_url: string
-                      next_page_url: string
-                      prev_page_url: string
-                      path: string
-                      last_page: 0
-                      per_page: 0
-                      total: 0
-                    data:
-                      - id: '0001000000000001'
-                        name: sample owner
-                        owned_robot:
-                          - string
-                        owned_map:
-                          - string
+                    id: '0001000000000001'
+                    name: sample owner
+                    owned_robot:
+                      - string
+                    owned_map:
+                      - string
       operationId: getMeInfo
       description: Ownerの一覧を取得
       parameters: []
@@ -1166,7 +1130,255 @@ paths:
                     type: array
                     items:
                       $ref: ../models/robot.v1.json
-              examples: {}
+              examples:
+                example-1:
+                  value:
+                    pagenate:
+                      current_page: 1
+                      from: 1
+                      to: 0
+                      first_page_url: string
+                      last_page_url: string
+                      next_page_url: string
+                      prev_page_url: string
+                      path: string
+                      last_page: 0
+                      per_page: 0
+                      total: 0
+                    data:
+                      - id: '0000000000000001'
+                        name: Chinokyoten_Elevator
+                        type: elevator
+                        specification:
+                          id: ef150538-268d-404d-acf4-78c2b2749dd3
+                          type: elevator
+                          discription: Chinokyoten Elevator
+                          manufacturer: TOSHIBA
+                          MQTT: true
+                          webRTC: false
+                          size:
+                            width: 2
+                            height: 3
+                            depth: 2
+                          supportSpecs:
+                            - type: navigation
+                              manufacturer: TOSHIBA
+                              MQTT: true
+                              webRTC: false
+                              size:
+                                width: 2
+                                height: 3
+                                depth: 2
+                        home:
+                          id: e739c2d0-ed0a-404a-8b2b-0c9968746c66
+                          name: elevator1f
+                          floor: 1
+                          point:
+                            z: 0
+                            x: 1007
+                            'y': 960
+                          owner:
+                            id: af8719c1-28ed-4e8a-937f-73e65d143515
+                            name: onclouds
+                            owned_map:
+                              - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                              - 3ca13748-2958-4928-b10b-b31feca5439d
+                              - fb346dce-fb84-4709-8c5e-76e339949af8
+                            owned_robot:
+                              - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                              - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                          attributes:
+                            - elevator
+                          facility:
+                            id: dummyId
+                        stopWaypoints:
+                          - id: 3a7d8fc3-31d0-46fd-a3b5-c475b1f18ce1
+                            name: elevator2f
+                            floor: 2
+                            point:
+                              z: 0
+                              x: 1034
+                              'y': 1368
+                            owner:
+                              id: af8719c1-28ed-4e8a-937f-73e65d143515
+                              name: onclouds
+                              owned_map:
+                                - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                                - 3ca13748-2958-4928-b10b-b31feca5439d
+                                - fb346dce-fb84-4709-8c5e-76e339949af8
+                              owned_robot:
+                                - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                                - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                            attributes:
+                              - elevator
+                            facility:
+                              id: dummyId
+                          - id: 711a0a6b-2472-42a5-b8ca-960912627beb
+                            name: elevator3f_wp
+                            floor: 3
+                            point:
+                              z: 0
+                              x: 383
+                              'y': 1317
+                            owner:
+                              id: af8719c1-28ed-4e8a-937f-73e65d143515
+                              name: onclouds
+                              owned_map:
+                                - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                                - 3ca13748-2958-4928-b10b-b31feca5439d
+                                - fb346dce-fb84-4709-8c5e-76e339949af8
+                              owned_robot:
+                                - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                                - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                            attributes:
+                              - wp
+                            facility:
+                              id: dummyId
+                          - id: d3e0fede-d485-4049-9b42-d3122b098dbd
+                            name: elevator2f_wp
+                            floor: 2
+                            point:
+                              z: 0
+                              x: 1063
+                              'y': 1349
+                            owner:
+                              id: af8719c1-28ed-4e8a-937f-73e65d143515
+                              name: onclouds
+                              owned_map:
+                                - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                                - 3ca13748-2958-4928-b10b-b31feca5439d
+                                - fb346dce-fb84-4709-8c5e-76e339949af8
+                              owned_robot:
+                                - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                                - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                            attributes:
+                              - wp
+                            facility:
+                              id: dummyId
+                          - id: e739c2d0-ed0a-404a-8b2b-0c9968746c66
+                            name: elevator1f
+                            floor: 1
+                            point:
+                              z: 0
+                              x: 1007
+                              'y': 960
+                            owner:
+                              id: af8719c1-28ed-4e8a-937f-73e65d143515
+                              name: onclouds
+                              owned_map:
+                                - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                                - 3ca13748-2958-4928-b10b-b31feca5439d
+                                - fb346dce-fb84-4709-8c5e-76e339949af8
+                              owned_robot:
+                                - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                                - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                            attributes:
+                              - elevator
+                            facility:
+                              id: dummyId
+                          - id: e906d295-c8a6-4a87-bfb4-5ddfba2676f7
+                            name: elevator3f
+                            floor: 3
+                            point:
+                              z: 0
+                              x: 370
+                              'y': 1285
+                            owner:
+                              id: af8719c1-28ed-4e8a-937f-73e65d143515
+                              name: onclouds
+                              owned_map:
+                                - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                                - 3ca13748-2958-4928-b10b-b31feca5439d
+                                - fb346dce-fb84-4709-8c5e-76e339949af8
+                              owned_robot:
+                                - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                                - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                            attributes:
+                              - elevator
+                            facility:
+                              id: dummyId
+                          - id: ef934197-95da-43bc-9b1a-2bd785e7ae20
+                            name: elevator1f_wp
+                            floor: 1
+                            point:
+                              z: 0
+                              x: 1031
+                              'y': 995
+                            owner:
+                              id: af8719c1-28ed-4e8a-937f-73e65d143515
+                              name: onclouds
+                              owned_map:
+                                - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                                - 3ca13748-2958-4928-b10b-b31feca5439d
+                                - fb346dce-fb84-4709-8c5e-76e339949af8
+                              owned_robot:
+                                - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                                - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                            attributes:
+                              - wp
+                            facility:
+                              id: dummyId
+                        owner:
+                          id: af8719c1-28ed-4e8a-937f-73e65d143515
+                          name: onclouds
+                          owned_map:
+                            - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                            - 3ca13748-2958-4928-b10b-b31feca5439d
+                            - fb346dce-fb84-4709-8c5e-76e339949af8
+                          owned_robot:
+                            - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                            - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                      - id: '0000000000000002'
+                        name: talbot_green
+                        type: navigation
+                        specification:
+                          id: f4a707c4-a815-45f9-b964-abdc11fa9e83
+                          name: talbot
+                          type: navigation
+                          manufacturer: Shinmei
+                          MQTT: true
+                          webRTC: false
+                          discription: SHINMEI talbot
+                          size:
+                            width: 0.8
+                            height: 0.8
+                            depth: 0.8
+                          radius: 0.4
+                          max_speed: 0.6
+                          max_acceleration: 0.6
+                          max_angular_speed: 1
+                        home:
+                          id: 4badea5c-42e1-482d-8914-27a2fabf6fc8
+                          name: hoge_waypoint
+                          floor: 1
+                          point:
+                            z: 3
+                            x: 1
+                            'y': 2
+                          owner:
+                            id: af8719c1-28ed-4e8a-937f-73e65d143515
+                            name: onclouds
+                            owned_map:
+                              - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                              - 3ca13748-2958-4928-b10b-b31feca5439d
+                              - fb346dce-fb84-4709-8c5e-76e339949af8
+                            owned_robot:
+                              - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                              - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
+                          attributes:
+                            - home
+                          facility:
+                            id: dummyId
+                        owner:
+                          id: af8719c1-28ed-4e8a-937f-73e65d143515
+                          name: onclouds
+                          owned_map:
+                            - 39ff8a0d-66dc-4dec-a525-1d258f9a120a
+                            - 3ca13748-2958-4928-b10b-b31feca5439d
+                            - fb346dce-fb84-4709-8c5e-76e339949af8
+                          owned_robot:
+                            - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
+                            - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
       description: |-
         ロボットDB一覧取
         get all robot DB record
@@ -1249,8 +1461,7 @@ paths:
                     current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.001
-                    map:
-                      id: '0000000000000002'
+                    floor: 1
                     point:
                       x: 7.7
                       'y': -35
@@ -1266,8 +1477,7 @@ paths:
                     current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.002
-                    map:
-                      id: '0000000000000003'
+                    floor: 2
                     point:
                       x: -25
                       'y': -15.9
@@ -1285,8 +1495,7 @@ paths:
                     battery: 20
                     owner:
                       id: '0000000000000001'
-                    map:
-                      id: '0000000000000001'
+                    floor: 3
                     point:
                       x: -2
                       'y': -15

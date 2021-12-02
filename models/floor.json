@@ -13,7 +13,7 @@
         "maps": {
           "type": "array",
           "items": {
-            "$ref": "./floorMap.json"
+            "$ref": "./mapMeta.v2.json"
           }
         },
         "waypoints": {
