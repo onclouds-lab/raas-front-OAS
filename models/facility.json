@@ -23,8 +23,14 @@
           "items": {
             "$ref": "./floor.json"
           }
+        },
+        "updateDate": {
+          "type": "string"
         }
-      }
+      },
+      "required": [
+        "updateDate"
+      ]
     }
   ]
 }

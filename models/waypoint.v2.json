@@ -13,8 +13,14 @@
       "properties": {
         "owner": {
           "$ref": "./owner.v1.json"
+        },
+        "updateDate": {
+          "type": "string"
         }
-      }
+      },
+      "required": [
+        "updateDate"
+      ]
     }
   ]
 }

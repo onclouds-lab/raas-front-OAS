@@ -7,6 +7,17 @@
     },
     {
       "$ref": "./pathParams.v1.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "updateDate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "updateDate"
+      ]
     }
   ]
 }

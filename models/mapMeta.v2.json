@@ -28,12 +28,16 @@
           "format": "uri",
           "description": "画像にアクセス可能なURLを発行するAPI-endpointへのリンク",
           "readOnly": true
+        },
+        "updateDate": {
+          "type": "string"
         }
       },
       "required": [
         "pgm_link",
         "owner",
-        "gen_preSingnedUrl"
+        "gen_preSingnedUrl",
+        "updateDate"
       ]
     }
   ],
