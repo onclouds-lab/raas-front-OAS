@@ -20,11 +20,15 @@
         },
         "home": {
           "$ref": "../waypoint.v2.json"
+        },
+        "updateDate": {
+          "type": "string"
         }
       },
       "required": [
         "specification",
-        "owner"
+        "owner",
+        "updateDate"
       ]
     }
   ]

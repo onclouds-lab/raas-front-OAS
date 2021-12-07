@@ -21,11 +21,15 @@
           "items": {
             "$ref": "./waypoint.v2.json"
           }
+        },
+        "updateDate": {
+          "type": "string"
         }
       },
       "required": [
         "maps",
-        "waypoints"
+        "waypoints",
+        "updateDate"
       ]
     }
   ]
