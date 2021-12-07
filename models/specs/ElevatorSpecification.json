@@ -9,7 +9,10 @@
       "properties": {
         "type": {
           "type": "string",
-          "pattern": "elevator"
+          "pattern": "elevator",
+          "enum": [
+            "elevator"
+          ]
         },
         "supportSpecs": {
           "type": "array",
