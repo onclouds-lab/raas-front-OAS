@@ -9,7 +9,10 @@
       "properties": {
         "type": {
           "type": "string",
-          "pattern": "navigation"
+          "pattern": "navigation",
+          "enum": [
+            "navigation"
+          ]
         },
         "name": {
           "type": "string",
