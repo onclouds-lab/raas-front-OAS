@@ -9,7 +9,7 @@
       "properties": {
         "attributes": {
           "type": "array",
-          "description": "attributeのListは、別のAPIから取得できる。",
+          "description": "特定の文字列のみ対応されます",
           "items": {
             "type": "string"
           }
