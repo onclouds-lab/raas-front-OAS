@@ -30,6 +30,7 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git pull
         git checkout OpenDocument
+        git pull
         git merge master --allow-unrelated-histories --no-commit
     - name: Generate Document
       run: npx redoc-cli bundle reference/RaaSWebAPIv2.yaml -o ./docs/index.html
