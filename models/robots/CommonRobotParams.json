@@ -23,13 +23,17 @@
         },
         "home": {
           "$ref": "../common/idObject.v1.json"
+        },
+        "facility": {
+          "$ref": "../common/idObject.v1.json"
         }
       },
       "required": [
         "name",
         "type",
         "specification",
-        "owner"
+        "owner",
+        "facility"
       ]
     },
     {
