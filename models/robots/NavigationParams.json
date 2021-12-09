@@ -18,7 +18,7 @@
               "properties": {
                 "type": {
                   "type": "string",
-                  "example": "navigation"
+                  "pattern": "navigation"
                 }
               }
             },
