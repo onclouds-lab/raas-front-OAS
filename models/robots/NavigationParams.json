@@ -12,13 +12,20 @@
           "pattern": "navigation"
         },
         "specification": {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "pattern": "navigation"
+          "allOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "navigation"
+                }
+              }
+            },
+            {
+              "$ref": "../common/idObject.v1.json"
             }
-          }
+          ]
         },
         "home": {
           "$ref": "../common/idObject.v1.json"
