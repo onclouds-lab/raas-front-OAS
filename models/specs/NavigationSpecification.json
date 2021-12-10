@@ -1,0 +1,48 @@
+{
+  "title": "NavigationSpecification",
+  "allOf": [
+    {
+      "$ref": "./CommonSpecification.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "navigation",
+          "enum": [
+            "navigation"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "型番"
+        },
+        "radius": {
+          "type": "number",
+          "description": "ロボットの大きさ（半径）[m]"
+        },
+        "max_speed": {
+          "type": "number",
+          "description": "最大速度[m/s]"
+        },
+        "max_acceleration": {
+          "type": "number",
+          "description": "最大加速度[m/(s^2)]"
+        },
+        "max_angular_speed": {
+          "type": "number",
+          "description": "最大角速度[rad/s]"
+        }
+      },
+      "required": [
+        "type",
+        "radius",
+        "max_speed",
+        "max_acceleration",
+        "max_angular_speed"
+      ]
+    }
+  ],
+  "description": "移動ロボットの諸元"
+}

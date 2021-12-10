@@ -1,0 +1,36 @@
+{
+  "title": "ElevatorParams",
+  "allOf": [
+    {
+      "$ref": "./CommonRobotParams.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "pattern": "elevator"
+        },
+        "stopWaypoints": {
+          "type": "array",
+          "items": {
+            "$ref": "../common/idObject.v1.json"
+          }
+        },
+        "specification": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "pattern": "elevator"
+            }
+          }
+        }
+      },
+      "required": [
+        "type"
+      ]
+    }
+  ],
+  "description": "elevator"
+}

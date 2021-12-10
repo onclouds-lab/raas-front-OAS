@@ -1,27 +1,25 @@
 {
-  "title": "facility",
-  "x-internal": false,
-  "description": "",
+  "title": "floor",
   "allOf": [
     {
       "$ref": "./common/idObject.v1.json"
     },
     {
-      "$ref": "./common/registDateObject.json"
-    },
-    {
-      "$ref": "./common/updateDateObject.json"
-    },
-    {
-      "$ref": "./facilityParams.v1.json"
+      "$ref": "./floorParams.json"
     },
     {
       "type": "object",
       "properties": {
-        "floors": {
+        "maps": {
           "type": "array",
           "items": {
-            "$ref": "./floor.json"
+            "$ref": "./mapMeta.v2.json"
+          }
+        },
+        "waypoints": {
+          "type": "array",
+          "items": {
+            "$ref": "./waypoint.v2.json"
           }
         },
         "updateDate": {
@@ -29,6 +27,8 @@
         }
       },
       "required": [
+        "maps",
+        "waypoints",
         "updateDate"
       ]
     }

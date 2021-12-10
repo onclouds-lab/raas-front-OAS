@@ -1,0 +1,41 @@
+{
+  "title": "Elevator",
+  "x-examples": {},
+  "description": "エレベーターの情報",
+  "allOf": [
+    {
+      "$ref": "./CommonRobot.json"
+    },
+    {
+      "$ref": "./ElevatorParams.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "specification": {
+          "$ref": "../specs/ElevatorSpecification.json"
+        },
+        "owner": {
+          "$ref": "../owner.v1.json"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "elevator"
+        },
+        "stopWaypoints": {
+          "type": "array",
+          "items": {
+            "$ref": "../waypoint.v2.json"
+          }
+        },
+        "home": {
+          "$ref": "../waypoint.v2.json"
+        }
+      },
+      "required": [
+        "specification",
+        "owner"
+      ]
+    }
+  ]
+}

@@ -15,22 +15,29 @@
           "format": "uri",
           "description": "このマップのpgmマップを取得するためのAPI URI"
         },
-        "costmap_link": {
+        "guidemap_link": {
           "type": "string",
           "format": "uri",
           "description": "このマップのコストマップを取得するためのAPI URI"
         },
-        "yaw": {
-          "type": "number",
-          "format": "float",
-          "default": 0,
-          "description": "yaw角。度数法。"
+        "owner": {
+          "$ref": "./owner.v1.json"
+        },
+        "gen_preSingnedUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "画像にアクセス可能なURLを発行するAPI-endpointへのリンク",
+          "readOnly": true
+        },
+        "updateDate": {
+          "type": "string"
         }
       },
       "required": [
         "pgm_link",
-        "costmap_link",
-        "yaw"
+        "owner",
+        "gen_preSingnedUrl",
+        "updateDate"
       ]
     }
   ],

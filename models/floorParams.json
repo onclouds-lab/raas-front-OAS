@@ -1,0 +1,48 @@
+{
+  "title": "floorParams",
+  "description": "",
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "translation": {
+          "type": "object",
+          "required": [
+            "x",
+            "y",
+            "z"
+          ],
+          "properties": {
+            "x": {
+              "type": "string"
+            },
+            "y": {
+              "type": "string"
+            },
+            "z": {
+              "type": "string"
+            }
+          }
+        },
+        "rotation": {
+          "$ref": "./common/rotation.json"
+        },
+        "floorNumber": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "translation",
+        "rotation",
+        "floorNumber",
+        "description"
+      ]
+    },
+    {
+      "$ref": "./common/updateDateObject.json"
+    }
+  ]
+}

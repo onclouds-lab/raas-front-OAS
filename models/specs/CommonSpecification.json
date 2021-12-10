@@ -1,0 +1,57 @@
+{
+  "title": "CommonSpecification",
+  "x-examples": {},
+  "description": "RaaSで扱う共通のロボット仕様",
+  "allOf": [
+    {
+      "$ref": "../common/idObject.v1.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "manufacturer": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "navigation",
+            "elevator"
+          ]
+        },
+        "MQTT": {
+          "type": "boolean"
+        },
+        "webRTC": {
+          "type": "boolean"
+        },
+        "discription": {
+          "type": "string"
+        },
+        "size": {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "number",
+              "description": "単位はメートル"
+            },
+            "width": {
+              "type": "number",
+              "description": "単位はメートル"
+            },
+            "depth": {
+              "type": "number",
+              "description": "単位はメートル"
+            }
+          }
+        }
+      },
+      "required": [
+        "manufacturer",
+        "type",
+        "MQTT",
+        "webRTC"
+      ]
+    }
+  ]
+}

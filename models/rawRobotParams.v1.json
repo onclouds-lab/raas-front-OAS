@@ -37,7 +37,10 @@
       ]
     },
     {
-      "$ref": "./common/pointMap.json"
+      "$ref": "./common/pointFloor.json"
+    },
+    {
+      "$ref": "./common/updateDateObject.json"
     }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "title": "rotation",
+  "type": "object",
+  "properties": {
+    "roll": {
+      "description": "X軸で回転。単位はradian。",
+      "type": "number"
+    },
+    "pitch": {
+      "type": "number",
+      "description": "Y軸で回転。単位はradian。"
+    },
+    "yaw": {
+      "type": "number",
+      "description": "Z軸で回転。単位はradian。"
+    }
+  },
+  "required": [
+    "roll",
+    "pitch",
+    "yaw"
+  ]
+}

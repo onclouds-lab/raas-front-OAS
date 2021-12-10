@@ -1,53 +1,69 @@
 {
   "title": "mapInfoParams",
-  "type": "object",
   "description": "YAMLデータ",
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "エンドユーザにとってのマップの名前"
+  "allOf": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "エンドユーザにとってのマップの名前"
+        },
+        "description": {
+          "type": "string",
+          "description": "このマップの説明。どこで使うかはわからないがとりあえず設定した。"
+        },
+        "resolution": {
+          "type": "number",
+          "description": "PGMマップの解像度。ロボットが使う"
+        },
+        "negate": {
+          "type": "boolean",
+          "default": false,
+          "description": "pgmのデータを白黒反転するかどうか。trueで反転"
+        },
+        "occupied_thresh": {
+          "type": "number",
+          "description": "0~1の数。ROSで壁判定に使う",
+          "format": "float",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "free_thresh": {
+          "type": "number",
+          "description": "0~1の数。ROSでロボットが通れる場所判定に使う。",
+          "format": "float",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "size": {
+          "$ref": "./common/size2d.v1.json"
+        },
+        "owner": {
+          "$ref": "./common/idObject.v1.json"
+        },
+        "floor": {
+          "$ref": "./common/idObject.v1.json"
+        },
+        "origin": {
+          "$ref": "./common/point3d.json"
+        },
+        "rotation": {
+          "$ref": "./common/rotation.json"
+        }
+      },
+      "required": [
+        "name",
+        "resolution",
+        "negate",
+        "occupied_thresh",
+        "free_thresh",
+        "size",
+        "owner"
+      ]
     },
-    "description": {
-      "type": "string",
-      "description": "このマップの説明。どこで使うかはわからないがとりあえず設定した。"
-    },
-    "resolution": {
-      "type": "number",
-      "description": "PGMマップの解像度。ロボットが使う"
-    },
-    "origin": {
-      "$ref": "./common/point2d.v1.json"
-    },
-    "negate": {
-      "type": "boolean",
-      "default": false,
-      "description": "pgmのデータを白黒反転するかどうか。trueで反転"
-    },
-    "occupied_thresh": {
-      "type": "number",
-      "description": "0~1の数。ROSで壁判定に使う",
-      "format": "float",
-      "minimum": 0,
-      "maximum": 1
-    },
-    "free_thresh": {
-      "type": "number",
-      "description": "0~1の数。ROSでロボットが通れる場所判定に使う。",
-      "format": "float",
-      "minimum": 0,
-      "maximum": 1
-    },
-    "size": {
-      "$ref": "./common/size2d.v1.json"
-    },
-    "owner": {
-      "$ref": "./owner.v1.json"
+    {
+      "$ref": "./common/updateDateObject.json"
     }
-  },
-  "required": [
-    "name",
-    "resolution",
-    "origin",
-    "size"
   ]
 }
