@@ -8,10 +8,6 @@
     {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "ユーザにとってのロボットの名前"
-        },
         "since": {
           "type": "string",
           "description": "接続したときのタイムスタンプ",
@@ -28,19 +24,19 @@
           "maximum": 100,
           "description": "0~100%"
         },
-        "owner": {
-          "$ref": "./common/idObject.v1.json"
+        "ang": {
+          "$ref": "./common/rotation.json"
         }
       },
       "required": [
-        "since"
+        "since",
+        "IP",
+        "battery",
+        "ang"
       ]
     },
     {
       "$ref": "./common/pointFloor.json"
-    },
-    {
-      "$ref": "./common/updateDateObject.json"
     }
   ]
 }
