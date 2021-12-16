@@ -1325,6 +1325,8 @@ paths:
                               - wp
                             facility:
                               id: dummyId
+                        facility:
+                          id: dummyId
                         owner:
                           id: af8719c1-28ed-4e8a-937f-73e65d143515
                           name: onclouds
@@ -1376,6 +1378,8 @@ paths:
                             - home
                           facility:
                             id: dummyId
+                        facility:
+                          id: dummyId
                         owner:
                           id: af8719c1-28ed-4e8a-937f-73e65d143515
                           name: onclouds
@@ -1535,6 +1539,52 @@ paths:
                     type: array
                     items:
                       $ref: ../models/robotSpecification.json
+              examples:
+                example-1:
+                  value:
+                    pagenate:
+                      current_page: 0
+                      from: 0
+                      to: 0
+                      first_page_url: string
+                      last_page_url: string
+                      next_page_url: string
+                      prev_page_url: string
+                      path: string
+                      last_page: 0
+                      per_page: 1
+                      total: 0
+                    data:
+                      - id: nav-1
+                        manufacturer: manufact-1
+                        type: navigation
+                        MQTT: true
+                        webRTC: true
+                        discription: string
+                        size:
+                          height: 10
+                          width: 10
+                          depth: 10
+                        name: nav-1 name
+                        radius: 2
+                        max_speed: 0
+                        max_acceleration: 0
+                        max_angular_speed: 0
+                      - id: el-1
+                        manufacturer: manufact-2
+                        type: elevator
+                        MQTT: true
+                        webRTC: false
+                        discription: string
+                        size:
+                          height: 10
+                          width: 10
+                          depth: 10
+                        name: elevator-1 name
+                        radius: 2
+                        max_speed: 0
+                        max_acceleration: 0
+                        max_angular_speed: 0
       operationId: getRobotSpecifications
     parameters: []
   '/robotSpecification/{robotModel_id}':
