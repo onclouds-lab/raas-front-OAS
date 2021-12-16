@@ -30,6 +30,9 @@
         },
         "owner": {
           "$ref": "./common/idObject.v1.json"
+        },
+        "ang": {
+          "$ref": "./common/rotation.json"
         }
       },
       "required": [
