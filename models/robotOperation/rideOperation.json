@@ -11,7 +11,7 @@
           "type": "string",
           "pattern": "ride"
         },
-        "argment": {
+        "argument": {
           "type": "object",
           "properties": {
             "target": {
@@ -21,7 +21,7 @@
         }
       },
       "required": [
-        "argment"
+        "argument"
       ]
     }
   ]
