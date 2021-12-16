@@ -8,15 +8,7 @@
       "$ref": "./rawRobotParams.v1.json"
     },
     {
-      "type": "object",
-      "properties": {
-        "updateDate": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "updateDate"
-      ]
+      "type": "object"
     }
   ]
 }
