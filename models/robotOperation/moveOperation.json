@@ -11,7 +11,7 @@
           "type": "string",
           "pattern": "move"
         },
-        "argment": {
+        "arguments": {
           "type": "array",
           "items": {
             "$ref": "../common/floorAttribute.json"
