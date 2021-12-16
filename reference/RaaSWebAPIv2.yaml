@@ -38,54 +38,6 @@ paths:
                 required:
                   - pagenate
                   - data
-              examples:
-                example-1:
-                  value:
-                    pagenate:
-                      current_page: 0
-                      from: 0
-                      to: 0
-                      first_page_url: string
-                      last_page_url: string
-                      next_page_url: string
-                      prev_page_url: string
-                      path: string
-                      last_page: 0
-                      per_page: 1
-                      total: 0
-                    data:
-                      - id: string
-                        name: string
-                        description: string
-                        resolution: 0
-                        negate: false
-                        occupied_thresh: 0
-                        free_thresh: 0
-                        size:
-                          width: 0
-                          height: 0
-                        owner:
-                          id: string
-                          name: string
-                          owned_robot:
-                            - string
-                          owned_map:
-                            - string
-                          updateDate: string
-                        floor:
-                          id: fl-2
-                        origin:
-                          x: 0
-                          'y': 0
-                          z: 0
-                        rotation:
-                          roll: 0
-                          pitch: 0
-                          yaw: 0
-                        updateDate: string
-                        pgm_link: 'http://example.com'
-                        guidemap_link: 'http://example.com'
-                        gen_preSingnedUrl: 'http://example.com'
       operationId: getMaps
       parameters:
         - schema:
@@ -302,7 +254,7 @@ paths:
                             rotation:
                               roll: 0
                               pitch: 0
-                              yaw: 0
+                              yaw: 0.8
                             floorNumber: 1
                             description: ''
                             maps:
@@ -754,48 +706,48 @@ paths:
                     robotSpecifications:
                       - id: '0000000000000001'
                     argment:
-                      - floor: 1
+                      - floor: 0
                         point:
                           x: 15.12
                           'y': 0.635
                           z: 0
                         attributes: []
-                      - floor: 1
+                      - floor: 0
                         point:
                           x: -5.5
                           'y': 23.1
                           z: 0
                         attributes:
                           - attribute1
-                      - floor: 1
+                      - floor: 0
                         point:
                           x: -21.8
                           'y': 43
                           z: 0
                         attributes:
                           - attribute1
-                      - floor: 2
+                      - floor: 1
                         point:
                           x: -20
                           'y': 14.4
                           z: 0
                         attributes:
                           - attribute2
-                      - floor: 2
+                      - floor: 1
                         point:
                           x: -2
                           'y': -4.6
                           z: 0
                         attributes:
                           - attribute1
-                      - floor: 3
+                      - floor: 2
                         point:
                           x: 18.8
                           'y': -28.8
                           z: 0
                         attributes:
                           - attribute1
-                      - floor: 3
+                      - floor: 2
                         point:
                           x: 10
                           'y': -2.2
@@ -945,7 +897,7 @@ paths:
                           id: '0000000000000001'
                         operations:
                           - method: move
-                            argment:
+                            arguments:
                               - floor: 1
                                 point:
                                   x: -18.69999999999999
@@ -966,7 +918,7 @@ paths:
                           id: '0000000000000001'
                         operations:
                           - method: move
-                            argment:
+                            arguments:
                               - floor: 1
                                 point:
                                   x: -2.4499999999999886
@@ -987,7 +939,7 @@ paths:
                           id: '0000000000000001'
                         operations:
                           - method: move
-                            argment:
+                            arguments:
                               - floor: 1
                                 point:
                                   x: -85.5
@@ -1008,7 +960,7 @@ paths:
                           id: '0000000000000001'
                         operations:
                           - method: move
-                            argment:
+                            arguments:
                               - floor: 1
                                 point:
                                   x: -85.5
@@ -1191,15 +1143,15 @@ paths:
                     pagenate:
                       current_page: 1
                       from: 1
-                      to: 1
+                      to: 0
                       first_page_url: string
                       last_page_url: string
                       next_page_url: string
                       prev_page_url: string
                       path: string
-                      last_page: 1
-                      per_page: 100
-                      total: 2
+                      last_page: 0
+                      per_page: 0
+                      total: 0
                     data:
                       - id: '0000000000000001'
                         name: Chinokyoten_Elevator
@@ -1216,21 +1168,14 @@ paths:
                             height: 3
                             depth: 2
                           supportSpecs:
-                            - id: nav-1
-                              manufacturer: manufact-1
-                              type: navigation
+                            - type: navigation
+                              manufacturer: TOSHIBA
                               MQTT: true
-                              webRTC: true
-                              discription: string
+                              webRTC: false
                               size:
-                                height: 10
-                                width: 10
-                                depth: 10
-                              name: nav-1 name
-                              radius: 2
-                              max_speed: 0
-                              max_acceleration: 0
-                              max_angular_speed: 0
+                                width: 2
+                                height: 3
+                                depth: 2
                         home:
                           id: e739c2d0-ed0a-404a-8b2b-0c9968746c66
                           name: elevator1f
@@ -1249,12 +1194,10 @@ paths:
                             owned_robot:
                               - 0c6acbd8-6b87-4d67-a2a3-8bbe3192fd53
                               - d083b7bd-6910-497f-8d15-3cc2cf7e3fca
-                            updateDate: 'Tue Dec 07 2021 10:40:21 GMT+0000 (Coordinated Universal Time)'
                           attributes:
                             - elevator
                           facility:
                             id: dummyId
-                          updateDate: 'Tue Dec 07 2021 10:40:21 GMT+0000 (Coordinated Universal Time)'
                         stopWaypoints:
                           - id: 3a7d8fc3-31d0-46fd-a3b5-c475b1f18ce1
                             name: elevator2f
@@ -1525,49 +1468,48 @@ paths:
                 '0000000000000001':
                   value:
                     id: '0000000000000001'
-                    name: test_robot
-                    current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.001
                     floor: 1
                     point:
-                      x: 7.7
+                      x: 7
                       'y': -35
                       z: 0
+                    ang:
+                      roll: 0
+                      pitch: 0
+                      yaw: 0
                     battery: 50
-                    task:
-                      id: '123'
-                      name: idoling
                 '0000000000000002':
                   value:
                     id: '0000000000000002'
-                    name: ロボット２３号
-                    current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.002
                     floor: 2
                     point:
-                      x: -25
-                      'y': -15.9
-                      z: 0
+                      x: 0
+                      'y': 0
+                      z: 0.5
+                    ang:
+                      roll: 0
+                      pitch: 0
+                      yaw: 0
                     battery: 80
-                    task:
-                      id: '124'
-                      name: offline
                 '0000000000000003':
                   value:
                     id: '0000000000000003'
-                    name: ロボット３号
                     since: '2019-08-24T14:15:22Z'
                     IP: 100.100.100.003
                     battery: 20
-                    owner:
-                      id: '0000000000000001'
                     floor: 3
                     point:
                       x: -2
                       'y': -15
                       z: 0
+                    ang:
+                      roll: 0
+                      pitch: 0
+                      yaw: 0
       tags:
         - rawRobot
   '/robotTypes/{robotType_id}':
@@ -1637,22 +1579,11 @@ paths:
                           height: 10
                           width: 10
                           depth: 10
-                        supportSpecs:
-                          - id: nav-1
-                            manufacturer: manufact-1
-                            type: navigation
-                            MQTT: true
-                            webRTC: true
-                            discription: string
-                            size:
-                              height: 10
-                              width: 10
-                              depth: 10
-                            name: nav-1 name
-                            radius: 2
-                            max_speed: 0
-                            max_acceleration: 0
-                            max_angular_speed: 0
+                        name: elevator-1 name
+                        radius: 2
+                        max_speed: 0
+                        max_acceleration: 0
+                        max_angular_speed: 0
       operationId: getRobotSpecifications
     parameters: []
   '/robotSpecification/{robotModel_id}':
