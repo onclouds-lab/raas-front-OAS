@@ -11,7 +11,10 @@
           "type": "string",
           "pattern": "cancel"
         }
-      }
+      },
+      "required": [
+        "method"
+      ]
     }
   ]
 }

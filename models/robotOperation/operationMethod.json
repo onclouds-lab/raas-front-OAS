@@ -18,6 +18,7 @@
     }
   },
   "required": [
-    "method"
+    "method",
+    "robotSpecifications"
   ]
 }

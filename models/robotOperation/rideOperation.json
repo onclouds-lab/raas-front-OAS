@@ -13,6 +13,9 @@
         },
         "argument": {
           "type": "object",
+          "required": [
+            "target"
+          ],
           "properties": {
             "target": {
               "type": "string"
@@ -21,6 +24,7 @@
         }
       },
       "required": [
+        "method",
         "argument"
       ]
     }
