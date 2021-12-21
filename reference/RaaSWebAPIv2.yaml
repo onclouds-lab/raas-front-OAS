@@ -254,7 +254,7 @@ paths:
                             rotation:
                               roll: 0
                               pitch: 0
-                              yaw: 0
+                              yaw: 0.8
                             floorNumber: 1
                             description: ''
                             maps:
@@ -1468,49 +1468,48 @@ paths:
                 '0000000000000001':
                   value:
                     id: '0000000000000001'
-                    name: test_robot
-                    current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.001
                     floor: 1
                     point:
-                      x: 7.7
+                      x: 7
                       'y': -35
                       z: 0
+                    ang:
+                      roll: 0
+                      pitch: 0
+                      yaw: 0
                     battery: 50
-                    task:
-                      id: '123'
-                      name: idoling
                 '0000000000000002':
                   value:
                     id: '0000000000000002'
-                    name: ロボット２３号
-                    current_map_id: '0000000000000001'
                     since: '2020-01-01T01:01:01Z'
                     IP: 100.100.100.002
                     floor: 2
                     point:
-                      x: -25
-                      'y': -15.9
-                      z: 0
+                      x: 0
+                      'y': 0
+                      z: 0.5
+                    ang:
+                      roll: 0
+                      pitch: 0
+                      yaw: 0
                     battery: 80
-                    task:
-                      id: '124'
-                      name: offline
                 '0000000000000003':
                   value:
                     id: '0000000000000003'
-                    name: ロボット３号
                     since: '2019-08-24T14:15:22Z'
                     IP: 100.100.100.003
                     battery: 20
-                    owner:
-                      id: '0000000000000001'
                     floor: 3
                     point:
                       x: -2
                       'y': -15
                       z: 0
+                    ang:
+                      roll: 0
+                      pitch: 0
+                      yaw: 0
       tags:
         - rawRobot
   '/robotTypes/{robotType_id}':
