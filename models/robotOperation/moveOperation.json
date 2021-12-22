@@ -9,7 +9,10 @@
       "properties": {
         "method": {
           "type": "string",
-          "pattern": "move"
+          "pattern": "move",
+          "enum": [
+            "move"
+          ]
         },
         "arguments": {
           "type": "array",

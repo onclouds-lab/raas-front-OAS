@@ -9,7 +9,10 @@
       "properties": {
         "method": {
           "type": "string",
-          "pattern": "ride"
+          "pattern": "ride",
+          "enum": [
+            "ride"
+          ]
         },
         "argument": {
           "type": "object",
