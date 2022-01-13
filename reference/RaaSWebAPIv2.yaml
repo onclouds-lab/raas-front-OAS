@@ -131,7 +131,11 @@ paths:
             application/json:
               schema:
                 $ref: ../models/mapMeta.v2.json
-      description: 地図の内容を変更
+        '409':
+          description: Conflict
+      description: |-
+        地図の内容を変更。
+        対象の地図が内部処理中だと受け付けません
       parameters: []
       operationId: updateMap
       tags:
