@@ -7,7 +7,8 @@
       "type": "string",
       "enum": [
         "move",
-        "cancel"
+        "cancel",
+        "ride"
       ]
     },
     "robotSpecifications": {
@@ -18,6 +19,7 @@
     }
   },
   "required": [
-    "method"
+    "method",
+    "robotSpecifications"
   ]
 }

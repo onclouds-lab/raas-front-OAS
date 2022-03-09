@@ -9,9 +9,15 @@
       "properties": {
         "method": {
           "type": "string",
-          "pattern": "cancel"
+          "pattern": "cancel",
+          "enum": [
+            "cancel"
+          ]
         }
-      }
+      },
+      "required": [
+        "method"
+      ]
     }
   ]
 }

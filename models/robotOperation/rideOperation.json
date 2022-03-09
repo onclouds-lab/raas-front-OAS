@@ -9,10 +9,16 @@
       "properties": {
         "method": {
           "type": "string",
-          "pattern": "ride"
+          "pattern": "ride",
+          "enum": [
+            "ride"
+          ]
         },
         "argument": {
           "type": "object",
+          "required": [
+            "target"
+          ],
           "properties": {
             "target": {
               "type": "string"
@@ -21,6 +27,7 @@
         }
       },
       "required": [
+        "method",
         "argument"
       ]
     }
