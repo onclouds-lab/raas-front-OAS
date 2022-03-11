@@ -444,7 +444,9 @@ paths:
             application/json:
               schema:
                 $ref: ../models/facility.json
-      description: facilityの更新
+      description: |
+        facilityの更新。floorの更新もこちらから。
+        floorsは新しくPUTされた状態にすべて上書きされます。新規floorの追加はIdのないfloorObjectを、変更はIdの追加されたオブジェクトを、削除はオブジェクト自体を含めずPUTしてください。
       requestBody:
         content:
           application/json:

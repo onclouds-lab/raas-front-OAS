@@ -5,7 +5,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "ユニーク識別子。16文字のstring。Modelを一意に識別する文字列"
+      "description": "ユニーク識別子。16文字のstring。Modelを一意に識別する文字列",
+      "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
     }
   },
   "required": [
