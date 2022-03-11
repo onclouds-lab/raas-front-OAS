@@ -1,0 +1,42 @@
+{
+  "title": "facility",
+  "x-internal": false,
+  "description": "",
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json"
+    },
+    {
+      "$ref": "./common/registDateObject.json"
+    },
+    {
+      "$ref": "./common/updateDateObject.json"
+    },
+    {
+      "$ref": "./facilityParams.v1.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "floors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "ユニーク識別子。16文字のstring\nModelを一意に識別する文字列。floorの変更をしたい場合には、対象のIDを含める。"
+              }
+            }
+          }
+        },
+        "updateDate": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "updateDate"
+      ]
+    }
+  ]
+}
