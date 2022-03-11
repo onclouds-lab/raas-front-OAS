@@ -449,7 +449,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: ../models/facility.json
+              $ref: ../models/facilityParams.v1.json
       tags:
         - facility
   /waypoints:
