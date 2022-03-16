@@ -32,6 +32,10 @@
         },
         "description": {
           "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "description": "ユニーク識別子。16文字のstring。Modelを一意に識別する文字列。floorの変更をしたい場合には、対象のIDを含める。"
         }
       },
       "required": [
