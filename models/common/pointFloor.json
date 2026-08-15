@@ -1,12 +1,21 @@
 {
   "title": "pointFloor",
+  "x-stoplight": {
+    "id": "kyz1bada51nbk"
+  },
   "type": "object",
   "properties": {
     "floor": {
-      "type": "integer"
+      "type": "integer",
+      "x-stoplight": {
+        "id": "brvwu6q02fntx"
+      }
     },
     "point": {
-      "$ref": "./point3d.json"
+      "$ref": "./point3d.json",
+      "x-stoplight": {
+        "id": "2ydo2r7y5v9iw"
+      }
     }
   },
   "required": [

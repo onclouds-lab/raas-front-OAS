@@ -1,5 +1,8 @@
 {
   "title": "ownerParams",
+  "x-stoplight": {
+    "id": "42uqzz4lh7d34"
+  },
   "description": "新規登録のownerのModel。",
   "allOf": [
     {
@@ -7,20 +10,35 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "エンドユーザにとってのユーザの名前"
+          "description": "エンドユーザにとってのユーザの名前",
+          "x-stoplight": {
+            "id": "yjv98j0dcmr0j"
+          }
         },
         "owned_robot": {
           "type": "array",
           "description": "ユーザが所有しているrobotのidリスト",
           "items": {
-            "type": "string"
+            "type": "string",
+            "x-stoplight": {
+              "id": "jgi81hke3ym3n"
+            }
+          },
+          "x-stoplight": {
+            "id": "m3gvuxbt5lw4i"
           }
         },
         "owned_map": {
           "type": "array",
           "description": "ユーザが所有しているmapのidリスト",
           "items": {
-            "type": "string"
+            "type": "string",
+            "x-stoplight": {
+              "id": "ff1u1r87dfq04"
+            }
+          },
+          "x-stoplight": {
+            "id": "jkmb6sab7f0or"
           }
         }
       },
@@ -28,10 +46,16 @@
         "name",
         "owned_robot",
         "owned_map"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "p4atnivd9irqk"
+      }
     },
     {
-      "$ref": "./common/updateDateObject.json"
+      "$ref": "./common/updateDateObject.json",
+      "x-stoplight": {
+        "id": "3kq1c9z6jp313"
+      }
     }
   ]
 }

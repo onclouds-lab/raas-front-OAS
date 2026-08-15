@@ -1,36 +1,68 @@
 {
   "title": "facility",
+  "x-stoplight": {
+    "id": "s01soivesb69g"
+  },
   "x-internal": false,
-  "description": "",
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "aojnfwitja5xy"
+      }
     },
     {
-      "$ref": "./common/registDateObject.json"
+      "$ref": "./common/registDateObject.json",
+      "x-stoplight": {
+        "id": "pz3nnmm2185hk"
+      }
     },
     {
-      "$ref": "./common/updateDateObject.json"
+      "$ref": "./common/updateDateObject.json",
+      "x-stoplight": {
+        "id": "ne0s4k0ijpgdz"
+      }
     },
     {
-      "$ref": "./facilityParams.v1.json"
+      "$ref": "./facilityParams.v1.json",
+      "x-stoplight": {
+        "id": "ggm8y7oah19bs"
+      }
     },
     {
       "type": "object",
-      "properties": {
-        "floors": {
-          "type": "array",
-          "items": {
-            "$ref": "./floor.json"
-          }
-        },
-        "updateDate": {
-          "type": "string"
-        }
+      "x-stoplight": {
+        "id": "y0oxjc74e8mxx"
       },
       "required": [
         "updateDate"
-      ]
+      ],
+      "properties": {
+        "floors": {
+          "type": "array",
+          "x-stoplight": {
+            "id": "85vun5gpxtncq"
+          },
+          "items": {
+            "$ref": "./floor.json",
+            "x-stoplight": {
+              "id": "8erbp7h04q8p5"
+            }
+          }
+        },
+        "updateDate": {
+          "type": "string",
+          "x-stoplight": {
+            "id": "pecpq32ms19xx"
+          }
+        },
+        "meshMap": {
+          "$ref": "./meshMap.json",
+          "x-stoplight": {
+            "id": "zmnmxxmrruktd"
+          }
+        }
+      }
     }
   ]
 }

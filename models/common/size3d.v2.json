@@ -1,15 +1,27 @@
 {
   "title": "size3d.v2",
+  "x-stoplight": {
+    "id": "7zmtmc3amblae"
+  },
   "type": "object",
   "properties": {
     "height": {
-      "type": "number"
+      "type": "number",
+      "x-stoplight": {
+        "id": "hkuv4ayc89dm7"
+      }
     },
     "width": {
-      "type": "number"
+      "type": "number",
+      "x-stoplight": {
+        "id": "s9x43wzgxfdky"
+      }
     },
     "deepth": {
-      "type": "number"
+      "type": "number",
+      "x-stoplight": {
+        "id": "y1lfjujg73fbh"
+      }
     }
   },
   "required": [

@@ -1,5 +1,8 @@
 {
   "title": "pathAlgorithm",
+  "x-stoplight": {
+    "id": "dpbn4qep6vj6k"
+  },
   "type": "object",
   "description": "Waypoint間のPath生成アルゴリズム",
   "properties": {
@@ -8,7 +11,10 @@
       "enum": [
         "straight",
         "graph"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "j1id48hgf6z8z"
+      }
     }
   },
   "required": [

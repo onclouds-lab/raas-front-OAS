@@ -1,8 +1,14 @@
 {
   "title": "moveOperation",
+  "x-stoplight": {
+    "id": "g0o7ytofhezw8"
+  },
   "allOf": [
     {
-      "$ref": "./operationMethod.json"
+      "$ref": "./operationMethod.json",
+      "x-stoplight": {
+        "id": "60hr5caqmga0h"
+      }
     },
     {
       "type": "object",
@@ -12,19 +18,31 @@
           "pattern": "move",
           "enum": [
             "move"
-          ]
+          ],
+          "x-stoplight": {
+            "id": "b50l3li5jd8yx"
+          }
         },
         "arguments": {
           "type": "array",
           "items": {
-            "$ref": "../common/floorAttribute.json"
+            "$ref": "../common/floorAttribute.json",
+            "x-stoplight": {
+              "id": "m0l8a7bmt9pn4"
+            }
+          },
+          "x-stoplight": {
+            "id": "d006wmbkluhb5"
           }
         }
       },
       "required": [
         "method",
         "arguments"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "e942j8ub0pqy2"
+      }
     }
   ],
   "description": ""

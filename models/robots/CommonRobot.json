@@ -1,35 +1,59 @@
 {
   "title": "CommonRobot",
+  "x-stoplight": {
+    "id": "2zw98pl7xcpkx"
+  },
   "x-examples": {},
   "description": "データベース上のロボットの共通情報",
   "allOf": [
     {
-      "$ref": "../common/idObject.v1.json"
+      "$ref": "../common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "e0l20ct0ge1vx"
+      }
     },
     {
-      "$ref": "./CommonRobotParams.json"
+      "$ref": "./CommonRobotParams.json",
+      "x-stoplight": {
+        "id": "hz41s7jxmi9vc"
+      }
     },
     {
       "type": "object",
       "properties": {
         "specification": {
-          "$ref": "../specs/CommonSpecification.json"
+          "$ref": "../specs/CommonSpecification.json",
+          "x-stoplight": {
+            "id": "u3m35ms16gpli"
+          }
         },
         "owner": {
-          "$ref": "../owner.v1.json"
+          "$ref": "../owner.v1.json",
+          "x-stoplight": {
+            "id": "5fwaatzz51kah"
+          }
         },
         "home": {
-          "$ref": "../waypoint.v2.json"
+          "$ref": "../waypoint.v2.json",
+          "x-stoplight": {
+            "id": "6pl0neqjoqb7m"
+          }
         },
         "updateDate": {
-          "type": "string"
+          "type": "string",
+          "x-stoplight": {
+            "id": "wvmhfajc37df3"
+          }
         }
       },
       "required": [
         "specification",
         "owner",
         "updateDate"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "q2pw7he2i1di1"
+      }
     }
   ]
 }

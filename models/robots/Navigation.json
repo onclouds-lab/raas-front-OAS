@@ -1,35 +1,59 @@
 {
   "title": "Navigation",
+  "x-stoplight": {
+    "id": "5hwtaikl1eb4e"
+  },
   "x-examples": {},
   "description": "移動ロボットの情報",
   "allOf": [
     {
-      "$ref": "./CommonRobot.json"
+      "$ref": "./CommonRobot.json",
+      "x-stoplight": {
+        "id": "zjb4fn0o9o4a3"
+      }
     },
     {
-      "$ref": "./NavigationParams.json"
+      "$ref": "./NavigationParams.json",
+      "x-stoplight": {
+        "id": "7oiqlreddyhxo"
+      }
     },
     {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "pattern": "navigation"
+          "pattern": "navigation",
+          "x-stoplight": {
+            "id": "nzcxpjabjcxu3"
+          }
         },
         "specification": {
-          "$ref": "../specs/NavigationSpecification.json"
+          "$ref": "../specs/NavigationSpecification.json",
+          "x-stoplight": {
+            "id": "iuq7rwdqlfmhn"
+          }
         },
         "owner": {
-          "$ref": "../owner.v1.json"
+          "$ref": "../owner.v1.json",
+          "x-stoplight": {
+            "id": "dbr90kiad6jv5"
+          }
         },
         "home": {
-          "$ref": "../waypoint.v2.json"
+          "$ref": "../waypoint.v2.json",
+          "x-stoplight": {
+            "id": "lqptjxn0rj2r5"
+          }
         }
       },
       "required": [
         "specification",
         "owner"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "mm1e0l4s1ica2"
+      }
     }
   ]
 }

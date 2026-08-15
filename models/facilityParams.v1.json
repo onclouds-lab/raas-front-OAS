@@ -1,32 +1,58 @@
 {
   "title": "facilityParams",
-  "description": "",
+  "x-stoplight": {
+    "id": "yi179rdeubpqz"
+  },
   "allOf": [
     {
       "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "countOfFloor": {
-          "type": "number",
-          "description": "建物の実際の階数"
-        },
-        "floors": {
-          "type": "array",
-          "items": {
-            "$ref": "./floorParams.json"
-          }
-        }
+      "x-stoplight": {
+        "id": "81fw93t078cys"
       },
       "required": [
         "name",
         "countOfFloor",
         "floors"
-      ]
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "x-stoplight": {
+            "id": "by5nv6qyw02zw"
+          }
+        },
+        "countOfFloor": {
+          "type": "number",
+          "description": "建物の実際の階数",
+          "x-stoplight": {
+            "id": "2rpdr5aed27ry"
+          }
+        },
+        "floors": {
+          "type": "array",
+          "x-stoplight": {
+            "id": "gy1h0zfkpni9w"
+          },
+          "items": {
+            "$ref": "./floorParams.json",
+            "x-stoplight": {
+              "id": "qu35t6bfutola"
+            }
+          }
+        },
+        "meshMap": {
+          "$ref": "./meshMapParams.v1.json",
+          "x-stoplight": {
+            "id": "kgtkud2rl8ppm"
+          }
+        }
+      }
     },
     {
-      "$ref": "./common/updateDateObject.json"
+      "$ref": "./common/updateDateObject.json",
+      "x-stoplight": {
+        "id": "qhvaaha9s9pju"
+      }
     }
   ]
 }

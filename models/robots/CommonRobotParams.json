@@ -1,31 +1,52 @@
 {
   "title": "CommonRobotParams",
+  "x-stoplight": {
+    "id": "9te4cs4edup19"
+  },
   "allOf": [
     {
       "type": "object",
       "properties": {
         "name": {
           "type": "string",
-          "description": "エンドユーザにとってのロボットの名前"
+          "description": "エンドユーザにとってのロボットの名前",
+          "x-stoplight": {
+            "id": "e7s0512m6fwu8"
+          }
         },
         "type": {
           "type": "string",
           "enum": [
             "elevator",
             "navigation"
-          ]
+          ],
+          "x-stoplight": {
+            "id": "5inzyrp14q3e0"
+          }
         },
         "specification": {
-          "$ref": "../common/idObject.v1.json"
+          "$ref": "../common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "hlbcyj9tbkrdu"
+          }
         },
         "owner": {
-          "$ref": "../common/idObject.v1.json"
+          "$ref": "../common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "iqpqh0bzjcvch"
+          }
         },
         "home": {
-          "$ref": "../common/idObject.v1.json"
+          "$ref": "../common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "7322nvq8g5e6z"
+          }
         },
         "facility": {
-          "$ref": "../common/idObject.v1.json"
+          "$ref": "../common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "j52q7qg9lgqi8"
+          }
         }
       },
       "required": [
@@ -34,10 +55,16 @@
         "specification",
         "owner",
         "facility"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "ni1plrs9otdmr"
+      }
     },
     {
-      "$ref": "../common/updateDateObject.json"
+      "$ref": "../common/updateDateObject.json",
+      "x-stoplight": {
+        "id": "1ab5z3hn4ijei"
+      }
     }
   ]
 }

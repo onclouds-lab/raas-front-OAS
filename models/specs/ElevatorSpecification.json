@@ -1,8 +1,14 @@
 {
   "title": "ElevatorSpecification",
+  "x-stoplight": {
+    "id": "wo6liuva1dn8i"
+  },
   "allOf": [
     {
-      "$ref": "./CommonSpecification.json"
+      "$ref": "./CommonSpecification.json",
+      "x-stoplight": {
+        "id": "nhn8r4q7qzijn"
+      }
     },
     {
       "type": "object",
@@ -12,18 +18,30 @@
           "pattern": "elevator",
           "enum": [
             "elevator"
-          ]
+          ],
+          "x-stoplight": {
+            "id": "lrcev5e25b92m"
+          }
         },
         "supportSpecs": {
           "type": "array",
           "items": {
-            "$ref": "./NavigationSpecification.json"
+            "$ref": "./NavigationSpecification.json",
+            "x-stoplight": {
+              "id": "rottsrdlsr6lc"
+            }
+          },
+          "x-stoplight": {
+            "id": "e3dxe6rflycqq"
           }
         }
       },
       "required": [
         "supportSpecs"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "dou3w90mslkyg"
+      }
     }
   ],
   "description": "エレベーターの諸元"

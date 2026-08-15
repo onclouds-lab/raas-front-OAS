@@ -1,14 +1,23 @@
 {
   "title": "robot",
+  "x-stoplight": {
+    "id": "yhtvz3lcrz0xg"
+  },
   "x-examples": {},
   "description": "データベース上のロボットの情報",
   "examples": [],
   "oneOf": [
     {
-      "$ref": "./robots/Elevator.json"
+      "$ref": "./robots/Elevator.json",
+      "x-stoplight": {
+        "id": "ky1nchyyosfn6"
+      }
     },
     {
-      "$ref": "./robots/Navigation.json"
+      "$ref": "./robots/Navigation.json",
+      "x-stoplight": {
+        "id": "d0vaxy9jl8nxm"
+      }
     }
   ]
 }

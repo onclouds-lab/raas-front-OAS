@@ -1,8 +1,14 @@
 {
   "title": "rideOperation",
+  "x-stoplight": {
+    "id": "1ltx8qz904iok"
+  },
   "allOf": [
     {
-      "$ref": "./operationMethod.json"
+      "$ref": "./operationMethod.json",
+      "x-stoplight": {
+        "id": "nzrf249zhwv1k"
+      }
     },
     {
       "type": "object",
@@ -12,7 +18,10 @@
           "pattern": "ride",
           "enum": [
             "ride"
-          ]
+          ],
+          "x-stoplight": {
+            "id": "gtfipkkfaucf4"
+          }
         },
         "argument": {
           "type": "object",
@@ -21,15 +30,24 @@
           ],
           "properties": {
             "target": {
-              "type": "string"
+              "type": "string",
+              "x-stoplight": {
+                "id": "5y1lzhcl71gyd"
+              }
             }
+          },
+          "x-stoplight": {
+            "id": "wv8b6n64qdtex"
           }
         }
       },
       "required": [
         "method",
         "argument"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "cwdoqm6oflggy"
+      }
     }
   ]
 }

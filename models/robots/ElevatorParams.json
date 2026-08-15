@@ -1,20 +1,35 @@
 {
   "title": "ElevatorParams",
+  "x-stoplight": {
+    "id": "o89r9e4flbtrg"
+  },
   "allOf": [
     {
-      "$ref": "./CommonRobotParams.json"
+      "$ref": "./CommonRobotParams.json",
+      "x-stoplight": {
+        "id": "vmo9t5nooc76h"
+      }
     },
     {
       "type": "object",
       "properties": {
         "type": {
           "type": "string",
-          "pattern": "elevator"
+          "pattern": "elevator",
+          "x-stoplight": {
+            "id": "ays74rbqfb4cc"
+          }
         },
         "stopWaypoints": {
           "type": "array",
           "items": {
-            "$ref": "../common/idObject.v1.json"
+            "$ref": "../common/idObject.v1.json",
+            "x-stoplight": {
+              "id": "l02mbu0mi15mz"
+            }
+          },
+          "x-stoplight": {
+            "id": "6vy4f2zetkf16"
           }
         },
         "specification": {
@@ -24,19 +39,34 @@
               "properties": {
                 "type": {
                   "type": "string",
-                  "pattern": "elevator"
+                  "pattern": "elevator",
+                  "x-stoplight": {
+                    "id": "zxgfxawj1nfv1"
+                  }
                 }
+              },
+              "x-stoplight": {
+                "id": "3us8rslu41al0"
               }
             },
             {
-              "$ref": "../common/idObject.v1.json"
+              "$ref": "../common/idObject.v1.json",
+              "x-stoplight": {
+                "id": "x2vsuis7d10ex"
+              }
             }
-          ]
+          ],
+          "x-stoplight": {
+            "id": "71f1ojer2b5pn"
+          }
         }
       },
       "required": [
         "type"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "e7mm5kma5vqm8"
+      }
     }
   ],
   "description": "elevator"

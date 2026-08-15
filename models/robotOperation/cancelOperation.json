@@ -1,8 +1,14 @@
 {
   "title": "cancelOperation",
+  "x-stoplight": {
+    "id": "igz06q2sbfdoy"
+  },
   "allOf": [
     {
-      "$ref": "./operationMethod.json"
+      "$ref": "./operationMethod.json",
+      "x-stoplight": {
+        "id": "ijxf7dlvz3zrb"
+      }
     },
     {
       "type": "object",
@@ -12,12 +18,18 @@
           "pattern": "cancel",
           "enum": [
             "cancel"
-          ]
+          ],
+          "x-stoplight": {
+            "id": "mi7lgunyv6hwj"
+          }
         }
       },
       "required": [
         "method"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "v2ml33zjzxqdu"
+      }
     }
   ]
 }

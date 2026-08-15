@@ -1,23 +1,38 @@
 {
   "title": "path",
+  "x-stoplight": {
+    "id": "ckkj5wmjcc2we"
+  },
   "description": "pathのModel",
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "3f3ecfdbld48g"
+      }
     },
     {
-      "$ref": "./pathParams.v1.json"
+      "$ref": "./pathParams.v1.json",
+      "x-stoplight": {
+        "id": "aqtb9mrrhinyc"
+      }
     },
     {
       "type": "object",
       "properties": {
         "updateDate": {
-          "type": "string"
+          "type": "string",
+          "x-stoplight": {
+            "id": "xw95vaumcq5am"
+          }
         }
       },
       "required": [
         "updateDate"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "4c93jf7kj9hoo"
+      }
     }
   ]
 }

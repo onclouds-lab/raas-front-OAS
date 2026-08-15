@@ -1,8 +1,14 @@
 {
   "title": "NavigationSpecification",
+  "x-stoplight": {
+    "id": "z5whnz2yn380c"
+  },
   "allOf": [
     {
-      "$ref": "./CommonSpecification.json"
+      "$ref": "./CommonSpecification.json",
+      "x-stoplight": {
+        "id": "w9m9wmxo3dtl2"
+      }
     },
     {
       "type": "object",
@@ -12,27 +18,45 @@
           "pattern": "navigation",
           "enum": [
             "navigation"
-          ]
+          ],
+          "x-stoplight": {
+            "id": "zmx37dw6dxqi1"
+          }
         },
         "name": {
           "type": "string",
-          "description": "型番"
+          "description": "型番",
+          "x-stoplight": {
+            "id": "0fnxethxytwzp"
+          }
         },
         "radius": {
           "type": "number",
-          "description": "ロボットの大きさ（半径）[m]"
+          "description": "ロボットの大きさ（半径）[m]",
+          "x-stoplight": {
+            "id": "i9390rk8npjzf"
+          }
         },
         "max_speed": {
           "type": "number",
-          "description": "最大速度[m/s]"
+          "description": "最大速度[m/s]",
+          "x-stoplight": {
+            "id": "hezacxmobrpaf"
+          }
         },
         "max_acceleration": {
           "type": "number",
-          "description": "最大加速度[m/(s^2)]"
+          "description": "最大加速度[m/(s^2)]",
+          "x-stoplight": {
+            "id": "87m2j5w1shxej"
+          }
         },
         "max_angular_speed": {
           "type": "number",
-          "description": "最大角速度[rad/s]"
+          "description": "最大角速度[rad/s]",
+          "x-stoplight": {
+            "id": "w1pa3fqbmd5a3"
+          }
         }
       },
       "required": [
@@ -41,7 +65,10 @@
         "max_speed",
         "max_acceleration",
         "max_angular_speed"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "1yia96gil4cik"
+      }
     }
   ],
   "description": "移動ロボットの諸元"

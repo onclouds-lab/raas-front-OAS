@@ -1,5 +1,8 @@
 {
   "title": "rawRobotParams",
+  "x-stoplight": {
+    "id": "07qy3jitqkdyd"
+  },
   "description": "ロボットのリアルタイム情報",
   "x-examples": {
     "example-1": {}
@@ -11,21 +14,33 @@
         "since": {
           "type": "string",
           "description": "接続したときのタイムスタンプ",
-          "format": "date-time"
+          "format": "date-time",
+          "x-stoplight": {
+            "id": "wmat9zqj43sm8"
+          }
         },
         "IP": {
           "type": "string",
           "description": "IPアドレス。管理者ユーザ向け？",
-          "format": "ipv4"
+          "format": "ipv4",
+          "x-stoplight": {
+            "id": "fk0jjlxuiajcb"
+          }
         },
         "battery": {
           "type": "integer",
           "minimum": 0,
           "maximum": 100,
-          "description": "0~100%"
+          "description": "0~100%",
+          "x-stoplight": {
+            "id": "dm3diwby0wkj9"
+          }
         },
         "ang": {
-          "$ref": "./common/rotation.json"
+          "$ref": "./common/rotation.json",
+          "x-stoplight": {
+            "id": "vsjcs14vbvous"
+          }
         }
       },
       "required": [
@@ -33,10 +48,16 @@
         "IP",
         "battery",
         "ang"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "ik5hxzkg9squp"
+      }
     },
     {
-      "$ref": "./common/pointFloor.json"
+      "$ref": "./common/pointFloor.json",
+      "x-stoplight": {
+        "id": "rz6men9et1szw"
+      }
     }
   ]
 }

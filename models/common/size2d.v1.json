@@ -1,14 +1,23 @@
 {
   "title": "size2d",
+  "x-stoplight": {
+    "id": "zpaad7xpqlotp"
+  },
   "type": "object",
   "properties": {
     "width": {
       "type": "number",
-      "description": "横サイズ"
+      "description": "横サイズ",
+      "x-stoplight": {
+        "id": "4n5g5d4ydz0z8"
+      }
     },
     "height": {
       "type": "number",
-      "description": "縦サイズ"
+      "description": "縦サイズ",
+      "x-stoplight": {
+        "id": "qi2lt84104ysa"
+      }
     }
   },
   "required": [

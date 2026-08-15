@@ -1,11 +1,20 @@
 {
   "title": "floor",
+  "x-stoplight": {
+    "id": "38a2tzny3uilw"
+  },
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "fryla5fxj7mak"
+      }
     },
     {
-      "$ref": "./floorParams.json"
+      "$ref": "./floorParams.json",
+      "x-stoplight": {
+        "id": "sncugeovvw0zu"
+      }
     },
     {
       "type": "object",
@@ -13,24 +22,42 @@
         "maps": {
           "type": "array",
           "items": {
-            "$ref": "./mapMeta.v2.json"
+            "$ref": "./mapMeta.v2.json",
+            "x-stoplight": {
+              "id": "w03r4nf2385gc"
+            }
+          },
+          "x-stoplight": {
+            "id": "v13uxvavdrzvi"
           }
         },
         "waypoints": {
           "type": "array",
           "items": {
-            "$ref": "./waypoint.v2.json"
+            "$ref": "./waypoint.v2.json",
+            "x-stoplight": {
+              "id": "8fjh5dwsy1g4x"
+            }
+          },
+          "x-stoplight": {
+            "id": "5x4fvy3p0flxv"
           }
         },
         "updateDate": {
-          "type": "string"
+          "type": "string",
+          "x-stoplight": {
+            "id": "n5ru5i5dm0l0h"
+          }
         }
       },
       "required": [
         "maps",
         "waypoints",
         "updateDate"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "bhx69l4nrzabt"
+      }
     }
   ]
 }

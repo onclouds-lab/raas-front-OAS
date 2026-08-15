@@ -1,15 +1,25 @@
 {
   "title": "attribute",
+  "x-stoplight": {
+    "id": "jrlnvvqorhxon"
+  },
   "type": "object",
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "x-stoplight": {
+        "id": "jgyevp53bvafa"
+      }
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "x-stoplight": {
+        "id": "28vq5f2oaeed1"
+      }
     }
   },
   "required": [
     "name"
-  ]
+  ],
+  "description": ""
 }

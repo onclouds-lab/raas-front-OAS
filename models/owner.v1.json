@@ -1,22 +1,37 @@
 {
   "title": "owner",
+  "x-stoplight": {
+    "id": "kgeg0muswiw07"
+  },
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "3w8zgg7ck6h3p"
+      }
     },
     {
-      "$ref": "./ownerParams.v1.json"
+      "$ref": "./ownerParams.v1.json",
+      "x-stoplight": {
+        "id": "l9uxytqcmu688"
+      }
     },
     {
       "type": "object",
       "properties": {
         "updateDate": {
-          "type": "string"
+          "type": "string",
+          "x-stoplight": {
+            "id": "wzogeadyywovt"
+          }
         }
       },
       "required": [
         "updateDate"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "886pdvsgcd7fg"
+      }
     }
   ]
 }

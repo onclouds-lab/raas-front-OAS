@@ -1,15 +1,24 @@
 {
   "title": "point2d.json",
+  "x-stoplight": {
+    "id": "cjrbmf9fmjo91"
+  },
   "type": "object",
   "description": "2次元の場所を示します",
   "properties": {
     "x": {
       "type": "number",
-      "description": "x座標の位置"
+      "description": "x座標の位置",
+      "x-stoplight": {
+        "id": "bnx9opdxe7gum"
+      }
     },
     "y": {
       "type": "number",
-      "description": "y座標の位置"
+      "description": "y座標の位置",
+      "x-stoplight": {
+        "id": "v0j0zazg1nudj"
+      }
     }
   },
   "required": [

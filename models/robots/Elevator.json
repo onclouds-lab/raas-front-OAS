@@ -1,41 +1,71 @@
 {
   "title": "Elevator",
+  "x-stoplight": {
+    "id": "jnxq8p5iz8u1h"
+  },
   "x-examples": {},
   "description": "エレベーターの情報",
   "allOf": [
     {
-      "$ref": "./CommonRobot.json"
+      "$ref": "./CommonRobot.json",
+      "x-stoplight": {
+        "id": "mhy661atnt3sg"
+      }
     },
     {
-      "$ref": "./ElevatorParams.json"
+      "$ref": "./ElevatorParams.json",
+      "x-stoplight": {
+        "id": "o8a82eup4pse3"
+      }
     },
     {
       "type": "object",
       "properties": {
         "specification": {
-          "$ref": "../specs/ElevatorSpecification.json"
+          "$ref": "../specs/ElevatorSpecification.json",
+          "x-stoplight": {
+            "id": "7nq33em4035au"
+          }
         },
         "owner": {
-          "$ref": "../owner.v1.json"
+          "$ref": "../owner.v1.json",
+          "x-stoplight": {
+            "id": "ye2r5k4wsxpdg"
+          }
         },
         "type": {
           "type": "string",
-          "pattern": "elevator"
+          "pattern": "elevator",
+          "x-stoplight": {
+            "id": "kg7p3s4d33mej"
+          }
         },
         "stopWaypoints": {
           "type": "array",
           "items": {
-            "$ref": "../waypoint.v2.json"
+            "$ref": "../waypoint.v2.json",
+            "x-stoplight": {
+              "id": "2hks0396fkbil"
+            }
+          },
+          "x-stoplight": {
+            "id": "5yxs492g6hx7g"
           }
         },
         "home": {
-          "$ref": "../waypoint.v2.json"
+          "$ref": "../waypoint.v2.json",
+          "x-stoplight": {
+            "id": "yk6ndxwnincce"
+          }
         }
       },
       "required": [
         "specification",
         "owner"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "cvinnik7h900n"
+      }
     }
   ]
 }

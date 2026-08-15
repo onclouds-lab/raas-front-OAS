@@ -1,13 +1,22 @@
 {
   "title": "pointMap",
+  "x-stoplight": {
+    "id": "76y0xtm4f9c17"
+  },
   "type": "object",
   "description": "Map上の位置を示す。Map座標系",
   "properties": {
     "map": {
-      "$ref": "./idObject.v1.json"
+      "$ref": "./idObject.v1.json",
+      "x-stoplight": {
+        "id": "1qr9ik10bqoq5"
+      }
     },
     "point": {
-      "$ref": "./point3d.json"
+      "$ref": "./point3d.json",
+      "x-stoplight": {
+        "id": "zd3pgl6kjho8h"
+      }
     }
   },
   "required": [

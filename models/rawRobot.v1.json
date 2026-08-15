@@ -1,14 +1,26 @@
 {
   "title": "rawRobot",
+  "x-stoplight": {
+    "id": "rzkrl3xvhj5u9"
+  },
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "1902cu7ahq6dt"
+      }
     },
     {
-      "$ref": "./rawRobotParams.v1.json"
+      "$ref": "./rawRobotParams.v1.json",
+      "x-stoplight": {
+        "id": "hry2e3etv6rti"
+      }
     },
     {
-      "type": "object"
+      "type": "object",
+      "x-stoplight": {
+        "id": "m8vl8ziesu3n2"
+      }
     }
   ]
 }

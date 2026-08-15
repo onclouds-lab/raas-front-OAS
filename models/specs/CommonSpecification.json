@@ -1,48 +1,81 @@
 {
   "title": "CommonSpecification",
+  "x-stoplight": {
+    "id": "qnnz80k15sj90"
+  },
   "x-examples": {},
   "description": "RaaSで扱う共通のロボット仕様",
   "allOf": [
     {
-      "$ref": "../common/idObject.v1.json"
+      "$ref": "../common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "vz86icl726fyf"
+      }
     },
     {
       "type": "object",
       "properties": {
         "manufacturer": {
-          "type": "string"
+          "type": "string",
+          "x-stoplight": {
+            "id": "k4viig57q9ux3"
+          }
         },
         "type": {
           "type": "string",
           "enum": [
             "navigation",
             "elevator"
-          ]
+          ],
+          "x-stoplight": {
+            "id": "hjbg2uo7ms46y"
+          }
         },
         "MQTT": {
-          "type": "boolean"
+          "type": "boolean",
+          "x-stoplight": {
+            "id": "m3ksayhn5sfi4"
+          }
         },
         "webRTC": {
-          "type": "boolean"
+          "type": "boolean",
+          "x-stoplight": {
+            "id": "7fp7d6caxeqaz"
+          }
         },
         "discription": {
-          "type": "string"
+          "type": "string",
+          "x-stoplight": {
+            "id": "s7bu9udkhfxkp"
+          }
         },
         "size": {
           "type": "object",
           "properties": {
             "height": {
               "type": "number",
-              "description": "単位はメートル"
+              "description": "単位はメートル",
+              "x-stoplight": {
+                "id": "27tk028qacfn0"
+              }
             },
             "width": {
               "type": "number",
-              "description": "単位はメートル"
+              "description": "単位はメートル",
+              "x-stoplight": {
+                "id": "7egs4wk50v6l4"
+              }
             },
             "depth": {
               "type": "number",
-              "description": "単位はメートル"
+              "description": "単位はメートル",
+              "x-stoplight": {
+                "id": "obzwxqrx0kio4"
+              }
             }
+          },
+          "x-stoplight": {
+            "id": "q8rx1vil3wwn1"
           }
         }
       },
@@ -51,7 +84,10 @@
         "type",
         "MQTT",
         "webRTC"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "e0qlad24ofx0l"
+      }
     }
   ]
 }

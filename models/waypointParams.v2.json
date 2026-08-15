@@ -1,5 +1,8 @@
 {
   "title": "waypointParam",
+  "x-stoplight": {
+    "id": "sxcpm14pa6i4f"
+  },
   "description": "新規登録のwaypointのModel。waypointは目的地設定などに使用されます。",
   "allOf": [
     {
@@ -7,26 +10,44 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "ユーザにとってのwaypointの名前"
+          "description": "ユーザにとってのwaypointの名前",
+          "x-stoplight": {
+            "id": "zenkw1lxz13ek"
+          }
         },
         "facility": {
-          "$ref": "./common/idObject.v1.json"
+          "$ref": "./common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "0xf34v2y7cvej"
+          }
         },
         "owner": {
-          "$ref": "./common/idObject.v1.json"
+          "$ref": "./common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "f3olitusq8jkj"
+          }
         }
       },
       "required": [
         "name",
         "facility",
         "owner"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "rg184yl1ckg98"
+      }
     },
     {
-      "$ref": "./common/floorAttribute.json"
+      "$ref": "./common/floorAttribute.json",
+      "x-stoplight": {
+        "id": "g3dg4kqi9q10q"
+      }
     },
     {
-      "$ref": "./common/updateDateObject.json"
+      "$ref": "./common/updateDateObject.json",
+      "x-stoplight": {
+        "id": "qyfkb5xvwya2x"
+      }
     }
   ]
 }

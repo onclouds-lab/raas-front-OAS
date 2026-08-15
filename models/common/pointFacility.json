@@ -1,12 +1,21 @@
 {
   "title": "pointFacility",
+  "x-stoplight": {
+    "id": "fr0jx6k29pqov"
+  },
   "type": "object",
   "properties": {
     "point": {
-      "$ref": "./point3d.json"
+      "$ref": "./point3d.json",
+      "x-stoplight": {
+        "id": "5cvyl6mpxbgk1"
+      }
     },
     "floor": {
-      "type": "integer"
+      "type": "integer",
+      "x-stoplight": {
+        "id": "2d0ywgioj967g"
+      }
     }
   },
   "required": [

@@ -1,12 +1,21 @@
 {
   "title": "roboSpecification",
+  "x-stoplight": {
+    "id": "sfod7srzx85yw"
+  },
   "description": "",
   "oneOf": [
     {
-      "$ref": "./specs/NavigationSpecification.json"
+      "$ref": "./specs/NavigationSpecification.json",
+      "x-stoplight": {
+        "id": "0y4bu5wmqf1it"
+      }
     },
     {
-      "$ref": "./specs/ElevatorSpecification.json"
+      "$ref": "./specs/ElevatorSpecification.json",
+      "x-stoplight": {
+        "id": "on5wnmnmgtm5q"
+      }
     }
   ],
   "examples": []

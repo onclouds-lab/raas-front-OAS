@@ -1,35 +1,59 @@
 {
   "title": "pathParams",
+  "x-stoplight": {
+    "id": "v1oo6jvv70rzy"
+  },
   "allOf": [
     {
       "type": "object",
       "properties": {
         "name": {
           "type": "string",
-          "description": "エンドユーザにとってのpath名"
+          "description": "エンドユーザにとってのpath名",
+          "x-stoplight": {
+            "id": "ofto4pv7qklnl"
+          }
         },
         "facility": {
-          "$ref": "./common/idObject.v1.json"
+          "$ref": "./common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "jknysxd3wox6y"
+          }
         },
         "operations": {
           "description": "",
           "type": "array",
           "items": {
-            "$ref": "./roboOperation.json"
+            "$ref": "./roboOperation.json",
+            "x-stoplight": {
+              "id": "iw946izb7utp2"
+            }
+          },
+          "x-stoplight": {
+            "id": "yr0vctdi43g8o"
           }
         },
         "owner": {
-          "$ref": "./common/idObject.v1.json"
+          "$ref": "./common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "oryhfucbu5awf"
+          }
         }
       },
       "required": [
         "name",
         "facility",
         "operations"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "kl0ae891kc9u7"
+      }
     },
     {
-      "$ref": "./common/updateDateObject.json"
+      "$ref": "./common/updateDateObject.json",
+      "x-stoplight": {
+        "id": "e22x8uj8m3n0s"
+      }
     }
   ]
 }

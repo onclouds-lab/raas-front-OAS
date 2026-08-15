@@ -1,26 +1,44 @@
 {
   "title": "waypoint",
+  "x-stoplight": {
+    "id": "lmy6p5n81fg7w"
+  },
   "description": "waypointのModel。waypointは目的地設定などに使用されます。",
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "m5jigl80yvhna"
+      }
     },
     {
-      "$ref": "./waypointParams.v2.json"
+      "$ref": "./waypointParams.v2.json",
+      "x-stoplight": {
+        "id": "s9ipjl8sh6386"
+      }
     },
     {
       "type": "object",
       "properties": {
         "owner": {
-          "$ref": "./owner.v1.json"
+          "$ref": "./owner.v1.json",
+          "x-stoplight": {
+            "id": "145p019jchqvk"
+          }
         },
         "updateDate": {
-          "type": "string"
+          "type": "string",
+          "x-stoplight": {
+            "id": "na5fczj5ij15a"
+          }
         }
       },
       "required": [
         "updateDate"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "nbktay6nfcnnk"
+      }
     }
   ]
 }

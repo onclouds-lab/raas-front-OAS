@@ -1,17 +1,38 @@
 {
   "title": "floorAttribute",
+  "x-stoplight": {
+    "id": "q42zxv1ccn2oe"
+  },
   "allOf": [
     {
-      "$ref": "./pointFloor.json"
+      "$ref": "./pointFloor.json",
+      "x-stoplight": {
+        "id": "ih0v8kd8i5eqh"
+      }
     },
     {
       "type": "object",
+      "x-stoplight": {
+        "id": "3r0hk2yjf2s3k"
+      },
       "properties": {
         "attributes": {
           "type": "array",
           "description": "特定の文字列のみ対応されます",
+          "x-stoplight": {
+            "id": "hmwskcjqql77s"
+          },
           "items": {
-            "type": "string"
+            "type": "string",
+            "x-stoplight": {
+              "id": "ib62mcn5jxpft"
+            }
+          }
+        },
+        "orientation": {
+          "$ref": "./rotation.json",
+          "x-stoplight": {
+            "id": "326ixfffprykh"
           }
         }
       }

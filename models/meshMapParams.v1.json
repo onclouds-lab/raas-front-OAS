@@ -1,0 +1,32 @@
+{
+  "title": "facilityParams",
+  "x-stoplight": {
+    "id": "a25lpa5bg9mw2"
+  },
+  "allOf": [
+    {
+      "x-stoplight": {
+        "id": "nz7kawi90l4pj"
+      },
+      "required": [
+        "name",
+        "scale"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "x-stoplight": {
+            "id": "9nlkggo69b6e7"
+          }
+        },
+        "scale": {
+          "type": "number",
+          "x-stoplight": {
+            "id": "2rxu4bhv7yx9j"
+          }
+        }
+      }
+    }
+  ],
+  "type": "object"
+}

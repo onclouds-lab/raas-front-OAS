@@ -1,18 +1,30 @@
 {
   "title": "rotation",
+  "x-stoplight": {
+    "id": "8x8o9ei5hmsa7"
+  },
   "type": "object",
   "properties": {
     "roll": {
       "description": "X軸で回転。単位はradian。",
-      "type": "number"
+      "type": "number",
+      "x-stoplight": {
+        "id": "ekl85f7udqb18"
+      }
     },
     "pitch": {
       "type": "number",
-      "description": "Y軸で回転。単位はradian。"
+      "description": "Y軸で回転。単位はradian。",
+      "x-stoplight": {
+        "id": "psdlov1cfuw75"
+      }
     },
     "yaw": {
       "type": "number",
-      "description": "Z軸で回転。単位はradian。"
+      "description": "Z軸で回転。単位はradian。",
+      "x-stoplight": {
+        "id": "80nvre81ttw60"
+      }
     }
   },
   "required": [

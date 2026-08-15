@@ -1,42 +1,78 @@
 {
   "type": "object",
+  "x-stoplight": {
+    "id": "43nytqi0t0jg8"
+  },
   "title": "pagenateTemplate",
   "x-examples": {},
   "minProperties": 1,
   "properties": {
     "current_page": {
-      "type": "integer"
+      "type": "integer",
+      "x-stoplight": {
+        "id": "nzwen7ceqggmr"
+      }
     },
     "from": {
-      "type": "integer"
+      "type": "integer",
+      "x-stoplight": {
+        "id": "8layflf062u8x"
+      }
     },
     "to": {
-      "type": "integer"
+      "type": "integer",
+      "x-stoplight": {
+        "id": "yngx1hnv9hzu1"
+      }
     },
     "first_page_url": {
-      "type": "string"
+      "type": "string",
+      "x-stoplight": {
+        "id": "m02a1pu7o4ur5"
+      }
     },
     "last_page_url": {
-      "type": "string"
+      "type": "string",
+      "x-stoplight": {
+        "id": "fds8965zvmst7"
+      }
     },
     "next_page_url": {
-      "type": "string"
+      "type": "string",
+      "x-stoplight": {
+        "id": "9rnspukhx0apa"
+      }
     },
     "prev_page_url": {
-      "type": "string"
+      "type": "string",
+      "x-stoplight": {
+        "id": "m6nu4ajm4osx0"
+      }
     },
     "path": {
-      "type": "string"
+      "type": "string",
+      "x-stoplight": {
+        "id": "32vx2a0o474rb"
+      }
     },
     "last_page": {
-      "type": "integer"
+      "type": "integer",
+      "x-stoplight": {
+        "id": "45mx6hla1dv42"
+      }
     },
     "per_page": {
       "type": "integer",
-      "minimum": 1
+      "minimum": 1,
+      "x-stoplight": {
+        "id": "i525vchhxxa4x"
+      }
     },
     "total": {
-      "type": "integer"
+      "type": "integer",
+      "x-stoplight": {
+        "id": "ff1fdorx1w6l9"
+      }
     }
   },
   "required": [

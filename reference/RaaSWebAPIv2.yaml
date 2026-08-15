@@ -1,4 +1,6 @@
 openapi: 3.0.1
+x-stoplight:
+  id: tsdlradtltion
 tags:
   - name: facility
   - name: robot
@@ -56,6 +58,8 @@ paths:
           name: limit
           description: 表示数
       description: 地図一覧を取得
+      x-stoplight:
+        id: a32s3pfleec7j
     parameters: []
     post:
       summary: add a new map
@@ -76,6 +80,9 @@ paths:
             schema:
               type: object
               title: createMapType
+              required:
+                - param
+                - pgm
               properties:
                 param:
                   $ref: ../models/mapParams.v2.json
@@ -83,10 +90,9 @@ paths:
                   type: string
                   description: バイナリ型のpgmファイル
                   format: binary
-              required:
-                - param
-                - pgm
         description: ''
+      x-stoplight:
+        id: qiyj1pnucpcob
   '/maps/{mapId}':
     description: mapの取得
     get:
@@ -102,6 +108,8 @@ paths:
                 $ref: ../models/mapMeta.v2.json
       operationId: getMap
       description: Idを指定してMapの取得
+      x-stoplight:
+        id: g0ki2hlppcaxq
     parameters:
       - schema:
           type: string
@@ -122,6 +130,8 @@ paths:
       description: map 削除
       tags:
         - map
+      x-stoplight:
+        id: z6k4rwwmff45d
     put:
       summary: update a map
       responses:
@@ -146,6 +156,8 @@ paths:
             schema:
               $ref: ../models/mapParams.v2.json
         description: ''
+      x-stoplight:
+        id: q0qi6lam65wjq
   '/maps/{mapId}/pgm':
     parameters:
       - schema:
@@ -162,6 +174,8 @@ paths:
           description: OK
       operationId: getPGMmapURL
       description: 詳細説明なし
+      x-stoplight:
+        id: 1dz03jjbmxgz0
     put:
       summary: ''
       operationId: putPGMmap
@@ -171,6 +185,8 @@ paths:
       tags:
         - map
       description: 詳細説明なし
+      x-stoplight:
+        id: d9940qbruls8x
   '/maps/{mapId}/cost':
     parameters:
       - schema:
@@ -200,6 +216,8 @@ paths:
                   value: 'http://localhost:3000/resource/bitmap/chinokyoten3f.png'
       operationId: getCostmapURL
       description: mapIdで指定される画像(PNG)を取得可能なURLが返る
+      x-stoplight:
+        id: er0w14rxtuyzi
     put:
       summary: ''
       operationId: putCostmap
@@ -209,6 +227,8 @@ paths:
       description: 詳細説明なし
       tags:
         - map
+      x-stoplight:
+        id: iedxp454ijah9
   /facilities:
     get:
       summary: GET Facilities
@@ -381,6 +401,19 @@ paths:
           description: Created
       operationId: getFacilities
       description: 詳細説明なし
+      x-stoplight:
+        id: w5nl84yzqj999
+      parameters:
+        - schema:
+            type: boolean
+          in: query
+          name: fullrelations
+          description: get full depth relations
+        - schema:
+            type: boolean
+          in: query
+          name: relations
+          description: get ( one depth ) relations
     parameters: []
     post:
       summary: post facility
@@ -394,12 +427,32 @@ paths:
                 $ref: ../models/facility.json
       requestBody:
         content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - param
+              properties:
+                param:
+                  $ref: ../models/facilityParams.v1.json
+                mesh:
+                  type: string
+                  x-stoplight:
+                    id: wznib9h526gxb
+                  format: binary
           application/json:
             schema:
-              $ref: ../models/facilityParams.v1.json
+              type: object
+              required:
+                - param
+              properties:
+                param:
+                  $ref: ../models/facilityParams.v1.json
       description: Facilityの作成
       tags:
         - facility
+      x-stoplight:
+        id: 4wd221smg2uhy
   '/facilities/{facilityId}':
     parameters:
       - schema:
@@ -420,6 +473,8 @@ paths:
                 $ref: ../models/facility.json
       operationId: getFacility
       description: 詳細説明なし
+      x-stoplight:
+        id: rsdoaxcmnrcaw
     delete:
       summary: ''
       operationId: deleteFacility
@@ -434,6 +489,8 @@ paths:
       description: facilityの削除
       tags:
         - facility
+      x-stoplight:
+        id: mbdmqce7ylozu
     put:
       summary: Update a Facility
       operationId: updateFacility
@@ -452,6 +509,8 @@ paths:
               $ref: ../models/facilityParams.v1.json
       tags:
         - facility
+      x-stoplight:
+        id: lpxlcffjiilk1
   /waypoints:
     get:
       summary: get waypoints
@@ -618,6 +677,8 @@ paths:
             type: integer
           in: query
           name: limit
+      x-stoplight:
+        id: ul0g44eqbn1o4
     post:
       summary: add new waypoint
       operationId: createWaypoint
@@ -638,6 +699,8 @@ paths:
             examples: {}
       tags:
         - waypoint
+      x-stoplight:
+        id: y4quzm31iy50p
   '/waypoints/{waypointID}':
     parameters:
       - schema:
@@ -659,6 +722,8 @@ paths:
       operationId: getWaypoint
       description: 指定されたwaypointIDのwaypointを返す
       parameters: []
+      x-stoplight:
+        id: 6qltwudo8ugd1
     put:
       summary: ''
       operationId: updateWaypoint
@@ -677,6 +742,8 @@ paths:
               $ref: ../models/waypointParams.v2.json
       tags:
         - waypoint
+      x-stoplight:
+        id: c03pl9d67nmxg
     delete:
       summary: ''
       operationId: deleteWaypoint
@@ -691,6 +758,8 @@ paths:
       description: waypointの削除
       tags:
         - waypoint
+      x-stoplight:
+        id: sq1cnhu8t33gm
   /autopath:
     post:
       summary: get auto generate path
@@ -797,6 +866,8 @@ paths:
           in: query
           name: facility_id
           description: Pathを生成するfacilityのID
+      x-stoplight:
+        id: 4zoqot0ih9egv
   /owners:
     get:
       summary: Your GET endpoint
@@ -849,6 +920,8 @@ paths:
             type: integer
           in: query
           name: limit
+      x-stoplight:
+        id: 04nc1cerj8468
   /me:
     get:
       summary: Your GET endpoint
@@ -873,6 +946,8 @@ paths:
       operationId: getMeInfo
       description: Ownerの一覧を取得
       parameters: []
+      x-stoplight:
+        id: 1dnwvifelmzeq
     parameters: []
   /paths:
     get:
@@ -992,6 +1067,8 @@ paths:
             type: integer
           in: query
           name: limit
+      x-stoplight:
+        id: qn8hh9e4ofpds
     post:
       summary: add new path
       responses:
@@ -1010,6 +1087,8 @@ paths:
           application/json:
             schema:
               $ref: ../models/pathParams.v1.json
+      x-stoplight:
+        id: n2thsgt4xqprm
   '/paths/{pathID}':
     parameters:
       - schema:
@@ -1030,6 +1109,8 @@ paths:
                 $ref: ../models/path.v1.json
       operationId: getPath
       description: Pathの取得
+      x-stoplight:
+        id: u6o2bz1wi7g54
     put:
       summary: update a path
       responses:
@@ -1048,6 +1129,8 @@ paths:
           application/json:
             schema:
               $ref: ../models/pathParams.v1.json
+      x-stoplight:
+        id: 5vzt0oidvjvrj
     delete:
       summary: delete a path
       responses:
@@ -1062,6 +1145,8 @@ paths:
       operationId: deletePath
       tags:
         - path
+      x-stoplight:
+        id: coin3bhuw61xg
   '/robots/{robotID}':
     parameters:
       - schema:
@@ -1085,6 +1170,8 @@ paths:
       operationId: getRobot
       tags:
         - robot
+      x-stoplight:
+        id: cramrpz3hhs83
     put:
       summary: update a robot
       responses:
@@ -1107,6 +1194,8 @@ paths:
             schema:
               $ref: ../models/robotParams.v1.json
         description: ''
+      x-stoplight:
+        id: 88fh33a8cvx41
     delete:
       summary: delete a robot
       responses:
@@ -1123,6 +1212,8 @@ paths:
       operationId: deleteRobot
       tags:
         - robot
+      x-stoplight:
+        id: l2906ogm6hhuq
   /robots:
     get:
       summary: get robots
@@ -1428,6 +1519,8 @@ paths:
       operationId: getRobots
       tags:
         - robot
+      x-stoplight:
+        id: sezzutrzo4jd4
     post:
       summary: add a new robot
       responses:
@@ -1448,6 +1541,8 @@ paths:
           application/json:
             schema:
               $ref: ../models/robotParams.v1.json
+      x-stoplight:
+        id: vp0pd5r1qzqu5
   '/rawRobot/{robotID}':
     parameters:
       - schema:
@@ -1517,6 +1612,8 @@ paths:
                       z: 0
       tags:
         - rawRobot
+      x-stoplight:
+        id: 2osyg3tjau4zy
   '/robotTypes/{robotType_id}':
     parameters:
       - schema:
@@ -1590,6 +1687,8 @@ paths:
                         max_acceleration: 0
                         max_angular_speed: 0
       operationId: getRobotSpecifications
+      x-stoplight:
+        id: rt1div772stbe
     parameters: []
   '/robotSpecification/{robotModel_id}':
     parameters:
@@ -1610,6 +1709,8 @@ paths:
       operationId: getRobotSpecification
       tags:
         - robot
+      x-stoplight:
+        id: 6um3jem2weikj
   '/sendOperation/{robot_id}':
     parameters:
       - schema:
@@ -1637,6 +1738,8 @@ paths:
               type: array
               items:
                 $ref: ../models/roboOperation.json
+      x-stoplight:
+        id: al417cvosjhnd
 components:
   schemas: {}
   responses: {}

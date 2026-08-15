@@ -1,11 +1,20 @@
 {
   "title": "mapMeta.v2",
+  "x-stoplight": {
+    "id": "p08xv0h1467e8"
+  },
   "allOf": [
     {
-      "$ref": "./common/idObject.v1.json"
+      "$ref": "./common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "2wc02a6q0jg9w"
+      }
     },
     {
-      "$ref": "./mapParams.v2.json"
+      "$ref": "./mapParams.v2.json",
+      "x-stoplight": {
+        "id": "7qov0cw7olzi7"
+      }
     },
     {
       "type": "object",
@@ -13,24 +22,39 @@
         "pgm_link": {
           "type": "string",
           "format": "uri",
-          "description": "このマップのpgmマップを取得するためのAPI URI"
+          "description": "このマップのpgmマップを取得するためのAPI URI",
+          "x-stoplight": {
+            "id": "n8q8lvoj4wgpd"
+          }
         },
         "guidemap_link": {
           "type": "string",
           "format": "uri",
-          "description": "このマップのコストマップを取得するためのAPI URI"
+          "description": "このマップのコストマップを取得するためのAPI URI",
+          "x-stoplight": {
+            "id": "iolyk32goasbo"
+          }
         },
         "owner": {
-          "$ref": "./owner.v1.json"
+          "$ref": "./owner.v1.json",
+          "x-stoplight": {
+            "id": "evt9whbn6qonx"
+          }
         },
         "gen_preSingnedUrl": {
           "type": "string",
           "format": "uri",
           "description": "画像にアクセス可能なURLを発行するAPI-endpointへのリンク",
-          "readOnly": true
+          "readOnly": true,
+          "x-stoplight": {
+            "id": "efc4w9nd4r9ib"
+          }
         },
         "updateDate": {
-          "type": "string"
+          "type": "string",
+          "x-stoplight": {
+            "id": "tp2xt0x577o4j"
+          }
         }
       },
       "required": [
@@ -38,7 +62,10 @@
         "owner",
         "gen_preSingnedUrl",
         "updateDate"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "7v8aj5g09drc4"
+      }
     }
   ],
   "description": ""

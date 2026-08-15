@@ -1,11 +1,20 @@
 {
   "title": "robotParams",
+  "x-stoplight": {
+    "id": "x8ogfe9wkrupn"
+  },
   "oneOf": [
     {
-      "$ref": "./robots/NavigationParams.json"
+      "$ref": "./robots/NavigationParams.json",
+      "x-stoplight": {
+        "id": "icaa1rfaspirf"
+      }
     },
     {
-      "$ref": "./robots/ElevatorParams.json"
+      "$ref": "./robots/ElevatorParams.json",
+      "x-stoplight": {
+        "id": "fgingcfhgi8mb"
+      }
     }
   ]
 }

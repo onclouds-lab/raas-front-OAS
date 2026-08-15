@@ -1,9 +1,15 @@
 {
   "title": "registDateObject",
+  "x-stoplight": {
+    "id": "wdwkssxp11op1"
+  },
   "type": "object",
   "properties": {
     "registDate": {
-      "type": "string"
+      "type": "string",
+      "x-stoplight": {
+        "id": "rkq2ct07jkg6s"
+      }
     }
   },
   "required": [

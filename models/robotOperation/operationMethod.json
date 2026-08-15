@@ -1,5 +1,8 @@
 {
   "title": "operationMethod",
+  "x-stoplight": {
+    "id": "1zw3vya93jl78"
+  },
   "type": "object",
   "description": "robot 操作の基本Interface",
   "properties": {
@@ -9,12 +12,21 @@
         "move",
         "cancel",
         "ride"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "pb0n79nggqp7d"
+      }
     },
     "robotSpecifications": {
       "type": "array",
       "items": {
-        "$ref": "../common/idObject.v1.json"
+        "$ref": "../common/idObject.v1.json",
+        "x-stoplight": {
+          "id": "gd6um5jmiz0de"
+        }
+      },
+      "x-stoplight": {
+        "id": "ajqd9s3rlcppt"
       }
     }
   },

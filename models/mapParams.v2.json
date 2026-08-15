@@ -1,5 +1,8 @@
 {
   "title": "mapInfoParams",
+  "x-stoplight": {
+    "id": "z30u7iweatwog"
+  },
   "description": "YAMLデータ",
   "allOf": [
     {
@@ -7,49 +10,82 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "エンドユーザにとってのマップの名前"
+          "description": "エンドユーザにとってのマップの名前",
+          "x-stoplight": {
+            "id": "42izq531vub7d"
+          }
         },
         "description": {
           "type": "string",
-          "description": "このマップの説明。どこで使うかはわからないがとりあえず設定した。"
+          "description": "このマップの説明。どこで使うかはわからないがとりあえず設定した。",
+          "x-stoplight": {
+            "id": "srj6prqxy61qv"
+          }
         },
         "resolution": {
           "type": "number",
-          "description": "PGMマップの解像度。ロボットが使う"
+          "description": "PGMマップの解像度。ロボットが使う",
+          "x-stoplight": {
+            "id": "zk29t5m8ib8ki"
+          }
         },
         "negate": {
           "type": "boolean",
           "default": false,
-          "description": "pgmのデータを白黒反転するかどうか。trueで反転"
+          "description": "pgmのデータを白黒反転するかどうか。trueで反転",
+          "x-stoplight": {
+            "id": "zsqlf6qaossbs"
+          }
         },
         "occupied_thresh": {
           "type": "number",
           "description": "0~1の数。ROSで壁判定に使う",
           "format": "float",
           "minimum": 0,
-          "maximum": 1
+          "maximum": 1,
+          "x-stoplight": {
+            "id": "m72jdvjylh2sj"
+          }
         },
         "free_thresh": {
           "type": "number",
           "description": "0~1の数。ROSでロボットが通れる場所判定に使う。",
           "format": "float",
           "minimum": 0,
-          "maximum": 1
+          "maximum": 1,
+          "x-stoplight": {
+            "id": "d85e48b6k81ph"
+          }
         },
         "size": {
-          "$ref": "./common/size2d.v1.json"
+          "$ref": "./common/size2d.v1.json",
+          "x-stoplight": {
+            "id": "zkcn09likyqoz"
+          }
         },
         "owner": {
-          "$ref": "./common/idObject.v1.json"
+          "$ref": "./common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "cvz0gfm9g2igo"
+          }
         },
         "floor": {
-          "$ref": "./common/idObject.v1.json"
+          "$ref": "./common/idObject.v1.json",
+          "x-stoplight": {
+            "id": "sspbxo6tb30nk"
+          }
         },
         "origin": {
-          "$ref": "./common/point3d.json"
+          "$ref": "./common/point3d.json",
+          "x-stoplight": {
+            "id": "qi45petsgj7sg"
+          }
         },
         "rotation": {
-          "$ref": "./common/rotation.json"
+          "$ref": "./common/rotation.json",
+          "x-stoplight": {
+            "id": "jaw74ea1r6n7u"
+          }
         }
       },
       "required": [
@@ -60,10 +96,16 @@
         "free_thresh",
         "size",
         "owner"
-      ]
+      ],
+      "x-stoplight": {
+        "id": "6eranvhy9ghil"
+      }
     },
     {
-      "$ref": "./common/updateDateObject.json"
+      "$ref": "./common/updateDateObject.json",
+      "x-stoplight": {
+        "id": "ihayz5rkfredw"
+      }
     }
   ]
 }

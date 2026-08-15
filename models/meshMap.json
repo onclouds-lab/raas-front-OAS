@@ -1,0 +1,34 @@
+{
+  "title": "facility",
+  "x-stoplight": {
+    "id": "09cyi5j2wce3l"
+  },
+  "x-internal": false,
+  "allOf": [
+    {
+      "$ref": "./common/idObject.v1.json",
+      "x-stoplight": {
+        "id": "p6cabpuj6g721"
+      }
+    },
+    {
+      "$ref": "./common/registDateObject.json",
+      "x-stoplight": {
+        "id": "q3ctxaqewox81"
+      }
+    },
+    {
+      "$ref": "./common/updateDateObject.json",
+      "x-stoplight": {
+        "id": "9g2wnskcua8c4"
+      }
+    },
+    {
+      "$ref": "./meshMapParams.v1.json",
+      "x-stoplight": {
+        "id": "m8k8cfrmbbvrp"
+      }
+    }
+  ],
+  "description": ""
+}

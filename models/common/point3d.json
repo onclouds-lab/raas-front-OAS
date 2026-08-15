@@ -1,18 +1,30 @@
 {
   "title": "point3d",
+  "x-stoplight": {
+    "id": "vi8g1hdhiixyf"
+  },
   "type": "object",
   "properties": {
     "x": {
       "type": "number",
-      "description": "x座標の位置"
+      "description": "x座標の位置",
+      "x-stoplight": {
+        "id": "gc9qfl7haxjhv"
+      }
     },
     "y": {
       "type": "number",
-      "description": "y座標の位置"
+      "description": "y座標の位置",
+      "x-stoplight": {
+        "id": "gthqlyac6l732"
+      }
     },
     "z": {
       "type": "number",
-      "description": "z座標の位置"
+      "description": "z座標の位置",
+      "x-stoplight": {
+        "id": "l923sa89jakd4"
+      }
     }
   },
   "required": [

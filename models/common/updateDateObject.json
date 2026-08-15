@@ -1,11 +1,17 @@
 {
   "title": "updateDate",
+  "x-stoplight": {
+    "id": "r7n07nb88kxos"
+  },
   "type": "object",
   "description": "",
   "properties": {
     "updateDate": {
       "type": "string",
-      "description": "更新時必須。getしたモデルの値をセット"
+      "description": "更新時必須。getしたモデルの値をセット",
+      "x-stoplight": {
+        "id": "fo9zzygf4i16l"
+      }
     }
   }
 }

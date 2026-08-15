@@ -1,15 +1,27 @@
 {
   "title": "roboOperation",
+  "x-stoplight": {
+    "id": "0d3rg2r4jdll5"
+  },
   "description": "method = move:moveOperation\nmethod = cancel: cancelOperation\nmethod = ride: rideOperation",
   "oneOf": [
     {
-      "$ref": "./robotOperation/moveOperation.json"
+      "$ref": "./robotOperation/moveOperation.json",
+      "x-stoplight": {
+        "id": "74nzfjq61a45u"
+      }
     },
     {
-      "$ref": "./robotOperation/cancelOperation.json"
+      "$ref": "./robotOperation/cancelOperation.json",
+      "x-stoplight": {
+        "id": "hf4mwzyjc67w4"
+      }
     },
     {
-      "$ref": "./robotOperation/rideOperation.json"
+      "$ref": "./robotOperation/rideOperation.json",
+      "x-stoplight": {
+        "id": "8fzqw5l1x9s71"
+      }
     }
   ],
   "examples": []
